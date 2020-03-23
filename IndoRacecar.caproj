@@ -53,11 +53,13 @@
         <layout>Game.xml</layout>
         <layout>Main Menu.xml</layout>
         <layout>Character Selection.xml</layout>
+        <layout>Victory Screen.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Game sheet.xml</event-sheet>
         <event-sheet>Menu sheet.xml</event-sheet>
         <event-sheet>Character Selection sheet.xml</event-sheet>
+        <event-sheet>Victory Screen sheet.xml</event-sheet>
     </event-folder>
     <global-instances />
     <sounds-folder />

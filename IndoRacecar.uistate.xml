@@ -12,7 +12,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="1">Game</layout>
         <layout order="3">Main Menu</layout>
-        <layout active="1" order="4">Character Selection</layout>
+        <layout order="4">Character Selection</layout>
+        <layout active="1" order="5">Victory Screen</layout>
         <event-sheet order="2">Game sheet</event-sheet>
     </open-tabs>
     <properties>
