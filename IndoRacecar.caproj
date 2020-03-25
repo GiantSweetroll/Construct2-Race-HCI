@@ -9,7 +9,9 @@
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>26500</saved-with-version>
-    <used-plugins />
+    <used-plugins>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
     <used-behaviors />
     <used-effects />
     <configurations>
@@ -21,6 +23,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Main Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -35,13 +38,28 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder />
+    <object-folder>
+        <object-type name="TiledBackground" sid="231481731809672">
+            <plugin id="TiledBg" />
+            <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\placeholderBG.png" />
+        </object-type>
+        <object-type name="skybg" sid="931067617807994">
+            <plugin id="TiledBg" />
+            <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\skybg.jpg" />
+        </object-type>
+    </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Game.xml</layout>
+        <layout>Main Menu.xml</layout>
+        <layout>Character Selection.xml</layout>
+        <layout>Victory Screen.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Game sheet.xml</event-sheet>
+        <event-sheet>Menu sheet.xml</event-sheet>
+        <event-sheet>Character Selection sheet.xml</event-sheet>
+        <event-sheet>Victory Screen sheet.xml</event-sheet>
     </event-folder>
     <global-instances />
     <sounds-folder />
