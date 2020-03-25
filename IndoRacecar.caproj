@@ -10,6 +10,10 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors />
@@ -39,6 +43,29 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
+        <object-folder name="Buttons">
+            <object-folder name="Start">
+                <object-type name="StartButton" sid="238869534300906">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>StartButtonText</type>
+                        <type>StartButton</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="714704044469900" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="StartButtonText" sid="774071151400415">
+                    <plugin id="Text" />
+                    <container>
+                        <type>StartButtonText</type>
+                        <type>StartButton</type>
+                    </container>
+                </object-type>
+            </object-folder>
+        </object-folder>
         <object-type name="TiledBackground" sid="231481731809672">
             <plugin id="TiledBg" />
             <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\placeholderBG.png" />
@@ -46,6 +73,25 @@
         <object-type name="skybg" sid="931067617807994">
             <plugin id="TiledBg" />
             <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\skybg.jpg" />
+        </object-type>
+        <object-type name="Mouse" sid="593802495600120">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="TiledBackground2" sid="886757884784346">
+            <plugin id="TiledBg" />
+            <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\WIPBackground.png" />
+        </object-type>
+        <object-type name="newTempBackground" sid="648914038339581">
+            <plugin id="NinePatch" />
+            <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\WIPBackground.png" />
+        </object-type>
+        <object-type name="StartButtonNew" sid="719833642827597">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="511486351646354" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\StartButton.png" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
@@ -61,7 +107,9 @@
         <event-sheet>Character Selection sheet.xml</event-sheet>
         <event-sheet>Victory Screen sheet.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Mouse" uid="4" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>

@@ -2,5 +2,20 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Menu sheet</name>
-    <events />
+    <events>
+        <event-block sid="216074201666407">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="925077710893414" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">StartButtonNew</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="880698796010566" type="System">
+                    <param id="0" name="Layout">Character Selection</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
