@@ -3,6 +3,14 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Menu sheet</name>
     <events>
+        <variable constant="0" name="MusicMuted" sid="990675534314577" static="0" type="number">0</variable>
+        <variable constant="0" name="SFXMuted" sid="858785408915771" static="0" type="number">0</variable>
+        <event-block sid="213627129081195">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="895766421818514" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
         <event-block sid="216074201666407">
             <conditions>
                 <condition id="6" name="On object clicked" sid="925077710893414" type="Mouse">
@@ -17,5 +25,331 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="178194399154346">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="375833760436937" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">ExitButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="635697939766977" type="Browser" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="717733421256055" title="MutedSettings">
+            <sub-events>
+                <event-block sid="714849767347656">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="812955529035374" type="System">
+                            <param id="0" name="Variable">SFXMuted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="438807977895456" type="Sprite6">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="314866533898142" type="Sprite6">
+                            <param id="0" name="X">1142</param>
+                            <param id="1" name="Y">546</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="883063162200038" type="Sprite">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="12" name="Remove all effects" sid="109958568928473" type="Audio">
+                            <param id="0" name="Tag">&quot;SoundEffect&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="291466731980601">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="528119000709156" type="System">
+                            <param id="0" name="Variable">SFXMuted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="530472145920410" type="Sprite">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="299107816568058" type="Sprite">
+                            <param id="0" name="X">1142</param>
+                            <param id="1" name="Y">546</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="635203562877201" type="Sprite6">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="32" name="Add mute effect" sid="469574055519550" type="Audio">
+                            <param id="0" name="Tag">&quot;SoundEffect&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="643810282071269">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="577396188629573" type="System">
+                            <param id="0" name="Variable">MusicMuted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="694749360662342" type="Sprite3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="163896079336347" type="Sprite3">
+                            <param id="0" name="X">781</param>
+                            <param id="1" name="Y">546</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="988478438325573" type="Sprite2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="12" name="Remove all effects" sid="894779856824829" type="Audio">
+                            <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="410007956110075">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="511996478217066" type="System">
+                            <param id="0" name="Variable">MusicMuted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="226246228151684" type="Sprite2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="436074616938631" type="Sprite2">
+                            <param id="0" name="X">781</param>
+                            <param id="1" name="Y">546</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="422939189839534" type="Sprite3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="32" name="Add mute effect" sid="632969472774782" type="Audio">
+                            <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="453655079316985" title="Popup">
+            <sub-events>
+                <event-group description="" sid="866351809617181" title="PopupFades">
+                    <sub-events>
+                        <variable constant="0" name="fadeOutDuration" sid="893884188921012" static="0" type="number">0.3</variable>
+                        <variable constant="0" name="fadeInDuration" sid="752947599917056" static="0" type="number">0.3</variable>
+                        <event-block sid="282516826251591">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="742181924505676" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">OptionButton</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="344016765595711" type="PopupBG">
+                                    <param id="0" name="X">960</param>
+                                    <param id="1" name="Y">546.591</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="548642219393874" type="Sprite4">
+                                    <param id="0" name="X">1284.686</param>
+                                    <param id="1" name="Y">429.786</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="669127568610280" type="PopupBG">
+                                    <param id="0" name="Fade-in time">fadeInDuration</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="593547025617377" type="PopupBG">
+                                    <param id="0" name="Fade-out time">0</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="943058266502824" type="Sprite6">
+                                    <param id="0" name="Fade-in time">fadeInDuration</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="865089809623489" type="Sprite6">
+                                    <param id="0" name="Fade-out time">0</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="670673180972233" type="Sprite3">
+                                    <param id="0" name="Fade-in time">fadeInDuration</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="784878152851169" type="Sprite3">
+                                    <param id="0" name="Fade-out time">0</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="195843119329838" type="Sprite4">
+                                    <param id="0" name="Fade-in time">fadeInDuration</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="225491016054201" type="Sprite4">
+                                    <param id="0" name="Fade-out time">0</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="530911146253521" type="Sprite">
+                                    <param id="0" name="Fade-in time">fadeInDuration</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="922071387996543" type="Sprite">
+                                    <param id="0" name="Fade-out time">0</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="999448586012095" type="Sprite2">
+                                    <param id="0" name="Fade-in time">fadeInDuration</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="940012141890134" type="Sprite2">
+                                    <param id="0" name="Fade-out time">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="195012422712280" type="PopupBG" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="839521265750373" type="Sprite4" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="861614669782741" type="Sprite6" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="469442244355974" type="Sprite3" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="626666229298141" type="Sprite" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="802575365149527" type="Sprite2" />
+                                <action id="-4" name="Set layer visible" sid="300224332513219" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="917172136176314">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="998708194380201" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Sprite4</param>
+                                </condition>
+                                <condition id="-9" name="Layer is visible" sid="398003183765908" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="982749420975596" type="PopupBG">
+                                    <param id="0" name="Fade-in time">0</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="464760475044245" type="PopupBG">
+                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="934726431803453" type="Sprite4">
+                                    <param id="0" name="Fade-in time">0</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="320368465434507" type="Sprite4">
+                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="994494055672577" type="Sprite3">
+                                    <param id="0" name="Fade-in time">0</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="317157942287958" type="Sprite3">
+                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="526974226009351" type="Sprite6">
+                                    <param id="0" name="Fade-in time">0</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="612751164866603" type="Sprite6">
+                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="151595084708146" type="Sprite2">
+                                    <param id="0" name="Fade-in time">0</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="384852077625024" type="Sprite2">
+                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="318002042389432" type="Sprite">
+                                    <param id="0" name="Fade-in time">0</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="593447467720898" type="Sprite">
+                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="581955486941655" type="Sprite3" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="324419805847715" type="Sprite6" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="824494677303194" type="Sprite2" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="889109704316043" type="Sprite" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="658144307780379" type="PopupBG" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="305378345973488" type="Sprite4" />
+                                <action id="-16" name="Wait" sid="297592170823171" type="System">
+                                    <param id="0" name="Seconds">fadeOutDuration</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="169006897529946" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="401413652256289">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="283060665409760" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite6</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="943700955849785" type="System">
+                            <param id="0" name="Layer">2</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="325462914690107" type="Sprite6" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="601133921538564" type="System">
+                            <param id="0" name="Variable">SFXMuted</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="633051036255180">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="708025842836255" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="450583490263421" type="System">
+                            <param id="0" name="Layer">2</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="488885359628927" type="Sprite" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="453091882564116" type="System">
+                            <param id="0" name="Variable">SFXMuted</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="341821375856659">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="805822139339978" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite3</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="393886588492411" type="System">
+                            <param id="0" name="Layer">2</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="582884044145229" type="Sprite3" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="813089880548292" type="System">
+                            <param id="0" name="Variable">MusicMuted</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="232017609971863">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="104572867480437" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite2</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="818007994402386" type="System">
+                            <param id="0" name="Layer">2</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="560415318331070" type="Sprite2" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="147832582663574" type="System">
+                            <param id="0" name="Variable">MusicMuted</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
