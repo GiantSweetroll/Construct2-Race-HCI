@@ -2,5 +2,7 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Character Selection sheet</name>
-    <events />
+    <events>
+        <variable constant="0" name="MY_USERNAME" sid="995835822116033" static="0" type="text"></variable>
+    </events>
 </c2eventsheet>
