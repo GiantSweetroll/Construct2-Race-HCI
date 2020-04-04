@@ -6,5 +6,13 @@
         <variable constant="0" name="ROOM_NAME" sid="183354296047805" static="0" type="text">main</variable>
         <variable constant="0" name="INSTANCE_NAME" sid="969926405757146" static="0" type="text">default</variable>
         <variable constant="0" name="GAME_NAME" sid="503164373709168" static="0" type="text">indo-racecar</variable>
+        <event-group description="Manages connecting to the signalling server and joining the room" sid="576943838037911" title="Signaling" />
+        <event-group description="Manages the gameplay and synchronization" sid="264574301002583" title="Game">
+            <sub-events>
+                <event-group description="Events that are common to both the host and peers." sid="796914128955514" title="Common" />
+                <event-group description="Events specific to the host" inactive="1" sid="765455193004978" title="Host" />
+                <event-group description="Events specific to peers (i.e. non-host users)" inactive="1" sid="736196256727978" title="Peer" />
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
