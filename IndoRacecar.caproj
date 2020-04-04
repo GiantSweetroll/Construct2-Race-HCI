@@ -126,6 +126,11 @@
             </object-type>
             <object-type name="Stick" sid="439242501701028">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="497316681692168">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327246612132688" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2-Race-HCI\Assets\Stick.png" />
@@ -134,7 +139,7 @@
             </object-type>
         </object-folder>
         <object-folder name="PopupMenu">
-            <object-type name="Sprite6" sid="992031176114466">
+            <object-type name="SFXIcon" sid="992031176114466">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Fade" sid="447433833388497">
@@ -158,7 +163,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Sprite3" sid="684620380330468">
+            <object-type name="MusicIcon" sid="684620380330468">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Fade" sid="447073709792024">
@@ -182,7 +187,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Sprite" sid="204590550514002">
+            <object-type name="MutedSFX" sid="204590550514002">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Fade" sid="961728966023204">
@@ -206,7 +211,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Sprite2" sid="265823360502980">
+            <object-type name="MutedMusic" sid="265823360502980">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Fade" sid="393282238793223">
@@ -230,7 +235,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Sprite4" sid="915772927057404">
+            <object-type name="xButton" sid="915772927057404">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Fade" sid="813116899624748">
