@@ -17,10 +17,12 @@
         <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -285,6 +287,47 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Ground and Vegetation">
+            <object-type name="Ground" sid="785856275011718">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="427344953789586">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\AsphaltTile.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Vehicles">
+            <object-type name="Esemka" sid="156566937575390">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="10" loop="0" name="Moving" pingpong="0" repeatcount="1" repeatto="0" sid="917324256651372" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-5.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-6.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-7.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-8.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-9.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-10.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="515152190606123" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Player" sid="116678091267772">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="247373106644282" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Mouse" sid="593802495600120">
             <plugin id="Mouse" />
         </object-type>
@@ -318,6 +361,7 @@
         <event-sheet>Character Selection sheet.xml</event-sheet>
         <event-sheet>Victory Screen sheet.xml</event-sheet>
         <event-sheet>Terrain Generation sheet.xml</event-sheet>
+        <event-sheet>Character sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="4" />
