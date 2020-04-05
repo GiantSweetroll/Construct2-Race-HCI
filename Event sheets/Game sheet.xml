@@ -23,11 +23,7 @@
                     <conditions>
                         <condition id="2" name="On connected" sid="849449562705701" type="Multiplayer" />
                     </conditions>
-                    <actions>
-                        <action id="4" name="Log in" sid="655874680639712" type="Multiplayer">
-                            <param id="0" name="Alias">MY_USERNAME</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="394067691848154">
                     <conditions>

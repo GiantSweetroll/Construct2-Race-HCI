@@ -3,6 +3,114 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Character Selection sheet</name>
     <events>
-        <variable constant="0" name="MY_USERNAME" sid="995835822116033" static="0" type="text"></variable>
+        <variable comment="Black ( full racist ) " constant="0" name="Player_2" sid="376304647789522" static="0" type="number">0</variable>
+        <variable comment="White (no racist) " constant="0" name="Player_1" sid="878046371168948" static="0" type="number">0</variable>
+        <event-block sid="745700413539265">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="785636900125668" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">back_button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="686524840372068" type="first">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="405120774507370" type="second">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="622194644551237" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="275198290993241">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="624450897593305" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">back_button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="537083875075461" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="211988290699594" type="System">
+                    <param id="0" name="Layout">&quot;Main Menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="343869707825109">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="411685980345763" type="Mouse">
+                    <param id="0" name="Object">duck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="156447542981438" type="Player_1_white">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="634057952145217" type="Player_1_white">
+                    <param id="0" name="X">139</param>
+                    <param id="1" name="Y">365</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="162463610412633" type="Player_1_white">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="379802633544664">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="461357224219013" type="Mouse">
+                    <param id="0" name="Object">emeska</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="832130753712524" type="Player_1_white">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="614061020561039" type="Player_1_white">
+                    <param id="0" name="X">347</param>
+                    <param id="1" name="Y">366</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="496106217079959" type="Player_1_white">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="812790530181560">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="319925310206979" type="Mouse">
+                    <param id="0" name="Object">horse</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="397847153866284" type="Player_1_white">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="724578680008951" type="Player_1_white">
+                    <param id="0" name="X">552</param>
+                    <param id="1" name="Y">365</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="233618584517219" type="Player_1_white">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="989370134484709">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="147368835659327" type="Mouse">
+                    <param id="0" name="Object">second</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="889284685834550" type="Player_1_white">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
