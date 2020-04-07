@@ -247,18 +247,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599872602464903" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2-Race-HCI\Assets\mutedMusicButton.png">
-                            <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="0.5" y="0.4" />
-                                <point x="1" y="0" />
-                                <point x="0.6" y="0.5" />
-                                <point x="1" y="1" />
-                                <point x="0.5" y="0.6" />
-                                <point x="0" y="1" />
-                                <point x="0.4" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\XButton.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -328,6 +317,76 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="CharacterSelection">
+            <object-type name="duck" sid="263727263894647">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="353938017990798" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\characterS_icon\aseprite\duck_icon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="emeska" sid="835717921099380">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650170094707700" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506329" original-source="D:\NWCO(construct2)\Construct2-Race-HCI\Assets\characterS_icon\png\emeska_icon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="horse" sid="471950664877120">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913558568926626" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\NWCO(construct2)\Construct2-Race-HCI\Assets\characterS_icon\png\horse_icon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="back_button" sid="362761589576927">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270313055137813" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Player_1_white" sid="192008918744788">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="119939638670553" speed="5">
+                        <frame duration="1" hotspotX="0.544444" hotspotY="0.544444" original-source="C:\Users\CXaVier\Desktop\characterS_icon\png\outline player 1 .png">
+                            <collision-poly>
+                                <point x="0.0111111" y="0.622222" />
+                                <point x="0.491666" y="0.0569444" />
+                                <point x="0.988889" y="0.711111" />
+                                <point x="0.988889" y="0.377778" />
+                                <point x="0.544444" y="0.988889" />
+                                <point x="0.0111111" y="0.466667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="second" sid="681770301543874">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="151810235464294" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\character selection2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\character selection1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="first" sid="986296838377454">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="654681624895149" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\character selection2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Mouse" sid="593802495600120">
             <plugin id="Mouse" />
         </object-type>
@@ -346,74 +405,6 @@
         </object-type>
         <object-type name="Function" sid="648479089449134">
             <plugin id="Function" />
-        </object-type>
-        <object-type name="back_button" sid="362761589576927">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270313055137813" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="first" sid="986296838377454">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="654681624895149" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\character selection2.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="second" sid="681770301543874">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="151810235464294" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\character selection2.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\character selection1.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="duck" sid="263727263894647">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="353938017990798" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\NWCO(construct2)\Construct2-Race-HCI\Assets\characterS_icon\png\duck_icon.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="emeska" sid="835717921099380">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650170094707700" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" original-source="D:\NWCO(construct2)\Construct2-Race-HCI\Assets\characterS_icon\png\emeska_icon.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="horse" sid="471950664877120">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913558568926626" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\NWCO(construct2)\Construct2-Race-HCI\Assets\characterS_icon\png\horse_icon.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Player_1_white" sid="192008918744788">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="119939638670553" speed="5">
-                    <frame duration="1" hotspotX="0.544444" hotspotY="0.544444" original-source="C:\Users\CXaVier\Desktop\characterS_icon\png\outline player 1 .png">
-                        <collision-poly>
-                            <point x="0.0111111" y="0.622222" />
-                            <point x="0.544444" y="0.0111111" />
-                            <point x="0.988889" y="0.711111" />
-                            <point x="0.988889" y="0.377778" />
-                            <point x="0.544444" y="0.988889" />
-                            <point x="0.0111111" y="0.466667" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
         </object-type>
     </object-folder>
     <families />
@@ -451,7 +442,13 @@
         <global-instance type="Multiplayer" uid="13" />
         <global-instance type="Function" uid="14" />
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="buttonOnClick.m4a" />
+        <file name="buttonBackClick.m4a" />
+        <file name="buttonBackClick.ogg" />
+        <file name="buttonOnClick.ogg" />
+        <file name="characterOnClick.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

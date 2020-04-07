@@ -21,24 +21,16 @@
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="-16" name="Wait" sid="622194644551237" type="System">
-                    <param id="0" name="Seconds">2.0</param>
+                <action id="0" name="Play" sid="273706427506121" type="Audio">
+                    <param id="0" name="Audio file">buttonBackClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="275198290993241">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="624450897593305" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">back_button</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="537083875075461" type="System">
-                    <param id="0" name="Seconds">0.5</param>
+                <action id="-16" name="Wait" sid="490810617724818" type="System">
+                    <param id="0" name="Seconds">0.25</param>
                 </action>
-                <action id="-25" name="Go to layout (by name)" sid="211988290699594" type="System">
+                <action id="-25" name="Go to layout (by name)" sid="617002903021749" type="System">
                     <param id="0" name="Layout">&quot;Main Menu&quot;</param>
                 </action>
             </actions>
@@ -62,6 +54,62 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Plays a sound when any of the character is clicked</comment>
+        <event-group description="" sid="271350362442806" title="Character select sound trigger">
+            <sub-events>
+                <event-block sid="904489883195048">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="927501301981568" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">duck</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="128832735083602" type="Audio">
+                            <param id="0" name="Audio file">characterOnClick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="116614125529004">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="417333042307142" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">emeska</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="374961560536429" type="Audio">
+                            <param id="0" name="Audio file">characterOnClick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="977816203294940">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="693266304276399" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">horse</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="651616074059214" type="Audio">
+                            <param id="0" name="Audio file">characterOnClick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="379802633544664">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="461357224219013" type="Mouse">
