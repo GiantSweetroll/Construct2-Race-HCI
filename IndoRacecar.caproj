@@ -290,6 +290,10 @@
         <object-folder name="Vehicles">
             <object-type name="Player" sid="156566937575390">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="mark which idle animation to use" name="idleAnimation" sid="972999433022523" type="number" />
+                    <instance-variable comment="Mark which moving animation to use" name="movingAnimation" sid="155410040303772" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="10" loop="0" name="EsemkaMoving" pingpong="0" repeatcount="1" repeatto="0" sid="917324256651372" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png" />
@@ -461,6 +465,98 @@
                                 <point x="0.5" y="0.79646" />
                                 <point x="0.183036" y="0.637168" />
                                 <point x="0.191964" y="0.495575" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="MotorBebekIdle" pingpong="0" repeatcount="1" repeatto="0" sid="837979759925562" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-1.png">
+                            <collision-poly>
+                                <point x="0.428571" y="0.849558" />
+                                <point x="0.5" y="0.681416" />
+                                <point x="0.629464" y="0.734513" />
+                                <point x="0.5" y="0.982301" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="10" loop="0" name="MotorBebekMoving" pingpong="0" repeatcount="1" repeatto="0" sid="775933296388549" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-1.png">
+                            <collision-poly>
+                                <point x="0.428571" y="0.849558" />
+                                <point x="0.5" y="0.681416" />
+                                <point x="0.629464" y="0.734513" />
+                                <point x="0.5" y="0.982301" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-2.png">
+                            <collision-poly>
+                                <point x="0.441964" y="0.876106" />
+                                <point x="0.5" y="0.690265" />
+                                <point x="0.638393" y="0.716814" />
+                                <point x="0.5" y="0.982301" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-3.png">
+                            <collision-poly>
+                                <point x="0.428571" y="0.849558" />
+                                <point x="0.5" y="0.681416" />
+                                <point x="0.629464" y="0.734513" />
+                                <point x="0.5" y="0.973451" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-4.png">
+                            <collision-poly>
+                                <point x="0.441964" y="0.876106" />
+                                <point x="0.5" y="0.690265" />
+                                <point x="0.638393" y="0.716814" />
+                                <point x="0.5" y="0.973451" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-5.png">
+                            <collision-poly>
+                                <point x="0.428571" y="0.849558" />
+                                <point x="0.5" y="0.681416" />
+                                <point x="0.629464" y="0.734513" />
+                                <point x="0.5" y="0.982301" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-6.png">
+                            <collision-poly>
+                                <point x="0.441964" y="0.876106" />
+                                <point x="0.5" y="0.690265" />
+                                <point x="0.638393" y="0.716814" />
+                                <point x="0.5" y="0.973451" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-7.png">
+                            <collision-poly>
+                                <point x="0.428571" y="0.849558" />
+                                <point x="0.5" y="0.681416" />
+                                <point x="0.629464" y="0.734513" />
+                                <point x="0.5" y="0.973451" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-8.png">
+                            <collision-poly>
+                                <point x="0.441964" y="0.876106" />
+                                <point x="0.5" y="0.690265" />
+                                <point x="0.638393" y="0.716814" />
+                                <point x="0.5" y="0.982301" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-9.png">
+                            <collision-poly>
+                                <point x="0.428571" y="0.849558" />
+                                <point x="0.5" y="0.681416" />
+                                <point x="0.629464" y="0.734513" />
+                                <point x="0.5" y="0.982301" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-10.png">
+                            <collision-poly>
+                                <point x="0.441964" y="0.876106" />
+                                <point x="0.5" y="0.690265" />
+                                <point x="0.638393" y="0.716814" />
+                                <point x="0.5" y="0.982301" />
                             </collision-poly>
                         </frame>
                     </animation>
