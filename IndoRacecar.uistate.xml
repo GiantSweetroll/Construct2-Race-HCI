@@ -12,8 +12,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Main Menu</layout>
         <layout order="1">Character Selection</layout>
-        <event-sheet order="2">Menu sheet</event-sheet>
-        <event-sheet active="1" order="3">Character Selection sheet</event-sheet>
+        <event-sheet active="1" order="3">Menu sheet</event-sheet>
+        <event-sheet order="2">Character Selection sheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -46,7 +46,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/MutedMusic/" />
         <folder expanded="1" path="animation-folder/xButton/" />
         <folder expanded="1" path="animation-folder/PopupBG/" />
-        <folder expanded="1" path="animation-folder/Esemka/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/duck/" />
         <folder expanded="1" path="animation-folder/emeska/" />
