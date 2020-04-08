@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game sheet</name>
     <events>
+        <comment>Global variables used to connect to the appropriate game room</comment>
         <variable constant="0" name="ROOM_NAME" sid="183354296047805" static="0" type="text">main</variable>
         <variable constant="0" name="INSTANCE_NAME" sid="969926405757146" static="0" type="text">default</variable>
         <variable constant="0" name="GAME_NAME" sid="503164373709168" static="0" type="text">indo-racecar</variable>
