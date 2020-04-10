@@ -18,7 +18,6 @@
         <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
@@ -824,11 +823,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="Text_input" sid="312711180216895">
+        <object-type name="Text_input" sid="312711180216895">
             <plugin id="TextBox" />
-        </object-type>
-        <object-type name="Placeholder" sid="647917868167188">
-            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
