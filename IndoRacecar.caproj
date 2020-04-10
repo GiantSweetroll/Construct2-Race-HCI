@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
@@ -22,6 +23,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -293,22 +295,150 @@
                 <instance-variables>
                     <instance-variable comment="mark which idle animation to use" name="idleAnimation" sid="972999433022523" type="number" />
                     <instance-variable comment="Mark which moving animation to use" name="movingAnimation" sid="155410040303772" type="number" />
+                    <instance-variable name="peerid" sid="719045910342626" type="string" />
+                    <instance-variable name="inputs" sid="847054310483112" type="number" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Physics" sid="129956147177379">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="10" loop="0" name="EsemkaMoving" pingpong="0" repeatcount="1" repeatto="0" sid="917324256651372" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-2.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-3.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-4.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-5.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-6.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-7.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-8.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-9.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-10.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.723451" />
+                                <point x="0.261161" y="0.721239" />
+                                <point x="0.262835" y="0.611725" />
+                                <point x="0.353515" y="0.613384" />
+                                <point x="0.415179" y="0.723451" />
+                                <point x="0.475447" y="0.719026" />
+                                <point x="0.476563" y="0.922566" />
+                                <point x="0.139509" y="0.922567" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-2.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.723451" />
+                                <point x="0.261161" y="0.721239" />
+                                <point x="0.262835" y="0.611725" />
+                                <point x="0.353515" y="0.613384" />
+                                <point x="0.415179" y="0.723451" />
+                                <point x="0.475447" y="0.719026" />
+                                <point x="0.476563" y="0.922566" />
+                                <point x="0.139509" y="0.922567" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-3.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.723451" />
+                                <point x="0.261161" y="0.721239" />
+                                <point x="0.262835" y="0.611725" />
+                                <point x="0.353515" y="0.613384" />
+                                <point x="0.415179" y="0.723451" />
+                                <point x="0.475447" y="0.719026" />
+                                <point x="0.476563" y="0.922566" />
+                                <point x="0.139509" y="0.922567" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-4.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.723451" />
+                                <point x="0.261161" y="0.721239" />
+                                <point x="0.262835" y="0.611725" />
+                                <point x="0.353515" y="0.613384" />
+                                <point x="0.415179" y="0.723451" />
+                                <point x="0.475447" y="0.719026" />
+                                <point x="0.476563" y="0.922566" />
+                                <point x="0.139509" y="0.922567" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-5.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.723451" />
+                                <point x="0.261161" y="0.721239" />
+                                <point x="0.262835" y="0.611725" />
+                                <point x="0.353515" y="0.613384" />
+                                <point x="0.415179" y="0.723451" />
+                                <point x="0.475447" y="0.719026" />
+                                <point x="0.476563" y="0.922566" />
+                                <point x="0.139509" y="0.922567" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-6.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.723451" />
+                                <point x="0.261161" y="0.721239" />
+                                <point x="0.262835" y="0.611725" />
+                                <point x="0.353515" y="0.613384" />
+                                <point x="0.415179" y="0.723451" />
+                                <point x="0.475447" y="0.719026" />
+                                <point x="0.476563" y="0.922566" />
+                                <point x="0.139509" y="0.922567" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-7.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.723451" />
+                                <point x="0.261161" y="0.721239" />
+                                <point x="0.262835" y="0.611725" />
+                                <point x="0.353515" y="0.613384" />
+                                <point x="0.415179" y="0.723451" />
+                                <point x="0.475447" y="0.719026" />
+                                <point x="0.476563" y="0.922566" />
+                                <point x="0.139509" y="0.922567" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-8.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.723451" />
+                                <point x="0.261161" y="0.721239" />
+                                <point x="0.262835" y="0.611725" />
+                                <point x="0.353515" y="0.613384" />
+                                <point x="0.415179" y="0.723451" />
+                                <point x="0.475447" y="0.719026" />
+                                <point x="0.476563" y="0.922566" />
+                                <point x="0.139509" y="0.922567" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-9.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.723451" />
+                                <point x="0.261161" y="0.721239" />
+                                <point x="0.262835" y="0.611725" />
+                                <point x="0.353515" y="0.613384" />
+                                <point x="0.415179" y="0.723451" />
+                                <point x="0.475447" y="0.719026" />
+                                <point x="0.476563" y="0.922566" />
+                                <point x="0.139509" y="0.922567" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-10.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.723451" />
+                                <point x="0.261161" y="0.721239" />
+                                <point x="0.262835" y="0.611725" />
+                                <point x="0.353515" y="0.613384" />
+                                <point x="0.415179" y="0.723451" />
+                                <point x="0.475447" y="0.719026" />
+                                <point x="0.476563" y="0.922566" />
+                                <point x="0.139509" y="0.922567" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="EsemkaIdle" pingpong="0" repeatcount="1" repeatto="0" sid="515152190606123" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png">
+                            <collision-poly>
+                                <point x="0.141741" y="0.719027" />
+                                <point x="0.262835" y="0.719579" />
+                                <point x="0.266462" y="0.611449" />
+                                <point x="0.350446" y="0.613938" />
+                                <point x="0.412947" y="0.716814" />
+                                <point x="0.477679" y="0.719027" />
+                                <point x="0.478795" y="0.926992" />
+                                <point x="0.142857" y="0.920354" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="DelmanIdle" pingpong="0" repeatcount="1" repeatto="0" sid="371407429643432" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-1.png">
@@ -633,6 +763,17 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="map">
+            <object-type name="map1" sid="479329989851080">
+                <plugin id="NinePatch" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="231758947050855">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\BigMap.png" />
+            </object-type>
+        </object-folder>
         <object-type name="Mouse" sid="593802495600120">
             <plugin id="Mouse" />
         </object-type>
@@ -651,6 +792,9 @@
         </object-type>
         <object-type name="Function" sid="648479089449134">
             <plugin id="Function" />
+        </object-type>
+        <object-type name="Keyboard" sid="632698657994483">
+            <plugin id="Keyboard" />
         </object-type>
     </object-folder>
     <families />
@@ -687,6 +831,7 @@
         </global-instance>
         <global-instance type="Multiplayer" uid="13" />
         <global-instance type="Function" uid="14" />
+        <global-instance type="Keyboard" uid="17" />
     </global-instances>
     <sounds-folder>
         <file name="buttonOnClick.m4a" />
