@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Character Selection sheet</name>
     <events>
+        <variable constant="0" name="locked" sid="338558279096045" static="0" type="number">0</variable>
         <variable comment="Used to store the username of the user" constant="0" name="MY_USERNAME" sid="558387289368357" static="0" type="text"></variable>
         <variable comment="Used to identify the player&apos;s final character selection (this will be used to login and connect to the signalling server)" constant="0" name="PLAYER_SELECTION" sid="512494463320977" static="0" type="number">0</variable>
         <variable comment="Black ( full racist ) " constant="0" name="Player_2" sid="376304647789522" static="0" type="number">0</variable>
@@ -37,25 +38,112 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="343869707825109">
-            <conditions>
-                <condition id="7" name="Cursor is over object" sid="411685980345763" type="Mouse">
-                    <param id="0" name="Object">duck</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="156447542981438" type="Player_1_white">
-                    <param id="0" name="Frame number">0</param>
-                </action>
-                <action id="-3" name="Set position" sid="634057952145217" type="Player_1_white">
-                    <param id="0" name="X">139</param>
-                    <param id="1" name="Y">365</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="162463610412633" type="Player_1_white">
-                    <param id="0" name="Opacity">0</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="805712147911056" title="Cursor Over player outline">
+            <sub-events>
+                <event-block sid="529536178208330">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="459803164878259" type="Mouse">
+                            <param id="0" name="Object">second</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="320133337921345" type="System">
+                            <param id="0" name="Variable">locked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="680273888550937" type="Player_1_white">
+                            <param id="0" name="X">-149.891</param>
+                            <param id="1" name="Y">232.372</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="343869707825109">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="411685980345763" type="Mouse">
+                            <param id="0" name="Object">duck</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="828821414129476" type="System">
+                            <param id="0" name="Variable">locked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="156447542981438" type="Player_1_white">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="634057952145217" type="Player_1_white">
+                            <param id="0" name="X">139</param>
+                            <param id="1" name="Y">365</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="162463610412633" type="Player_1_white">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="379802633544664">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="461357224219013" type="Mouse">
+                            <param id="0" name="Object">emeska</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="910237839820869" type="System">
+                            <param id="0" name="Variable">locked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="832130753712524" type="Player_1_white">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="614061020561039" type="Player_1_white">
+                            <param id="0" name="X">347</param>
+                            <param id="1" name="Y">366</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="496106217079959" type="Player_1_white">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="812790530181560">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="319925310206979" type="Mouse">
+                            <param id="0" name="Object">horse</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="471386611054040" type="System">
+                            <param id="0" name="Variable">locked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="397847153866284" type="Player_1_white">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="724578680008951" type="Player_1_white">
+                            <param id="0" name="X">552</param>
+                            <param id="1" name="Y">365</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="233618584517219" type="Player_1_white">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="989370134484709">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="147368835659327" type="Mouse">
+                            <param id="0" name="Object">second</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="889284685834550" type="Player_1_white">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <comment>Plays a sound when any of the character is clicked</comment>
         <event-group description="" sid="271350362442806" title="Character select sound trigger">
             <sub-events>
@@ -65,6 +153,11 @@
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">duck</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="519086712033444" type="System">
+                            <param id="0" name="Variable">locked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -83,6 +176,11 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">emeska</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="448537925075315" type="System">
+                            <param id="0" name="Variable">locked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Play" sid="374961560536429" type="Audio">
@@ -100,6 +198,11 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">horse</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="987795217640463" type="System">
+                            <param id="0" name="Variable">locked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Play" sid="651616074059214" type="Audio">
@@ -112,55 +215,81 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="379802633544664">
+        <event-block sid="689940292321004">
             <conditions>
-                <condition id="7" name="Cursor is over object" sid="461357224219013" type="Mouse">
-                    <param id="0" name="Object">emeska</param>
-                </condition>
+                <condition id="-18" name="On created" sid="854012772005074" type="Text_input" />
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="832130753712524" type="Player_1_white">
-                    <param id="0" name="Frame number">0</param>
+                <action id="7" name="Set CSS style" sid="411462414488810" type="Text_input">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;200px&quot;</param>
                 </action>
-                <action id="-3" name="Set position" sid="614061020561039" type="Player_1_white">
-                    <param id="0" name="X">347</param>
-                    <param id="1" name="Y">366</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="496106217079959" type="Player_1_white">
-                    <param id="0" name="Opacity">0</param>
+                <action id="7" name="Set CSS style" sid="605754418638925" type="Text_input">
+                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                    <param id="1" name="Value">&quot;CyberpunkWaifus&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="812790530181560">
-            <conditions>
-                <condition id="7" name="Cursor is over object" sid="319925310206979" type="Mouse">
-                    <param id="0" name="Object">horse</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="397847153866284" type="Player_1_white">
-                    <param id="0" name="Frame number">0</param>
-                </action>
-                <action id="-3" name="Set position" sid="724578680008951" type="Player_1_white">
-                    <param id="0" name="X">552</param>
-                    <param id="1" name="Y">365</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="233618584517219" type="Player_1_white">
-                    <param id="0" name="Opacity">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="989370134484709">
-            <conditions>
-                <condition id="7" name="Cursor is over object" sid="147368835659327" type="Mouse">
-                    <param id="0" name="Object">second</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="889284685834550" type="Player_1_white">
-                    <param id="0" name="Opacity">100</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="765340205905390" title="Character locked trigger ">
+            <sub-events>
+                <event-block sid="323525509398492">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="919059883511444" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">duck</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="704369238602205" type="System">
+                            <param id="0" name="Variable">locked</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="384716390855047" type="System">
+                            <param id="0" name="Variable">PLAYER_SELECTION</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="282411269010972">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="136286728431854" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">emeska</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="591655926043575" type="System">
+                            <param id="0" name="Variable">locked</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="418650379973526" type="System">
+                            <param id="0" name="Variable">PLAYER_SELECTION</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="575916616190551">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="508973648099358" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">horse</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="646477883001952" type="System">
+                            <param id="0" name="Variable">locked</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="918882333537956" type="System">
+                            <param id="0" name="Variable">PLAYER_SELECTION</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
