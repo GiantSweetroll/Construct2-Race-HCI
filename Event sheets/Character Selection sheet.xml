@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Character Selection sheet</name>
     <events>
+        <variable comment="Used to store the username of the user" constant="0" name="MY_USERNAME" sid="558387289368357" static="0" type="text"></variable>
         <variable comment="Used to identify the player&apos;s final character selection (this will be used to login and connect to the signalling server)" constant="0" name="PLAYER_SELECTION" sid="512494463320977" static="0" type="number">0</variable>
         <variable comment="Black ( full racist ) " constant="0" name="Player_2" sid="376304647789522" static="0" type="number">0</variable>
         <variable comment="White (no racist) " constant="0" name="Player_1" sid="878046371168948" static="0" type="number">0</variable>
