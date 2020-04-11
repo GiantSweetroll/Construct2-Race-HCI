@@ -9,8 +9,66 @@
         <variable constant="0" name="INSTANCE_NAME" sid="969926405757146" static="0" type="text">default</variable>
         <variable constant="0" name="GAME_NAME" sid="503164373709168" static="0" type="text">indo-racecar</variable>
         <comment>Global variables used for game events</comment>
-        <variable comment="Amount of force applied to the Player object" constant="0" name="VEHICLE_FORCE" sid="762445360987483" static="0" type="number">200</variable>
-        <variable comment="How much can the Player object be rotated" constant="0" name="VEHICLE_ROTATE_ANGLE" sid="317218240619773" static="0" type="number">15</variable>
+        <variable comment="Amount of force applied to the Player object" constant="1" name="VEHICLE_FORCE" sid="762445360987483" static="0" type="number">10</variable>
+        <variable comment="How much force is applied to the Player object upwards" constant="1" name="VEHICLE_FORCE_UPWARDS" sid="317218240619773" static="0" type="number">5</variable>
+        <event-group description="Functions to manag eupdating the LogText object as messages are added." sid="659441807254993" title="Message log">
+            <sub-events>
+                <comment>Function to display log</comment>
+                <event-block sid="364947380847411">
+                    <conditions>
+                        <condition id="0" name="On function" sid="408666876547442" type="Function">
+                            <param id="0" name="Name">&quot;addLog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="472174031766664" type="LogMessages">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>If we are over 20 messages, delete the first (oldest) message</comment>
+                        <event-block sid="882911451531066">
+                            <conditions>
+                                <condition id="7" name="Compare size" sid="775439450886831" type="LogMessages">
+                                    <param id="0" name="Axis">0</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Pop" sid="702844071105524" type="LogMessages">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Rebuild text from array</comment>
+                        <event-block sid="320724495189620">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="583022653077615" type="LogText">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="291366327070498">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="641180195941016" type="LogMessages">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="311191223209190" type="LogText">
+                                    <param id="0" name="Text">LogMessages.CurValue &amp; newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="Manages connecting to the signalling server and joining the room" sid="576943838037911" title="Signaling">
             <sub-events>
                 <comment>On start layout, connect to the signalling server. We also set up which client input values the peers will be using, and sync the Peer object&apos;s position and additional instance variables.</comment>
@@ -65,6 +123,10 @@
                         <condition id="2" name="On connected" sid="849449562705701" type="Multiplayer" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="286910859800141" type="Function">
+                            <param id="0" name="Name">&quot;addLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Connected, logging in...&quot;</param>
+                        </action>
                         <action id="4" name="Log in" sid="764877252059956" type="Multiplayer">
                             <param id="0" name="Alias">MY_USERNAME</param>
                         </action>
@@ -82,6 +144,10 @@
                             <param id="2" name="Room">ROOM_NAME</param>
                             <param id="3" name="Max peers">2</param>
                         </action>
+                        <action id="0" name="Call function" sid="876817516039233" type="Function">
+                            <param id="0" name="Name">&quot;addLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Logged in with alias: &quot; &amp; Multiplayer.MyAlias &amp; &quot; (&quot; &amp; Multiplayer.MyID &amp; &quot;)&quot; &amp; newline &amp; &quot;Joining room...&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>We joined the room: activate either the Host or the Peer group.</comment>
@@ -97,6 +163,10 @@
                                 <condition id="10" name="Is host" sid="502972479323490" type="Multiplayer" />
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="977761400026193" type="Function">
+                                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Joined room as host&quot;</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="859684667374311" type="System">
                                     <param id="0" name="Group name">&quot;Host&quot;</param>
                                     <param id="1" name="State">1</param>
@@ -121,6 +191,10 @@
                                 <condition id="-22" name="Else" sid="488229857780248" type="System" />
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="186918883909165" type="Function">
+                                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Joined room as peer&quot;</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="382086962064254" type="System">
                                     <param id="0" name="Group name">&quot;Peer&quot;</param>
                                     <param id="1" name="State">1</param>
@@ -137,29 +211,74 @@
             <conditions>
                 <condition id="3" name="On disconnected" sid="920903253274730" type="Multiplayer" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="217651280611929" type="Function">
+                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Signalling disconnected&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="463570432328086">
             <conditions>
                 <condition id="1" name="On error" sid="430526850489325" type="Multiplayer" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="383693403588176" type="Function">
+                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Signalling error: &quot; &amp; Multiplayer.ErrorMessage</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="557030394706019">
             <conditions>
                 <condition id="6" name="On left room" sid="112827495655679" type="Multiplayer" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="673794544661700" type="Function">
+                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Signalling: left room&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="524603887099811">
             <conditions>
                 <condition id="14" name="On kicked" sid="159573665605136" type="Multiplayer" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="878423032114626" type="Function">
+                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Kicked (either could not connect to host or host quit)&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-group description="Manages the gameplay and synchronization" sid="264574301002583" title="Game">
             <sub-events>
-                <event-group description="Events that are common to both the host and peers." sid="796914128955514" title="Common" />
+                <event-group description="Events that are common to both the host and peers." sid="796914128955514" title="Common">
+                    <sub-events>
+                        <event-block sid="350332043266820">
+                            <conditions>
+                                <condition id="11" name="On peer connected" sid="919865334347842" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="473239743919546" type="Function">
+                                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&apos;&quot; &amp; Multiplayer.PeerAlias &amp; &quot;&apos; joined&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="954820769693364">
+                            <conditions>
+                                <condition id="13" name="On peer disconnected" sid="693304782216729" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="770023431751508" type="Function">
+                                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&apos;&quot; &amp; Multiplayer.PeerAlias &amp; &quot;&apos; left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="Events specific to the host" inactive="1" sid="765455193004978" title="Host">
                     <sub-events>
                         <comment>As the host, when a peer joins we create a new Player object for them. &apos;Sync object&apos; will then notify all the peers that this object was created. We set the created instance&apos;s peer ID variable to the associated peer. Finally we use the &apos;Associate object&apos; action in the Multiplayer object to tell it that this instance represents that peer.</comment>
@@ -206,10 +325,14 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="0" name="Apply force" sid="690755721206658" type="Player">
-                                            <param id="0" name="Force X">VEHICLE_FORCE</param>
-                                            <param id="1" name="Force Y">0</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="690755721206658" type="Player">
+                                            <param id="0" name="Force">VEHICLE_FORCE</param>
+                                            <param id="1" name="Angle">Player.Angle</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="437104761905810" type="Function">
+                                            <param id="0" name="Name">&quot;setMoving&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.movingAnimation</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -225,31 +348,27 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="538975061691710">
+                                        <event-block sid="367153531482498">
                                             <conditions>
-                                                <condition behavior="Physics" id="1" name="Compare velocity" sid="246005343920618" type="Player">
-                                                    <param id="0" name="Which">0</param>
-                                                    <param id="1" name="Comparison">5</param>
-                                                    <param id="2" name="Value">0</param>
+                                                <condition id="1" name="Is overlapping another object" sid="637879438229062" type="Player">
+                                                    <param id="0" name="Object">map1</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action behavior="Physics" id="0" name="Apply force" sid="647377828915917" type="Player">
-                                                    <param id="0" name="Force X">VEHICLE_FORCE * -1</param>
-                                                    <param id="1" name="Force Y">0</param>
-                                                    <param id="2" name="Image point">0</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
                                         </event-block>
-                                        <comment>If velocity is less than 0, set it to 0 so that the Player stops (cannot go into reverse)</comment>
-                                        <event-block sid="991948857426013">
+                                        <event-block sid="652152463722194">
                                             <conditions>
-                                                <condition id="-22" name="Else" sid="426714338179715" type="System" />
+                                                <condition id="-22" name="Else" sid="701007888161805" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action behavior="Physics" id="15" name="Set velocity" sid="658510133002964" type="Player">
-                                                    <param id="0" name="X component">0</param>
-                                                    <param id="1" name="Y component">0</param>
+                                                <action behavior="Physics" id="2" name="Apply force at angle" sid="741724840333190" type="Player">
+                                                    <param id="0" name="Force">VEHICLE_FORCE * -1</param>
+                                                    <param id="1" name="Angle">Player.Angle</param>
+                                                    <param id="2" name="Image point">2</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="308744189179119" type="Function">
+                                                    <param id="0" name="Name">&quot;setMoving&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.movingAnimation</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -280,8 +399,10 @@
                                                 <condition id="-22" name="Else" sid="458179155481583" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="-18" name="Rotate clockwise" sid="130911647506165" type="Player">
-                                                    <param id="0" name="Degrees">VEHICLE_ROTATE_ANGLE</param>
+                                                <action behavior="Physics" id="0" name="Apply force" sid="130911647506165" type="Player">
+                                                    <param id="0" name="Force X">0</param>
+                                                    <param id="1" name="Force Y">VEHICLE_FORCE_UPWARDS</param>
+                                                    <param id="2" name="Image point">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -312,8 +433,10 @@
                                                 <condition id="-22" name="Else" sid="333917859580355" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="-19" name="Rotate counter-clockwise" sid="836747925149493" type="Player">
-                                                    <param id="0" name="Degrees">VEHICLE_ROTATE_ANGLE</param>
+                                                <action behavior="Physics" id="0" name="Apply force" sid="992595258684665" type="Player">
+                                                    <param id="0" name="Force X">0</param>
+                                                    <param id="1" name="Force Y">-1*VEHICLE_FORCE_UPWARDS</param>
+                                                    <param id="2" name="Image point">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
