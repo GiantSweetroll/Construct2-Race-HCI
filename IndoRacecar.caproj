@@ -980,6 +980,63 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite3" sid="637739905889282">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211553488847798" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\characterS_icon\aseprite\select_button_1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="570237894302616">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="424207000829865" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\characterS_icon\aseprite\select_button1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="311187941927346">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259380347457970" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\characterS_icon\aseprite\select_button1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="330850052697560">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="323719176230314" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="451074253904591">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974442405912806" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\characterS_icon\aseprite\select_button1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="select_Button" sid="771139161498230">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="770129247940514" speed="5">
+                    <frame duration="1" hotspotX="-0.5" hotspotY="-2.07447" original-source="C:\Users\CXaVier\Desktop\characterS_icon\aseprite\select_button_2.png" />
+                    <frame duration="1" hotspotX="-0.5" hotspotY="-2.07447" original-source="C:\Users\CXaVier\Desktop\characterS_icon\aseprite\select_button_1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="select_empty_button" sid="216726210525835">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="733237931345906" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

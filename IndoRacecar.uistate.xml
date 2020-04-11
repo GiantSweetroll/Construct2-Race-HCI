@@ -11,8 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Main Menu</layout>
-        <layout order="1">Character Selection</layout>
-        <event-sheet active="1" order="2">Character Selection sheet</event-sheet>
+        <layout active="1" order="1">Character Selection</layout>
+        <event-sheet order="2">Character Selection sheet</event-sheet>
         <event-sheet order="3">Menu sheet</event-sheet>
         <event-sheet order="4">Game sheet</event-sheet>
     </open-tabs>
@@ -58,5 +58,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/first/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/StartFlag/" />
+        <folder expanded="1" path="animation-folder/FinishFlag/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/select_Button/" />
+        <folder expanded="1" path="animation-folder/select_empty_button/" />
     </folders-expanded>
 </c2uistate>
