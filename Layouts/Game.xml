@@ -4,8 +4,8 @@
     <sid>8873350371196689</sid>
     <event-sheet>Game sheet</event-sheet>
     <size>
-        <width>3840</width>
-        <height>2160</height>
+        <width>1920</width>
+        <height>1080</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -31,6 +31,52 @@
             <instances />
             <effects />
         </layer>
+        <layer name="Log" sid="107597470386808">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="LogText" uid="34">
+                    <properties>
+                        <text>Connecting...</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-24,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>1909</width>
+                        <height>785</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
         <layer name="Ground" sid="564911311397544">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -47,24 +93,19 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="map1" uid="15">
+                <instance type="map2" uid="15">
                     <properties>
-                        <left-margin>16</left-margin>
-                        <right-margin>16</right-margin>
-                        <top-margin>16</top-margin>
-                        <bottom-margin>16</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
                         <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Physics">
                             <properties>
                                 <immovable>Yes</immovable>
                                 <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
+                                <prevent-rotation>Yes</prevent-rotation>
                                 <density>1</density>
                                 <friction>0.5</friction>
                                 <elasticity>0.2</elasticity>
@@ -78,14 +119,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3</x>
-                        <y>1581</y>
+                        <x>1920</x>
+                        <y>804</y>
                         <z>0</z>
-                        <width>3841</width>
-                        <height>576</height>
+                        <width>3838</width>
+                        <height>556</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -119,7 +161,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>52</x>
-                        <y>1757</y>
+                        <y>701</y>
                         <z>0</z>
                         <width>100</width>
                         <height>211</height>
@@ -140,8 +182,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3795</x>
-                        <y>1950</y>
+                        <x>3782</x>
+                        <y>866</y>
                         <z>0</z>
                         <width>100</width>
                         <height>211</height>
@@ -180,7 +222,7 @@
                     </properties>
                     <instance-variables>
                         <idleAnimation>0</idleAnimation>
-                        <movingAnimation>1</movingAnimation>
+                        <movingAnimation>0</movingAnimation>
                         <peerid></peerid>
                         <inputs>0</inputs>
                     </instance-variables>
@@ -199,12 +241,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Wrap">
+                            <properties>
+                                <wrap-to>Layout</wrap-to>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>76</x>
-                        <y>1815</y>
+                        <x>86</x>
+                        <y>750</y>
                         <z>0</z>
                         <width>224</width>
                         <height>113</height>
@@ -219,6 +266,14 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="LogMessages" uid="33">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>
