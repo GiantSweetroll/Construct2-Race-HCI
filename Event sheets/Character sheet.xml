@@ -11,54 +11,55 @@
                         <condition id="0" name="On function" sid="103472616931725" type="Function">
                             <param id="0" name="Name">&quot;setIdle&quot;</param>
                         </condition>
-                        <condition id="1" name="Compare parameter" sid="222087762539309" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="231865772396745" type="Player">
-                            <param id="0" name="Animation">&quot;EsemkaIdle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="359134323167007">
-                    <conditions>
-                        <condition id="0" name="On function" sid="360625829006754" type="Function">
-                            <param id="0" name="Name">&quot;setIdle&quot;</param>
-                        </condition>
-                        <condition id="1" name="Compare parameter" sid="438857568732760" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="953537215856043" type="Player">
-                            <param id="0" name="Animation">&quot;DelmanIdle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="204152621871856">
-                    <conditions>
-                        <condition id="0" name="On function" sid="243581678686440" type="Function">
-                            <param id="0" name="Name">&quot;setIdle&quot;</param>
-                        </condition>
-                        <condition id="1" name="Compare parameter" sid="799629645661912" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="136067080746792" type="Player">
-                            <param id="0" name="Animation">&quot;MotorBebekIdle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="116410109062861">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="368166184426381" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="744236212646231" type="Player">
+                                    <param id="0" name="Animation">&quot;EsemkaIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="908116627350322">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="435698015027250" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="107260705680094" type="Player">
+                                    <param id="0" name="Animation">&quot;DelmanIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="680361908460466">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="150587147813041" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="786342054795694" type="Player">
+                                    <param id="0" name="Animation">&quot;MotorBebekIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Function to set the moving animation.&#x0D;&#x0A;&#x0D;&#x0A;Parameters:&#x0D;&#x0A;Param(0): Accepts integer (0: Esemka, 1: Delman, 2: Motor Bebek)</comment>
                 <event-block sid="107654512006230">
@@ -66,54 +67,55 @@
                         <condition id="0" name="On function" sid="505418484164261" type="Function">
                             <param id="0" name="Name">&quot;setMoving&quot;</param>
                         </condition>
-                        <condition id="1" name="Compare parameter" sid="394259404210118" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="910076235797041" type="Player">
-                            <param id="0" name="Animation">&quot;EsemkaMoving&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="791001254854592">
-                    <conditions>
-                        <condition id="0" name="On function" sid="182534822539919" type="Function">
-                            <param id="0" name="Name">&quot;setMoving&quot;</param>
-                        </condition>
-                        <condition id="1" name="Compare parameter" sid="569734034313543" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="151792338554408" type="Player">
-                            <param id="0" name="Animation">&quot;DelmanMoving&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="268836049667938">
-                    <conditions>
-                        <condition id="0" name="On function" sid="553469707256276" type="Function">
-                            <param id="0" name="Name">&quot;setMoving&quot;</param>
-                        </condition>
-                        <condition id="1" name="Compare parameter" sid="251713984082678" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="248727327269999" type="Player">
-                            <param id="0" name="Animation">&quot;MotorBebekMoving&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="989779752472752">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="319459604688885" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="745911127129910" type="Player">
+                                    <param id="0" name="Animation">&quot;EsemkaMoving&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="332577790707245">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="667552028337355" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="739503788941083" type="Player">
+                                    <param id="0" name="Animation">&quot;DelmanMoving&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="671086761749168">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="321155070620382" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="653963527053587" type="Player">
+                                    <param id="0" name="Animation">&quot;MotorBebekMoving&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
