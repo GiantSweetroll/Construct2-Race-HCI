@@ -4,10 +4,9 @@
     <name>Character Selection sheet</name>
     <events>
         <variable constant="0" name="locked" sid="338558279096045" static="0" type="number">0</variable>
-        <variable comment="Used to store the username of the user" constant="0" name="MY_USERNAME" sid="558387289368357" static="0" type="text"></variable>
+        <variable comment="Used to store the username of the user" constant="0" name="MY_USERNAME" sid="558387289368357" static="0" type="text">defaultname</variable>
         <variable comment="Used to identify the player&apos;s final character selection (this will be used to login and connect to the signalling server)" constant="0" name="PLAYER_SELECTION" sid="512494463320977" static="0" type="number">0</variable>
-        <variable comment="Black ( full racist ) " constant="0" name="Player_2" sid="376304647789522" static="0" type="number">0</variable>
-        <variable comment="White (no racist) " constant="0" name="Player_1" sid="878046371168948" static="0" type="number">0</variable>
+        <comment>Resets the locked status, and initializes the font, ordering the browser to download the font</comment>
         <event-block sid="436130950337470">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="234504889630468" type="System" />
@@ -49,6 +48,52 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="230544535570431" title="InitializeFont">
+            <sub-events>
+                <event-block sid="689940292321004">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="854012772005074" type="Text_input" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set CSS style" sid="411462414488810" type="Text_input">
+                            <param id="0" name="Property name">&quot;font-size&quot;</param>
+                            <param id="1" name="Value">&quot;2.5vw&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="605754418638925" type="Text_input">
+                            <param id="0" name="Property name">&quot;font-family&quot;</param>
+                            <param id="1" name="Value">&quot;CyberpunkWaifus&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="910228161923384" type="Text_input">
+                            <param id="0" name="Property name">&quot;background-color&quot;</param>
+                            <param id="1" name="Value">&quot;rgba(75,85,97,255)&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="488422785467144" type="Text_input">
+                            <param id="0" name="Property name">&quot;border-style&quot;</param>
+                            <param id="1" name="Value">&quot;solid&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="980777928652196" type="Text_input">
+                            <param id="0" name="Property name">&quot;border-width&quot;</param>
+                            <param id="1" name="Value">&quot;0px 0px 2px 0px&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="666910208886002">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="189215069797443" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set web font" sid="838826176881617" type="Text">
+                            <param id="0" name="Family name">&quot;CyberpunkWaifus&quot;</param>
+                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="507595808098020" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="310988322224449" type="Text" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="805712147911056" title="Cursor Over player outline">
             <sub-events>
                 <event-block sid="529536178208330">
@@ -226,46 +271,42 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="689940292321004">
-            <conditions>
-                <condition id="-18" name="On created" sid="854012772005074" type="Text_input" />
-            </conditions>
-            <actions>
-                <action id="7" name="Set CSS style" sid="411462414488810" type="Text_input">
-                    <param id="0" name="Property name">&quot;font-size&quot;</param>
-                    <param id="1" name="Value">&quot;2.5vw&quot;</param>
-                </action>
-                <action id="7" name="Set CSS style" sid="605754418638925" type="Text_input">
-                    <param id="0" name="Property name">&quot;font-family&quot;</param>
-                    <param id="1" name="Value">&quot;CyberpunkWaifus&quot;</param>
-                </action>
-                <action id="7" name="Set CSS style" sid="910228161923384" type="Text_input">
-                    <param id="0" name="Property name">&quot;background-color&quot;</param>
-                    <param id="1" name="Value">&quot;rgba(75,85,97,255)&quot;</param>
-                </action>
-                <action id="7" name="Set CSS style" sid="488422785467144" type="Text_input">
-                    <param id="0" name="Property name">&quot;border-style&quot;</param>
-                    <param id="1" name="Value">&quot;solid&quot;</param>
-                </action>
-                <action id="7" name="Set CSS style" sid="980777928652196" type="Text_input">
-                    <param id="0" name="Property name">&quot;border-width&quot;</param>
-                    <param id="1" name="Value">&quot;0px 0px 2px 0px&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="945412818335981">
-            <conditions>
-                <condition id="2" name="Key is down" sid="434359899953431" type="Keyboard">
-                    <param id="0" name="Key">13</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="639270915587857" type="System">
-                    <param id="0" name="Variable">MY_USERNAME</param>
-                    <param id="1" name="Value">Text_input.Text</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="449603075069419" title="InitializeName">
+            <sub-events>
+                <event-block sid="945412818335981">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="434359899953431" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="639270915587857" type="System">
+                            <param id="0" name="Variable">MY_USERNAME</param>
+                            <param id="1" name="Value">Text_input.Text</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="565464456292154">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="948782329502531" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">select_empty_button</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="536220436715413" type="Text_input">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="195501131496321" type="System">
+                            <param id="0" name="Variable">MY_USERNAME</param>
+                            <param id="1" name="Value">Text_input.Text</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="765340205905390" title="Character locked trigger ">
             <sub-events>
                 <event-block sid="323525509398492">

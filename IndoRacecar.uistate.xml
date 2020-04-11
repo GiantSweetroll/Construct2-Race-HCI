@@ -10,11 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Main Menu</layout>
-        <layout active="1" order="1">Character Selection</layout>
+        <layout active="1" order="0">Main Menu</layout>
+        <layout order="1">Character Selection</layout>
+        <layout order="5">Game</layout>
         <event-sheet order="2">Character Selection sheet</event-sheet>
         <event-sheet order="3">Menu sheet</event-sheet>
         <event-sheet order="4">Game sheet</event-sheet>
+        <event-sheet order="6">Character sheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,12 +32,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/PopupMenu/" />
         <folder expanded="0" path="object-folder/Ground and Vegetation/" />
         <folder expanded="0" path="object-folder/Vehicles/" />
-        <folder expanded="1" path="object-folder/CharacterSelection/" />
+        <folder expanded="0" path="object-folder/CharacterSelection/" />
         <folder expanded="0" path="object-folder/map/" />
+        <folder expanded="1" path="object-folder/game messages/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/StartButtonNew/" />
@@ -56,15 +59,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Player_1_white/" />
         <folder expanded="1" path="animation-folder/second/" />
         <folder expanded="1" path="animation-folder/first/" />
+        <folder expanded="1" path="animation-folder/map2/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/StartFlag/" />
         <folder expanded="1" path="animation-folder/FinishFlag/" />
-        <folder expanded="1" path="animation-folder/Sprite3/" />
-        <folder expanded="1" path="animation-folder/Sprite4/" />
-        <folder expanded="1" path="animation-folder/Sprite5/" />
-        <folder expanded="1" path="animation-folder/Sprite6/" />
-        <folder expanded="1" path="animation-folder/Sprite7/" />
         <folder expanded="1" path="animation-folder/select_Button/" />
         <folder expanded="1" path="animation-folder/select_empty_button/" />
     </folders-expanded>
