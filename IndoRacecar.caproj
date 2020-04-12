@@ -27,8 +27,8 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
-        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -292,6 +292,19 @@
                 </behaviors>
                 <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\AsphaltTile.png" />
             </object-type>
+            <object-type name="Border" sid="526525536236019">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="644253774408830">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="256093581345074" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Vehicles">
             <object-type name="Player" sid="156566937575390">
@@ -306,8 +319,8 @@
                     <behavior-type name="Physics" sid="129956147177379">
                         <behavior id="Physics" />
                     </behavior-type>
-                    <behavior-type name="Wrap" sid="669796134931849">
-                        <behavior id="wrap" />
+                    <behavior-type name="ScrollTo" sid="964833555350080">
+                        <behavior id="scrollto" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
