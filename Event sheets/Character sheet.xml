@@ -119,5 +119,35 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="301830505599379" title="Player Force Calculation">
+            <sub-events>
+                <comment>Function to calculate the force of the Player&apos;s vehicle going forward</comment>
+                <event-block sid="118312085668891">
+                    <conditions>
+                        <condition id="0" name="On function" sid="271679869973399" type="Function">
+                            <param id="0" name="Name">&quot;calculateForce&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="186459942699462" type="Function">
+                            <param id="0" name="Value">VEHICLE_FORCE - terrain_force_reduction</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Function to calculate the force of the Player&apos;s vehicle going upwards</comment>
+                <event-block sid="631679991854132">
+                    <conditions>
+                        <condition id="0" name="On function" sid="691050954388488" type="Function">
+                            <param id="0" name="Name">&quot;calculateForceUpwards&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="902768698235180" type="Function">
+                            <param id="0" name="Value">VEHICLE_FORCE_UPWARDS - terrain_force_reduction</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
