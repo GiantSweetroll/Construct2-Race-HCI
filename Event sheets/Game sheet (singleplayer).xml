@@ -8,6 +8,7 @@
         <variable comment="Indicator if the game has finished" constant="0" name="finished" sid="392121217228079" static="0" type="number">0</variable>
         <variable comment="Used to keep track of how long the player has been playing on the map" constant="0" name="timer" sid="357399775604295" static="0" type="number">0</variable>
         <variable comment="Indicator if a random event is already in progress" constant="0" name="randomEventRunning" sid="407178735813083" static="0" type="number">0</variable>
+        <variable comment="variable to identify that the flood should go down" constant="0" name="floodReverse" sid="517704121229718" static="0" type="number">0</variable>
         <event-group description="" sid="903638005397133" title="Initialization">
             <sub-events>
                 <event-block sid="449259786209480">
@@ -19,13 +20,17 @@
                             <param id="0" name="Variable">timer</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-16" name="Set opacity" sid="199695569516120" type="Flood">
+                            <param id="0" name="Opacity">50</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="Manages random events" sid="755444636785502" title="Random Events">
             <sub-events>
-                <variable constant="0" name="randomEvent" sid="204886377227959" static="0" type="number">0</variable>
+                <variable comment="variable to set which random event to fire" constant="0" name="randomEventType" sid="945365526528682" static="0" type="number">0</variable>
+                <variable comment="variable to identify if a random event should be fired" constant="0" name="randomEvent" sid="204886377227959" static="0" type="number">0</variable>
                 <comment>Every x seconds, randomize if a random event will trigger</comment>
                 <event-block sid="336233252941088">
                     <conditions>
@@ -64,12 +69,45 @@
                                     <param id="0" name="Variable">randomEventRunning</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="489927837026965" type="Smog">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="-9" name="Set value" sid="194798096705739" type="System">
+                                    <param id="0" name="Variable">randomEventType</param>
+                                    <param id="1" name="Value">int(random(0, 2))</param>
                                 </action>
-                                <action behavior="Fade" id="0" name="Restart fade" sid="465126859159813" type="Smog" />
-                                <action behavior="Fade2" id="1" name="Start fade" sid="880285152469702" type="Smog" />
                             </actions>
+                            <sub-events>
+                                <comment>Check for what kind of random event to fire.&#x0D;&#x0A;&#x0D;&#x0A;0 = Smog&#x0D;&#x0A;1 = Flood</comment>
+                                <event-block sid="818559196565365">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="560133877441847" type="System">
+                                            <param id="0" name="Variable">randomEventType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="209678589109741" type="Smog">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="873046086866555" type="Smog" />
+                                        <action behavior="Fade2" id="1" name="Start fade" sid="899308221839821" type="Smog" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="223961952701749">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="136615804475942" type="System">
+                                            <param id="0" name="Variable">randomEventType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="195949217659318" type="System">
+                                            <param id="0" name="Group name">&quot;Flood&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -84,6 +122,96 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-group description="Controls the flood random event logic" inactive="1" sid="892784841226373" title="Flood">
+                    <sub-events>
+                        <comment>Make water go up</comment>
+                        <event-block sid="373269577947185">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="289468331196142" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="553845014439137">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="780557175441581" type="System">
+                                            <param id="0" name="First value">Flood.Y</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">map2.Y +(map2.Height/2)</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="671873716746309" type="System">
+                                            <param id="0" name="Variable">floodReverse</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="558115490296292" type="Flood">
+                                            <param id="0" name="Y">Flood.Y - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="737017768972428">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="827341863676173" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="439027944408185" type="System">
+                                            <param id="0" name="Seconds">5</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="489892275193497" type="System">
+                                            <param id="0" name="Variable">floodReverse</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>Make water go down</comment>
+                                        <event-block sid="655090839848538">
+                                            <conditions>
+                                                <condition id="-1" name="Every tick" sid="781539562093843" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="396220280197849">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="354886518985269" type="System">
+                                                            <param id="0" name="First value">Flood.Y - Flood.Height</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Second value">LayoutHeight</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-2" name="Set Y" sid="682913926748668" type="Flood">
+                                                            <param id="0" name="Y">Flood.Y + 1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="303267334796910">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="638757617032334" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="470820011193211" type="System">
+                                                            <param id="0" name="Variable">randomEventRunning</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="854876199599722" type="System">
+                                                            <param id="0" name="Variable">floodReverse</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-12" name="Set group active" sid="484611730583721" type="System">
+                                                            <param id="0" name="Group name">&quot;Flood&quot;</param>
+                                                            <param id="1" name="State">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="Manages the logic for the player&apos;s movement" sid="231594897478263" title="Movement">

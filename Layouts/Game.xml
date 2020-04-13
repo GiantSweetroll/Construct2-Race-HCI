@@ -233,11 +233,11 @@
                         <x>1920</x>
                         <y>804</y>
                         <z>0</z>
-                        <width>3838</width>
-                        <height>556</height>
+                        <width>3842.997314453</width>
+                        <height>362.944458008</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.228723407</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -364,6 +364,28 @@
                         <z>0</z>
                         <width>3828</width>
                         <height>756</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Flood" uid="36">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1921</x>
+                        <y>1228</y>
+                        <z>0</z>
+                        <width>3828</width>
+                        <height>279</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

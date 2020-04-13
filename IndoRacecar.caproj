@@ -849,31 +849,31 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="215699773179583" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\BigMap.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.228723" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\BigMap.png">
                             <collision-poly>
-                                <point x="0.0924479" y="0.489583" />
-                                <point x="0.137044" y="0.5" />
-                                <point x="0.173015" y="0.588541" />
-                                <point x="0.213135" y="0.799478" />
-                                <point x="0.249472" y="0.811197" />
-                                <point x="0.298239" y="0.639973" />
-                                <point x="0.351268" y="0.609917" />
-                                <point x="0.38885" y="0.469889" />
-                                <point x="0.436287" y="0.441542" />
-                                <point x="0.457683" y="0.621527" />
-                                <point x="0.479818" y="0.65625" />
-                                <point x="0.502604" y="0.732638" />
-                                <point x="0.60905" y="0.444445" />
-                                <point x="0.743653" y="0.362848" />
-                                <point x="0.801432" y="0.38889" />
-                                <point x="0.821614" y="0.489583" />
-                                <point x="0.878581" y="0.489584" />
-                                <point x="0.913248" y="0.734375" />
-                                <point x="0.944906" y="0.794271" />
-                                <point x="1" y="0.803386" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0.5" />
+                                <point x="0.0929779" y="0.212765" />
+                                <point x="0.137516" y="0.228723" />
+                                <point x="0.17344" y="0.364361" />
+                                <point x="0.213508" y="0.687498" />
+                                <point x="0.249798" y="0.705451" />
+                                <point x="0.298501" y="0.44315" />
+                                <point x="0.351461" y="0.397107" />
+                                <point x="0.388995" y="0.182596" />
+                                <point x="0.43637" y="0.139171" />
+                                <point x="0.457738" y="0.414892" />
+                                <point x="0.479844" y="0.468085" />
+                                <point x="0.502601" y="0.585105" />
+                                <point x="0.608908" y="0.143618" />
+                                <point x="0.743336" y="0.0186182" />
+                                <point x="0.80104" y="0.0585123" />
+                                <point x="0.821196" y="0.212765" />
+                                <point x="0.878089" y="0.212767" />
+                                <point x="0.912711" y="0.587766" />
+                                <point x="0.944327" y="0.679522" />
+                                <point x="0.99935" y="0.693485" />
+                                <point x="0.99935" y="0.994681" />
+                                <point x="0.000650195" y="0.994681" />
+                                <point x="0.000650195" y="0.228723" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -901,6 +901,14 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="553863673562248" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Flood" sid="987531881571833">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525435133107124" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
