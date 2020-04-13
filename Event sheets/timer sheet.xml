@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>timer sheet</name>
+    <events>
+        <event-group description="" sid="670028140874329" title="Timer">
+            <sub-events>
+                <comment>Function to convert seconds into hh:mm:ss format</comment>
+                <variable constant="0" name="currentTimer" sid="183470753177321" static="0" type="number">0</variable>
+                <event-block sid="842865881402953">
+                    <conditions>
+                        <condition id="0" name="On function" sid="402694173418625" type="Function">
+                            <param id="0" name="Name">&quot;getTime&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="380008733505934" type="System">
+                            <param id="0" name="Variable">currentTimer</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="sec" sid="169561602491897" static="0" type="text"></variable>
+                        <variable constant="0" name="minutes" sid="190642503624549" static="0" type="text"></variable>
+                        <variable constant="0" name="hours" sid="924780735748329" static="0" type="text"></variable>
+                        <comment>Convert seconds to minutes</comment>
+                        <event-block sid="219643649429208">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="585410069503698" type="System">
+                                    <param id="0" name="Variable">sec</param>
+                                    <param id="1" name="Value">str(int(currentTimer % 60))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="576537712800760" type="System">
+                                    <param id="0" name="Variable">currentTimer</param>
+                                    <param id="1" name="Value">int(currentTimer / 60)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="324867151174966">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="893822753740133" type="System">
+                                            <param id="0" name="First value">len(sec)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="625803832595161" type="System">
+                                            <param id="0" name="Variable">sec</param>
+                                            <param id="1" name="Value">&quot;0&quot; &amp;sec</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Convert minutes to hours</comment>
+                        <event-block sid="568297866275564">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="155196715642386" type="System">
+                                    <param id="0" name="Variable">minutes</param>
+                                    <param id="1" name="Value">str(int(currentTimer % 60))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="737191463206257" type="System">
+                                    <param id="0" name="Variable">currentTimer</param>
+                                    <param id="1" name="Value">int(currentTimer / 60)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="168830557803776">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="450831023993564" type="System">
+                                            <param id="0" name="First value">len(minutes)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="502295959990547" type="System">
+                                            <param id="0" name="Variable">minutes</param>
+                                            <param id="1" name="Value">&quot;0&quot; &amp;minutes</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Validate hours</comment>
+                        <event-block sid="185918902066619">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="452923250411332" type="System">
+                                    <param id="0" name="Variable">hours</param>
+                                    <param id="1" name="Value">str(int(currentTimer))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="832801567045977">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="101819344313538" type="System">
+                                            <param id="0" name="First value">len(hours)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="311868749122873" type="System">
+                                            <param id="0" name="Variable">hours</param>
+                                            <param id="1" name="Value">&quot;0&quot; &amp;hours</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Putting them together</comment>
+                        <event-block sid="988726853323097">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="159174965951052" type="Function">
+                                    <param id="0" name="Value">hours &amp; &quot;:&quot; &amp; minutes &amp; &quot;:&quot; &amp; sec</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
