@@ -1104,12 +1104,14 @@
         <layout>Victory Screen.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Game sheet.xml</event-sheet>
+        <event-sheet>Game sheet (multiplayer).xml</event-sheet>
         <event-sheet>Menu sheet.xml</event-sheet>
         <event-sheet>Character Selection sheet.xml</event-sheet>
         <event-sheet>Victory Screen sheet.xml</event-sheet>
         <event-sheet>Terrain Generation sheet.xml</event-sheet>
         <event-sheet>Character sheet.xml</event-sheet>
+        <event-sheet>Game sheet (singleplayer).xml</event-sheet>
+        <event-sheet>timer sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="4" />
