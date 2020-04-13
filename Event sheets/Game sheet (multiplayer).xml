@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game sheet (multiplayer)</name>
+    <events>
+        <include>Character sheet</include>
+        <comment>Global variables used to connect to the appropriate game room</comment>
+        <variable constant="0" name="ROOM_NAME" sid="183354296047805" static="0" type="text">main</variable>
+        <variable constant="0" name="INSTANCE_NAME" sid="969926405757146" static="0" type="text">default</variable>
+        <variable constant="0" name="GAME_NAME" sid="503164373709168" static="0" type="text">indo-racecar</variable>
+        <comment>Global variables used for game events</comment>
+        <variable comment="Amount of force applied to the Player object" constant="1" name="VEHICLE_FORCE" sid="762445360987483" static="0" type="number">10</variable>
+        <variable comment="How much force is applied to the Player object upwards" constant="1" name="VEHICLE_FORCE_UPWARDS" sid="317218240619773" static="0" type="number">5</variable>
+        <event-group description="Functions to manag eupdating the LogText object as messages are added." sid="659441807254993" title="Message log">
+            <sub-events>
+                <comment>Function to display log</comment>
+                <event-block sid="364947380847411">
+                    <conditions>
+                        <condition id="0" name="On function" sid="408666876547442" type="Function">
+                            <param id="0" name="Name">&quot;addLog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="472174031766664" type="LogMessages">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>If we are over 20 messages, delete the first (oldest) message</comment>
+                        <event-block sid="882911451531066">
+                            <conditions>
+                                <condition id="7" name="Compare size" sid="775439450886831" type="LogMessages">
+                                    <param id="0" name="Axis">0</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Pop" sid="702844071105524" type="LogMessages">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Rebuild text from array</comment>
+                        <event-block sid="320724495189620">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="583022653077615" type="LogText">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="291366327070498">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="641180195941016" type="LogMessages">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="694419782166379">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="318335781687395" type="System">
+                                            <param id="0" name="First value">LogMessages.CurValue</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="972088386486957" type="LogText">
+                                            <param id="0" name="Text">LogMessages.CurValue &amp; newline</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Manages connecting to the signalling server and joining the room" sid="576943838037911" title="Signaling">
+            <sub-events>
+                <comment>On start layout, connect to the signalling server. We also set up which client input values the peers will be using, and sync the Peer object&apos;s position and additional instance variables.</comment>
+                <event-block sid="169993040856886">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="153813874882320" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="15" name="Add client input value" sid="194385305370269" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;inputs&quot;</param>
+                            <param id="1" name="Precision">3</param>
+                            <param id="2" name="Interpolation">0</param>
+                        </action>
+                        <action id="15" name="Add client input value" sid="519761090601443" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;idle&quot;</param>
+                            <param id="1" name="Precision">3</param>
+                            <param id="2" name="Interpolation">0</param>
+                        </action>
+                        <action id="15" name="Add client input value" sid="251207581561635" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;moving&quot;</param>
+                            <param id="1" name="Precision">3</param>
+                            <param id="2" name="Interpolation">0</param>
+                        </action>
+                        <action id="11" name="Sync object" sid="618444744379599" type="Multiplayer">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Data">3</param>
+                            <param id="2" name="Precision">2</param>
+                            <param id="3" name="Bandwidth">0</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="878683906735790" type="Multiplayer">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Instance variable">Player|idleAnimation</param>
+                            <param id="2" name="Precision">3</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;idle&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="536476702676332" type="Multiplayer">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Instance variable">Player|movingAnimation</param>
+                            <param id="2" name="Precision">3</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;moving&quot;</param>
+                        </action>
+                        <action id="1" name="Connect" sid="439197921550293" type="Multiplayer">
+                            <param id="0" name="Server">&quot;wss://multiplayer.scirra.com&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>When connected, request to log in</comment>
+                <event-block sid="687057312190641">
+                    <conditions>
+                        <condition id="2" name="On connected" sid="849449562705701" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="286910859800141" type="Function">
+                            <param id="0" name="Name">&quot;addLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Connected, logging in...&quot;</param>
+                        </action>
+                        <action id="4" name="Log in" sid="764877252059956" type="Multiplayer">
+                            <param id="0" name="Alias">MY_USERNAME</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>When logged in, request to join the room.</comment>
+                <event-block sid="394067691848154">
+                    <conditions>
+                        <condition id="4" name="On logged in" sid="646111067596382" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Join room" sid="466028126351864" type="Multiplayer">
+                            <param id="0" name="Game">GAME_NAME</param>
+                            <param id="1" name="Instance">INSTANCE_NAME</param>
+                            <param id="2" name="Room">ROOM_NAME</param>
+                            <param id="3" name="Max peers">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="876817516039233" type="Function">
+                            <param id="0" name="Name">&quot;addLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Logged in with alias: &quot; &amp; Multiplayer.MyAlias &amp; &quot; (&quot; &amp; Multiplayer.MyID &amp; &quot;)&quot; &amp; newline &amp; &quot;Joining room...&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>We joined the room: activate either the Host or the Peer group.</comment>
+                <event-block sid="947000657351300">
+                    <conditions>
+                        <condition id="5" name="On joined room" sid="707030469113083" type="Multiplayer" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>As the host, we associate the existing Player object in the layout as our own player. We need to associate its peer id to our multiplayer id and tell the Multiplayer object thus. We also set our vehicle to where the Start Flag is.</comment>
+                        <event-block sid="246184687731058">
+                            <conditions>
+                                <condition id="10" name="Is host" sid="502972479323490" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="977761400026193" type="Function">
+                                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Joined room as host&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="859684667374311" type="System">
+                                    <param id="0" name="Group name">&quot;Host&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="814597500860035" type="Player">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Value">Multiplayer.MyID</param>
+                                </action>
+                                <action id="13" name="Associate object with peer" sid="189822982082826" type="Multiplayer">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="Peer ID">Multiplayer.MyID</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="428961146621713" type="Player">
+                                    <param id="0" name="X">StartFlag.X</param>
+                                    <param id="1" name="Y">StartFlag.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>When not the host, the Player object in the layout is destroyed. &apos;Sync object&apos; will create the Player object for ourselves and it will be associated then in the Peer group</comment>
+                        <event-block sid="211915619419817">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="488229857780248" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="186918883909165" type="Function">
+                                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Joined room as peer&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="382086962064254" type="System">
+                                    <param id="0" name="Group name">&quot;Peer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="663028915303075" type="Player" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Error and disconnect handling</comment>
+        <event-block sid="538023213918215">
+            <conditions>
+                <condition id="3" name="On disconnected" sid="920903253274730" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="217651280611929" type="Function">
+                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Signalling disconnected&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="463570432328086">
+            <conditions>
+                <condition id="1" name="On error" sid="430526850489325" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="383693403588176" type="Function">
+                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Signalling error: &quot; &amp; Multiplayer.ErrorMessage</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="557030394706019">
+            <conditions>
+                <condition id="6" name="On left room" sid="112827495655679" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="673794544661700" type="Function">
+                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Signalling: left room&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="524603887099811">
+            <conditions>
+                <condition id="14" name="On kicked" sid="159573665605136" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="878423032114626" type="Function">
+                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Kicked (either could not connect to host or host quit)&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="Manages the gameplay and synchronization" sid="264574301002583" title="Game">
+            <sub-events>
+                <event-group description="Events specific to peers (i.e. non-host users)" inactive="1" sid="736196256727978" title="Peer">
+                    <sub-events>
+                        <comment>When a Peer is created from &apos;Sync object&apos;, Multiplayer.PeerID has the ID of the peer that the object represents. This must be stored in an instance variable so we can later identify which peer the object represents.</comment>
+                        <event-block sid="811061167383122">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="906622773207895" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="565776537608219" type="Player">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Value">Multiplayer.PeerID</param>
+                                </action>
+                                <action id="13" name="Associate object with peer" sid="529858256314569" type="Multiplayer">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="Peer ID">Multiplayer.PeerID</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>If the peer that is created represents the local player, enable local input prediction for it. This means instead of being locked to whatever position it is on the host, it can start to move around. However as it moves it will correct its position if it starts to deviate from where it is on the host, so it&apos;s important both the peer and the host move it in exactly the same way.</comment>
+                                <event-block sid="157045186951509">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="922356511598719" type="Player">
+                                            <param id="0" name="Instance variable">peerid</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Multiplayer.MyID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="16" name="Enable local input prediction" sid="143617328898577" type="Multiplayer">
+                                            <param id="0" name="Object">Player</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>&apos;On client update&apos; triggers when the Multiplayer object is about to send our inputs to the host, so we need to update them. To save bandwidth, we use an 8-bit value in the &apos;inputs&apos; instance variable. We store use four controls - arrow keys - represented as four bits in the 8-bit input number. 0 means not pressed and 1 means pressed. The four bits we use are:&#x0D;&#x0A;0 = forward&#x0D;&#x0A;1 = rotate clockwise&#x0D;&#x0A;2 = reverse&#x0D;&#x0A;3 = rotate counter-clockwise</comment>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="485151718329810">
+                            <conditions>
+                                <condition id="17" name="On client update" sid="272803398155209" type="Multiplayer" />
+                                <condition id="-7" name="Compare instance variable" sid="901304960415118" type="Player">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>W or Up arrow key is used to accelerate the Player object by applying force to the right</comment>
+                                <event-block any="1" sid="307074120416111">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="349149692566117" type="Keyboard">
+                                            <param id="0" name="Key">87</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="264963379630774" type="Keyboard">
+                                            <param id="0" name="Key">38</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="779924175526623" type="Player">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 0, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>S or Down arrow key is used to deaccelerate the Player object by applying force to the left</comment>
+                                <event-block any="1" sid="138586725223663">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="858503278583419" type="Keyboard">
+                                            <param id="0" name="Key">83</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="960840704511272" type="Keyboard">
+                                            <param id="0" name="Key">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="908893973789129" type="Player">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 2, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>D or Right arrow key is used to allow the player to rotate their vehicle clockwise</comment>
+                                <event-block any="1" sid="499441047850207">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="393691945744905" type="Keyboard">
+                                            <param id="0" name="Key">68</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="550016821700963" type="Keyboard">
+                                            <param id="0" name="Key">38</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="747398200159738" type="Player">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 1, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>A or Left arrow key is used to allow the player to rotate their vehicle counter-clockwise</comment>
+                                <event-block any="1" sid="702827799102294">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="379904418445753" type="Keyboard">
+                                            <param id="0" name="Key">65</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="346397081540405" type="Keyboard">
+                                            <param id="0" name="Key">37</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="146006122489977" type="Player">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 3, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>After we&apos;ve updated all the bits in the instance variable, set the client input state to the resulting value.</comment>
+                                <event-block sid="355655143371996">
+                                    <conditions />
+                                    <actions>
+                                        <action id="14" name="Set client state" sid="842693185215668" type="Multiplayer">
+                                            <param id="0" name="Tag">&quot;inputs&quot;</param>
+                                            <param id="1" name="Value">Player.inputs</param>
+                                        </action>
+                                        <action id="14" name="Set client state" sid="195448879361160" type="Multiplayer">
+                                            <param id="0" name="Tag">&quot;idle&quot;</param>
+                                            <param id="1" name="Value">Player.idleAnimation</param>
+                                        </action>
+                                        <action id="14" name="Set client state" sid="646342243304110" type="Multiplayer">
+                                            <param id="0" name="Tag">&quot;moving&quot;</param>
+                                            <param id="1" name="Value">Player.movingAnimation</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="712568167941764">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="209134454912044" type="Player">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="516985503215493">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="956059219271187" type="System">
+                                            <param id="0" name="First value">getbit(Player.inputs, 0)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="289288754354560" type="Player">
+                                            <param id="0" name="Force">VEHICLE_FORCE</param>
+                                            <param id="1" name="Angle">Player.Angle</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="249129412080135" type="Function">
+                                            <param id="0" name="Name">&quot;setMoving&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.movingAnimation</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="672487090793155">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="652086602916138" type="System">
+                                            <param id="0" name="First value">getbit(Player.inputs, 1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="0" name="Apply force" sid="945676295074773" type="Player">
+                                            <param id="0" name="Force X">0</param>
+                                            <param id="1" name="Force Y">VEHICLE_FORCE_UPWARDS</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="480880604893391">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="253090706732614" type="System">
+                                            <param id="0" name="First value">getbit(Player.inputs, 2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="218190970801030" type="Player">
+                                            <param id="0" name="Force">VEHICLE_FORCE * -1</param>
+                                            <param id="1" name="Angle">Player.Angle</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="211724877917501" type="Function">
+                                            <param id="0" name="Name">&quot;setMoving&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.movingAnimation</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="856438216469512">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="443266844267261" type="System">
+                                            <param id="0" name="First value">getbit(Player.inputs, 3)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="0" name="Apply force" sid="663242784436823" type="Player">
+                                            <param id="0" name="Force X">0</param>
+                                            <param id="1" name="Force Y">-1*VEHICLE_FORCE_UPWARDS</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="Events specific to the host" inactive="1" sid="765455193004978" title="Host">
+                    <sub-events>
+                        <comment>As the host, when a peer joins we create a new Player object for them. &apos;Sync object&apos; will then notify all the peers that this object was created. We set the created instance&apos;s peer ID variable to the associated peer. Finally we use the &apos;Associate object&apos; action in the Multiplayer object to tell it that this instance represents that peer.</comment>
+                        <event-block sid="787423749515187">
+                            <conditions>
+                                <condition id="11" name="On peer connected" sid="142741371800776" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="272760075771113" type="System">
+                                    <param id="0" name="Object to create">Player</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">StartFlag.X</param>
+                                    <param id="3" name="Y">StartFlag.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="569921718956311" type="Player">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Value">Multiplayer.PeerID</param>
+                                </action>
+                                <action id="13" name="Associate object with peer" sid="190549908627959" type="Multiplayer">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="Peer ID">Multiplayer.PeerID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>As the host, we can control our own object directly. We do not need to send the input state anywhere or worry about input prediction; as the host we run the authoritative version of the game. Therefore unlike with peers we can use keyboard and mouse input directly.</comment>
+                        <event-block sid="711851109482096">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="145131531226378" type="Player">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>W or Up arrow key is used to accelerate the Player object by applying force to the right</comment>
+                                <event-block any="1" sid="517980070079905">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="104831247058561" type="Keyboard">
+                                            <param id="0" name="Key">87</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="278407237106883" type="Keyboard">
+                                            <param id="0" name="Key">38</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="690755721206658" type="Player">
+                                            <param id="0" name="Force">VEHICLE_FORCE</param>
+                                            <param id="1" name="Angle">Player.Angle</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="437104761905810" type="Function">
+                                            <param id="0" name="Name">&quot;setMoving&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.movingAnimation</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>S or Down arrow key is used to deaccelerate the Player object by applying force to the left</comment>
+                                <event-block any="1" sid="308071266275466">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="123621397096107" type="Keyboard">
+                                            <param id="0" name="Key">83</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="327934852674683" type="Keyboard">
+                                            <param id="0" name="Key">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="494414981420181" type="Player">
+                                            <param id="0" name="Force">VEHICLE_FORCE * -1</param>
+                                            <param id="1" name="Angle">Player.Angle</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="199001539819002" type="Function">
+                                            <param id="0" name="Name">&quot;setMoving&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.movingAnimation</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>D or Right arrow key is used to allow the player to rotate their vehicle clockwise</comment>
+                                <event-block any="1" sid="826615492328157">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="642704881109362" type="Keyboard">
+                                            <param id="0" name="Key">68</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="967493288338140" type="Keyboard">
+                                            <param id="0" name="Key">39</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="0" name="Apply force" sid="818071319482002" type="Player">
+                                            <param id="0" name="Force X">0</param>
+                                            <param id="1" name="Force Y">VEHICLE_FORCE_UPWARDS</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>A or Left arrow key is used to allow the player to rotate their vehicle counter-clockwise</comment>
+                                <event-block any="1" sid="649852809097368">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="727234511598396" type="Keyboard">
+                                            <param id="0" name="Key">65</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="878373158386904" type="Keyboard">
+                                            <param id="0" name="Key">37</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="0" name="Apply force" sid="699681045889720" type="Player">
+                                            <param id="0" name="Force X">0</param>
+                                            <param id="1" name="Force Y">-1*VEHICLE_FORCE_UPWARDS</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>As host we are also responsible for moving each peer. Now that we have updated the &apos;inputs&apos; variable, we can simulate controls for the player depending on what their current inputs are. Since the host has the authoritative version of the game, this is their &quot;true&quot; movement; the peers will be moving themselves immediately, but if there is a discrepency, the host takes precedent and the peer must correct its own position to match that of the host.</comment>
+                        <event-block sid="815447158923752">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="198252832126071" type="Player">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="152776344244739" type="System">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="854880609825686" type="Player">
+                                    <param id="0" name="Instance variable">idleAnimation</param>
+                                    <param id="1" name="Value">Multiplayer.PeerState(Player.peerid, &quot;idle&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="580725971354704" type="Player">
+                                    <param id="0" name="Instance variable">movingAnimation</param>
+                                    <param id="1" name="Value">Multiplayer.PeerState(Player.peerid, &quot;moving&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="854143059938733" type="Player">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">Multiplayer.PeerState(Player.peerid, &quot;inputs&quot;)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>As host, we also need to update all the other players to reflect what they are doing. Therefore we iterate all peers who are *not* our own player, and update their instance variables based on their latest received inputs (from the PeerState expression).</comment>
+                                <event-block sid="423323352643652">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="238631051962811" type="System">
+                                            <param id="0" name="First value">getbit(Player.inputs, 0)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="505845815962441" type="Player">
+                                            <param id="0" name="Force">VEHICLE_FORCE</param>
+                                            <param id="1" name="Angle">Player.Angle</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="736624433965219" type="Function">
+                                            <param id="0" name="Name">&quot;setMoving&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.movingAnimation</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="256761907414998">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="401164106465039" type="System">
+                                            <param id="0" name="First value">getbit(Player.inputs, 1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="0" name="Apply force" sid="649292360427887" type="Player">
+                                            <param id="0" name="Force X">0</param>
+                                            <param id="1" name="Force Y">VEHICLE_FORCE_UPWARDS</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="737011635255369">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="595872369027021" type="System">
+                                            <param id="0" name="First value">getbit(Player.inputs, 2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="514534504465856" type="Player">
+                                            <param id="0" name="Force">VEHICLE_FORCE * -1</param>
+                                            <param id="1" name="Angle">Player.Angle</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="732417217354944" type="Function">
+                                            <param id="0" name="Name">&quot;setMoving&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.movingAnimation</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="884773361703730">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="742579791457734" type="System">
+                                            <param id="0" name="First value">getbit(Player.inputs, 3)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="0" name="Apply force" sid="389695600970817" type="Player">
+                                            <param id="0" name="Force X">0</param>
+                                            <param id="1" name="Force Y">-1*VEHICLE_FORCE_UPWARDS</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="Events that are common to both the host and peers." sid="796914128955514" title="Common">
+                    <sub-events>
+                        <event-block sid="350332043266820">
+                            <conditions>
+                                <condition id="11" name="On peer connected" sid="919865334347842" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="473239743919546" type="Function">
+                                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&apos;&quot; &amp; Multiplayer.PeerAlias &amp; &quot;&apos; joined&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="954820769693364">
+                            <conditions>
+                                <condition id="13" name="On peer disconnected" sid="693304782216729" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="770023431751508" type="Function">
+                                    <param id="0" name="Name">&quot;addLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&apos;&quot; &amp; Multiplayer.PeerAlias &amp; &quot;&apos; left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="319173780895718">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="768410368382774" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="111604843869274" type="Player">
+                                    <param id="0" name="Layer">&quot;Player&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

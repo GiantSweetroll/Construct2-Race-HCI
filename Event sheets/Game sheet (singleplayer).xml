@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game sheet (singleplayer)</name>
+    <events>
+        <include>timer sheet</include>
+        <include>Character sheet</include>
+        <variable constant="0" name="timer" sid="357399775604295" static="0" type="number">0</variable>
+        <event-group description="" sid="231594897478263" title="Movement">
+            <sub-events>
+                <comment>W or Up arrow key is used to accelerate the Player object by applying force to the right</comment>
+                <event-block any="1" sid="250455436510950">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="193621803579516" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="909958609667417" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="2" name="Apply force at angle" sid="955739301379152" type="Player">
+                            <param id="0" name="Force">VEHICLE_FORCE</param>
+                            <param id="1" name="Angle">Player.Angle</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="680284169650762" type="Function">
+                            <param id="0" name="Name">&quot;setMoving&quot;</param>
+                            <param id="1" name="Parameter {n}">Player.movingAnimation</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>S or Down arrow key is used to deaccelerate the Player object by applying force to the left</comment>
+                <event-block any="1" sid="833151635601619">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="955874150679859" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="487630642824265" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="2" name="Apply force at angle" sid="414795356094538" type="Player">
+                            <param id="0" name="Force">VEHICLE_FORCE * -1</param>
+                            <param id="1" name="Angle">Player.Angle</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="687431733256086" type="Function">
+                            <param id="0" name="Name">&quot;setMoving&quot;</param>
+                            <param id="1" name="Parameter {n}">Player.movingAnimation</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>D or Right arrow key is used to allow the player to rotate their vehicle clockwise</comment>
+                <event-block any="1" sid="378716525530293">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="874558689586651" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="553081361602609" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="0" name="Apply force" sid="736364075560935" type="Player">
+                            <param id="0" name="Force X">0</param>
+                            <param id="1" name="Force Y">VEHICLE_FORCE_UPWARDS</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>A or Left arrow key is used to allow the player to rotate their vehicle counter-clockwise</comment>
+                <event-block any="1" sid="547460979579921">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="762823797205394" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="610482286906199" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="0" name="Apply force" sid="449213631508517" type="Player">
+                            <param id="0" name="Force X">0</param>
+                            <param id="1" name="Force Y">-1*VEHICLE_FORCE_UPWARDS</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="449259786209480">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="169621157212844" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="237866527652669" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="185206275458166">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="318983454126320" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="867733745288587" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">timer + 1</param>
+                </action>
+                <action id="0" name="Set text" sid="639549630475005" type="LogText">
+                    <param id="0" name="Text">Function.Call(&quot;getTime&quot;, timer)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
