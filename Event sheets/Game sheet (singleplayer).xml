@@ -5,9 +5,88 @@
     <events>
         <include>timer sheet</include>
         <include>Character sheet</include>
-        <variable constant="0" name="finished" sid="392121217228079" static="0" type="number">0</variable>
-        <variable constant="0" name="timer" sid="357399775604295" static="0" type="number">0</variable>
-        <event-group description="" sid="231594897478263" title="Movement">
+        <variable comment="Indicator if the game has finished" constant="0" name="finished" sid="392121217228079" static="0" type="number">0</variable>
+        <variable comment="Used to keep track of how long the player has been playing on the map" constant="0" name="timer" sid="357399775604295" static="0" type="number">0</variable>
+        <variable comment="Indicator if a random event is already in progress" constant="0" name="randomEventRunning" sid="407178735813083" static="0" type="number">0</variable>
+        <event-group description="" sid="903638005397133" title="Initialization">
+            <sub-events>
+                <event-block sid="449259786209480">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="169621157212844" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="237866527652669" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Manages random events" sid="755444636785502" title="Random Events">
+            <sub-events>
+                <variable constant="0" name="randomEvent" sid="204886377227959" static="0" type="number">0</variable>
+                <comment>Every x seconds, randomize if a random event will trigger</comment>
+                <event-block sid="336233252941088">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="840786618994354" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="153749219794180" type="System">
+                            <param id="0" name="Variable">randomEvent</param>
+                            <param id="1" name="Value">int(random(0, 11))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>If randomEvent is 1, select from the available random event to trigger</comment>
+                        <event-block sid="460801938843724">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="332476618029997" type="System">
+                                    <param id="0" name="Variable">randomEvent</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="968486747492835" type="System">
+                                    <param id="0" name="Variable">finished</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="844245018553753" type="System">
+                                    <param id="0" name="Variable">randomEventRunning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="612238467777176" type="System">
+                                    <param id="0" name="Variable">randomEventRunning</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="489927837026965" type="Smog">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="465126859159813" type="Smog" />
+                                <action behavior="Fade2" id="1" name="Start fade" sid="880285152469702" type="Smog" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="402979831956691">
+                    <conditions>
+                        <condition behavior="Fade2" id="0" name="On fade-out finished" sid="145021061357015" type="Smog" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="649292344017231" type="System">
+                            <param id="0" name="Variable">randomEventRunning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Manages the logic for the player&apos;s movement" sid="231594897478263" title="Movement">
             <sub-events>
                 <comment>W or Up arrow key is used to accelerate the Player object by applying force to the right</comment>
                 <event-block any="1" sid="250455436510950">
@@ -91,38 +170,32 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="449259786209480">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="169621157212844" type="System" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="237866527652669" type="System">
-                    <param id="0" name="Variable">timer</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="185206275458166">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="318983454126320" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="141233482111145" type="System">
-                    <param id="0" name="Variable">finished</param>
-                    <param id="1" name="Comparison">1</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="867733745288587" type="System">
-                    <param id="0" name="Variable">timer</param>
-                    <param id="1" name="Value">timer + 1</param>
-                </action>
-                <action id="0" name="Set text" sid="639549630475005" type="LogText">
-                    <param id="0" name="Text">Function.Call(&quot;getTime&quot;, timer)</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="Manages timer (elapsed time the player has played in the map)" sid="713501233372355" title="Timer Group">
+            <sub-events>
+                <event-block sid="185206275458166">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="318983454126320" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="141233482111145" type="System">
+                            <param id="0" name="Variable">finished</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="867733745288587" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Value">timer + 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="639549630475005" type="LogText">
+                            <param id="0" name="Text">Function.Call(&quot;getTime&quot;, timer)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>When the player hits the finish flag, the game ends</comment>
         <event-block sid="485440985367220">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="161365322687385" type="Player">

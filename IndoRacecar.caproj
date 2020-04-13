@@ -888,6 +888,24 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
+        <object-folder name="Random events">
+            <object-type name="Smog" sid="212436217287090">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="485620428703199">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Fade2" sid="528357815040648">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="553863673562248" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Mouse" sid="593802495600120">
             <plugin id="Mouse" />
         </object-type>
