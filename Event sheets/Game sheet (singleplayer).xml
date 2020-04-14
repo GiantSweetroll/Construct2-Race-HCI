@@ -409,7 +409,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Physics" breakpoint="1" disabled="1" id="15" name="Set velocity" sid="242839852208159" type="Player">
+                        <action behavior="Physics" breakpoint="1" id="15" name="Set velocity" sid="242839852208159" type="Player">
                             <param id="0" name="X component">0</param>
                             <param id="1" name="Y component">0</param>
                         </action>
@@ -417,11 +417,8 @@
                             <param id="0" name="X">StartFlag.X</param>
                             <param id="1" name="Y">StartFlag.Y</param>
                         </action>
-                        <action disabled="1" id="-8" name="Set angle" sid="312082725183385" type="Player">
+                        <action id="-8" name="Set angle" sid="312082725183385" type="Player">
                             <param id="0" name="Angle">0</param>
-                        </action>
-                        <action id="8" name="Set flipped" sid="923100762527251" type="Player">
-                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
