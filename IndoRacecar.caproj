@@ -325,585 +325,585 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="EsemkaIdle" pingpong="0" repeatcount="1" repeatto="0" sid="515152190606123" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png">
-                            <image-point name="Front" x="0.446429" y="0.778761" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="1.05195" hotspotY="-0.289474" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png">
+                            <image-point name="Front" x="0.896104" y="0.526316" />
+                            <image-point name="Rear" x="0.194805" y="0.552632" />
                             <collision-poly>
-                                <point x="0.141741" y="0.719027" />
-                                <point x="0.262835" y="0.719579" />
-                                <point x="0.266462" y="0.611449" />
-                                <point x="0.350446" y="0.613938" />
-                                <point x="0.412947" y="0.716814" />
-                                <point x="0.477679" y="0.719027" />
-                                <point x="0.478795" y="0.926992" />
-                                <point x="0.142857" y="0.920354" />
+                                <point x="0.00974004" y="0.348685" />
+                                <point x="0.362013" y="0.350327" />
+                                <point x="0.372565" y="0.0287825" />
+                                <point x="0.616882" y="0.036184" />
+                                <point x="0.798703" y="0.342105" />
+                                <point x="0.987014" y="0.348685" />
+                                <point x="0.990261" y="0.967108" />
+                                <point x="0.0129866" y="0.947368" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="10" loop="0" name="EsemkaMoving" pingpong="0" repeatcount="1" repeatto="0" sid="917324256651372" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png">
-                            <image-point name="Front" x="0.446429" y="0.778761" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="1.05195" hotspotY="-0.289474" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-1.png">
+                            <image-point name="Front" x="0.896104" y="0.526316" />
+                            <image-point name="Rear" x="0.194805" y="0.552632" />
                             <collision-poly>
-                                <point x="0.140625" y="0.723451" />
-                                <point x="0.261161" y="0.721239" />
-                                <point x="0.262835" y="0.611725" />
-                                <point x="0.353515" y="0.613384" />
-                                <point x="0.415179" y="0.723451" />
-                                <point x="0.475447" y="0.719026" />
-                                <point x="0.476563" y="0.922566" />
-                                <point x="0.139509" y="0.922567" />
+                                <point x="0.00649351" y="0.361841" />
+                                <point x="0.357144" y="0.355263" />
+                                <point x="0.362013" y="0.0296033" />
+                                <point x="0.62581" y="0.0345367" />
+                                <point x="0.805196" y="0.361841" />
+                                <point x="0.980521" y="0.348683" />
+                                <point x="0.983768" y="0.953946" />
+                                <point x="0.00324698" y="0.953949" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-2.png">
-                            <image-point name="Front" x="0.446429" y="0.778761" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="1.05195" hotspotY="-0.297297" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-2.png">
+                            <image-point name="Front" x="0.896104" y="0.540541" />
+                            <image-point name="Rear" x="0.194805" y="0.567568" />
                             <collision-poly>
-                                <point x="0.140625" y="0.723451" />
-                                <point x="0.261161" y="0.721239" />
-                                <point x="0.262835" y="0.611725" />
-                                <point x="0.353515" y="0.613384" />
-                                <point x="0.415179" y="0.723451" />
-                                <point x="0.475447" y="0.719026" />
-                                <point x="0.476563" y="0.922566" />
-                                <point x="0.139509" y="0.922567" />
+                                <point x="0.00649351" y="0.371621" />
+                                <point x="0.357144" y="0.364865" />
+                                <point x="0.362013" y="0.0304033" />
+                                <point x="0.62581" y="0.0354701" />
+                                <point x="0.805196" y="0.371621" />
+                                <point x="0.980521" y="0.358106" />
+                                <point x="0.983768" y="0.979729" />
+                                <point x="0.00324698" y="0.979732" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-3.png">
-                            <image-point name="Front" x="0.446429" y="0.778761" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="1.05195" hotspotY="-0.297297" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-3.png">
+                            <image-point name="Front" x="0.896104" y="0.540541" />
+                            <image-point name="Rear" x="0.194805" y="0.567568" />
                             <collision-poly>
-                                <point x="0.140625" y="0.723451" />
-                                <point x="0.261161" y="0.721239" />
-                                <point x="0.262835" y="0.611725" />
-                                <point x="0.353515" y="0.613384" />
-                                <point x="0.415179" y="0.723451" />
-                                <point x="0.475447" y="0.719026" />
-                                <point x="0.476563" y="0.922566" />
-                                <point x="0.139509" y="0.922567" />
+                                <point x="0.00649351" y="0.371621" />
+                                <point x="0.357144" y="0.364865" />
+                                <point x="0.362013" y="0.0304033" />
+                                <point x="0.62581" y="0.0354701" />
+                                <point x="0.805196" y="0.371621" />
+                                <point x="0.980521" y="0.358106" />
+                                <point x="0.983768" y="0.979729" />
+                                <point x="0.00324698" y="0.979732" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-4.png">
-                            <image-point name="Front" x="0.446429" y="0.778761" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="1.05195" hotspotY="-0.297297" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-4.png">
+                            <image-point name="Front" x="0.896104" y="0.540541" />
+                            <image-point name="Rear" x="0.194805" y="0.567568" />
                             <collision-poly>
-                                <point x="0.140625" y="0.723451" />
-                                <point x="0.261161" y="0.721239" />
-                                <point x="0.262835" y="0.611725" />
-                                <point x="0.353515" y="0.613384" />
-                                <point x="0.415179" y="0.723451" />
-                                <point x="0.475447" y="0.719026" />
-                                <point x="0.476563" y="0.922566" />
-                                <point x="0.139509" y="0.922567" />
+                                <point x="0.00649351" y="0.371621" />
+                                <point x="0.357144" y="0.364865" />
+                                <point x="0.362013" y="0.0304033" />
+                                <point x="0.62581" y="0.0354701" />
+                                <point x="0.805196" y="0.371621" />
+                                <point x="0.980521" y="0.358106" />
+                                <point x="0.983768" y="0.979729" />
+                                <point x="0.00324698" y="0.979732" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-5.png">
-                            <image-point name="Front" x="0.446429" y="0.778761" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="1.05195" hotspotY="-0.333333" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-5.png">
+                            <image-point name="Front" x="0.896104" y="0.527778" />
+                            <image-point name="Rear" x="0.194805" y="0.555556" />
                             <collision-poly>
-                                <point x="0.140625" y="0.723451" />
-                                <point x="0.261161" y="0.721239" />
-                                <point x="0.262835" y="0.611725" />
-                                <point x="0.353515" y="0.613384" />
-                                <point x="0.415179" y="0.723451" />
-                                <point x="0.475447" y="0.719026" />
-                                <point x="0.476563" y="0.922566" />
-                                <point x="0.139509" y="0.922567" />
+                                <point x="0.00649351" y="0.354166" />
+                                <point x="0.357144" y="0.347222" />
+                                <point x="0.362013" y="0.0034701" />
+                                <point x="0.62581" y="0.00867759" />
+                                <point x="0.805196" y="0.354166" />
+                                <point x="0.980521" y="0.340276" />
+                                <point x="0.983768" y="0.979165" />
+                                <point x="0.00324698" y="0.979169" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-6.png">
-                            <image-point name="Front" x="0.446429" y="0.778761" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="1.05195" hotspotY="-0.297297" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-6.png">
+                            <image-point name="Front" x="0.896104" y="0.540541" />
+                            <image-point name="Rear" x="0.194805" y="0.567568" />
                             <collision-poly>
-                                <point x="0.140625" y="0.723451" />
-                                <point x="0.261161" y="0.721239" />
-                                <point x="0.262835" y="0.611725" />
-                                <point x="0.353515" y="0.613384" />
-                                <point x="0.415179" y="0.723451" />
-                                <point x="0.475447" y="0.719026" />
-                                <point x="0.476563" y="0.922566" />
-                                <point x="0.139509" y="0.922567" />
+                                <point x="0.00649351" y="0.371621" />
+                                <point x="0.357144" y="0.364865" />
+                                <point x="0.362013" y="0.0304033" />
+                                <point x="0.62581" y="0.0354701" />
+                                <point x="0.805196" y="0.371621" />
+                                <point x="0.980521" y="0.358106" />
+                                <point x="0.983768" y="0.979729" />
+                                <point x="0.00324698" y="0.979732" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-7.png">
-                            <image-point name="Front" x="0.446429" y="0.778761" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="1.05195" hotspotY="-0.297297" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-7.png">
+                            <image-point name="Front" x="0.896104" y="0.540541" />
+                            <image-point name="Rear" x="0.194805" y="0.567568" />
                             <collision-poly>
-                                <point x="0.140625" y="0.723451" />
-                                <point x="0.261161" y="0.721239" />
-                                <point x="0.262835" y="0.611725" />
-                                <point x="0.353515" y="0.613384" />
-                                <point x="0.415179" y="0.723451" />
-                                <point x="0.475447" y="0.719026" />
-                                <point x="0.476563" y="0.922566" />
-                                <point x="0.139509" y="0.922567" />
+                                <point x="0.00649351" y="0.371621" />
+                                <point x="0.357144" y="0.364865" />
+                                <point x="0.362013" y="0.0304033" />
+                                <point x="0.62581" y="0.0354701" />
+                                <point x="0.805196" y="0.371621" />
+                                <point x="0.980521" y="0.358106" />
+                                <point x="0.983768" y="0.979729" />
+                                <point x="0.00324698" y="0.979732" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-8.png">
-                            <image-point name="Front" x="0.446429" y="0.778761" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="1.05195" hotspotY="-0.297297" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-8.png">
+                            <image-point name="Front" x="0.896104" y="0.540541" />
+                            <image-point name="Rear" x="0.194805" y="0.567568" />
                             <collision-poly>
-                                <point x="0.140625" y="0.723451" />
-                                <point x="0.261161" y="0.721239" />
-                                <point x="0.262835" y="0.611725" />
-                                <point x="0.353515" y="0.613384" />
-                                <point x="0.415179" y="0.723451" />
-                                <point x="0.475447" y="0.719026" />
-                                <point x="0.476563" y="0.922566" />
-                                <point x="0.139509" y="0.922567" />
+                                <point x="0.00649351" y="0.371621" />
+                                <point x="0.357144" y="0.364865" />
+                                <point x="0.362013" y="0.0304033" />
+                                <point x="0.62581" y="0.0354701" />
+                                <point x="0.805196" y="0.371621" />
+                                <point x="0.980521" y="0.358106" />
+                                <point x="0.983768" y="0.979729" />
+                                <point x="0.00324698" y="0.979732" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-9.png">
-                            <image-point name="Front" x="0.446429" y="0.778761" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="1.05195" hotspotY="-0.289474" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-9.png">
+                            <image-point name="Front" x="0.896104" y="0.526316" />
+                            <image-point name="Rear" x="0.194805" y="0.552632" />
                             <collision-poly>
-                                <point x="0.140625" y="0.723451" />
-                                <point x="0.261161" y="0.721239" />
-                                <point x="0.262835" y="0.611725" />
-                                <point x="0.353515" y="0.613384" />
-                                <point x="0.415179" y="0.723451" />
-                                <point x="0.475447" y="0.719026" />
-                                <point x="0.476563" y="0.922566" />
-                                <point x="0.139509" y="0.922567" />
+                                <point x="0.00649351" y="0.361841" />
+                                <point x="0.357144" y="0.355263" />
+                                <point x="0.362013" y="0.0296033" />
+                                <point x="0.62581" y="0.0345367" />
+                                <point x="0.805196" y="0.361841" />
+                                <point x="0.980521" y="0.348683" />
+                                <point x="0.983768" y="0.953946" />
+                                <point x="0.00324698" y="0.953949" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-10.png">
-                            <image-point name="Front" x="0.446429" y="0.778761" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="1.05195" hotspotY="-0.324324" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\esemka\row-1-col-10.png">
+                            <image-point name="Front" x="0.896104" y="0.513514" />
+                            <image-point name="Rear" x="0.194805" y="0.540541" />
                             <collision-poly>
-                                <point x="0.140625" y="0.723451" />
-                                <point x="0.261161" y="0.721239" />
-                                <point x="0.262835" y="0.611725" />
-                                <point x="0.353515" y="0.613384" />
-                                <point x="0.415179" y="0.723451" />
-                                <point x="0.475447" y="0.719026" />
-                                <point x="0.476563" y="0.922566" />
-                                <point x="0.139509" y="0.922567" />
+                                <point x="0.00649351" y="0.344594" />
+                                <point x="0.357144" y="0.337838" />
+                                <point x="0.362013" y="0.00337632" />
+                                <point x="0.62581" y="0.00844306" />
+                                <point x="0.805196" y="0.344594" />
+                                <point x="0.980521" y="0.331079" />
+                                <point x="0.983768" y="0.952701" />
+                                <point x="0.00324698" y="0.952705" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="DelmanIdle" pingpong="0" repeatcount="1" repeatto="0" sid="600204816332337" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425">
-                            <image-point name="Front" x="0.540179" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.723214" hotspotY="0.0535714">
+                            <image-point name="Front" x="0.803571" y="0.535714" />
+                            <image-point name="Rear" x="0.258929" y="0.589286" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.109376" y="0.0267863" />
+                                <point x="0.417411" y="0.0133935" />
+                                <point x="0.569197" y="0.169644" />
+                                <point x="0.620536" y="0.379464" />
+                                <point x="0.843751" y="0.35491" />
+                                <point x="0.919644" y="0.248883" />
+                                <point x="0.995537" y="0.213727" />
+                                <point x="0.995537" y="0.401506" />
+                                <point x="0.897322" y="0.415178" />
+                                <point x="0.897324" y="0.991071" />
+                                <point x="0.0468751" y="0.993302" />
+                                <point x="0.0446422" y="0.111607" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="13" loop="0" name="DelmanMoving" pingpong="0" repeatcount="1" repeatto="0" sid="115981948056321" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-1.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.723214" hotspotY="0.0535714" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-1.png">
+                            <image-point name="Front" x="0.821429" y="0.535714" />
+                            <image-point name="Rear" x="0.25" y="0.589286" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.109376" y="0.0267863" />
+                                <point x="0.417411" y="0.0133935" />
+                                <point x="0.569197" y="0.169644" />
+                                <point x="0.620536" y="0.379464" />
+                                <point x="0.843751" y="0.35491" />
+                                <point x="0.919644" y="0.248883" />
+                                <point x="0.995537" y="0.213727" />
+                                <point x="0.995537" y="0.401506" />
+                                <point x="0.897322" y="0.415178" />
+                                <point x="0.897324" y="0.991071" />
+                                <point x="0.0468751" y="0.993302" />
+                                <point x="0.0446422" y="0.111607" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-2.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.723214" hotspotY="0.0535714" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-2.png">
+                            <image-point name="Front" x="0.821429" y="0.535714" />
+                            <image-point name="Rear" x="0.25" y="0.589286" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.109376" y="0.0267863" />
+                                <point x="0.417411" y="0.0133935" />
+                                <point x="0.569197" y="0.169644" />
+                                <point x="0.620536" y="0.379464" />
+                                <point x="0.843751" y="0.35491" />
+                                <point x="0.919644" y="0.248883" />
+                                <point x="0.995537" y="0.213727" />
+                                <point x="0.995537" y="0.401506" />
+                                <point x="0.897322" y="0.415178" />
+                                <point x="0.897324" y="0.991071" />
+                                <point x="0.0468751" y="0.993302" />
+                                <point x="0.0446422" y="0.111607" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-3.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.723214" hotspotY="0.0545455" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-3.png">
+                            <image-point name="Front" x="0.821429" y="0.545455" />
+                            <image-point name="Rear" x="0.25" y="0.6" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.109376" y="0.0272734" />
+                                <point x="0.417411" y="0.0136371" />
+                                <point x="0.569197" y="0.172728" />
+                                <point x="0.620536" y="0.386363" />
+                                <point x="0.843751" y="0.361363" />
+                                <point x="0.919644" y="0.253408" />
+                                <point x="0.995537" y="0.217613" />
+                                <point x="0.995537" y="0.408806" />
+                                <point x="0.897322" y="0.422727" />
+                                <point x="0.897324" y="1" />
+                                <point x="0.0468751" y="1" />
+                                <point x="0.0446422" y="0.113636" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-4.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.723214" hotspotY="0.0535714" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-4.png">
+                            <image-point name="Front" x="0.821429" y="0.535714" />
+                            <image-point name="Rear" x="0.25" y="0.589286" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.109376" y="0.0267863" />
+                                <point x="0.417411" y="0.0133935" />
+                                <point x="0.569197" y="0.169644" />
+                                <point x="0.620536" y="0.379464" />
+                                <point x="0.843751" y="0.35491" />
+                                <point x="0.919644" y="0.248883" />
+                                <point x="0.995537" y="0.213727" />
+                                <point x="0.995537" y="0.401506" />
+                                <point x="0.897322" y="0.415178" />
+                                <point x="0.897324" y="0.991071" />
+                                <point x="0.0468751" y="0.993302" />
+                                <point x="0.0446422" y="0.111607" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-5.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.723214" hotspotY="0.0535714" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-5.png">
+                            <image-point name="Front" x="0.821429" y="0.535714" />
+                            <image-point name="Rear" x="0.25" y="0.589286" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.109376" y="0.0267863" />
+                                <point x="0.417411" y="0.0133935" />
+                                <point x="0.569197" y="0.169644" />
+                                <point x="0.620536" y="0.379464" />
+                                <point x="0.843751" y="0.35491" />
+                                <point x="0.919644" y="0.248883" />
+                                <point x="0.995537" y="0.213727" />
+                                <point x="0.995537" y="0.401506" />
+                                <point x="0.897322" y="0.415178" />
+                                <point x="0.897324" y="0.991071" />
+                                <point x="0.0468751" y="0.993302" />
+                                <point x="0.0446422" y="0.111607" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-6.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.716814" hotspotY="0.0535714" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-6.png">
+                            <image-point name="Front" x="0.814159" y="0.535714" />
+                            <image-point name="Rear" x="0.247788" y="0.589286" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.108408" y="0.0267863" />
+                                <point x="0.413717" y="0.0133935" />
+                                <point x="0.56416" y="0.169644" />
+                                <point x="0.615045" y="0.379464" />
+                                <point x="0.836284" y="0.35491" />
+                                <point x="0.911505" y="0.248883" />
+                                <point x="0.986727" y="0.213727" />
+                                <point x="0.986727" y="0.401506" />
+                                <point x="0.889381" y="0.415178" />
+                                <point x="0.889383" y="0.991071" />
+                                <point x="0.0464603" y="0.993302" />
+                                <point x="0.0442471" y="0.111607" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-7.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.716814" hotspotY="0.0535714" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-7.png">
+                            <image-point name="Front" x="0.814159" y="0.535714" />
+                            <image-point name="Rear" x="0.247788" y="0.589286" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.108408" y="0.0267863" />
+                                <point x="0.413717" y="0.0133935" />
+                                <point x="0.56416" y="0.169644" />
+                                <point x="0.615045" y="0.379464" />
+                                <point x="0.836284" y="0.35491" />
+                                <point x="0.911505" y="0.248883" />
+                                <point x="0.986727" y="0.213727" />
+                                <point x="0.986727" y="0.401506" />
+                                <point x="0.889381" y="0.415178" />
+                                <point x="0.889383" y="0.991071" />
+                                <point x="0.0464603" y="0.993302" />
+                                <point x="0.0442471" y="0.111607" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-8.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.698276" hotspotY="0.0535714" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-8.png">
+                            <image-point name="Front" x="0.793103" y="0.535714" />
+                            <image-point name="Rear" x="0.241379" y="0.589286" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.105604" y="0.0267863" />
+                                <point x="0.403018" y="0.0133935" />
+                                <point x="0.54957" y="0.169644" />
+                                <point x="0.599139" y="0.379464" />
+                                <point x="0.814656" y="0.35491" />
+                                <point x="0.887932" y="0.248883" />
+                                <point x="0.961208" y="0.213727" />
+                                <point x="0.961208" y="0.401506" />
+                                <point x="0.86638" y="0.415178" />
+                                <point x="0.866382" y="0.991071" />
+                                <point x="0.0452588" y="0.993302" />
+                                <point x="0.0431028" y="0.111607" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-9.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.710526" hotspotY="0.0545455" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-9.png">
+                            <image-point name="Front" x="0.807018" y="0.545455" />
+                            <image-point name="Rear" x="0.245614" y="0.6" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.107457" y="0.0272734" />
+                                <point x="0.410088" y="0.0136371" />
+                                <point x="0.559211" y="0.172728" />
+                                <point x="0.60965" y="0.386363" />
+                                <point x="0.828949" y="0.361363" />
+                                <point x="0.90351" y="0.253408" />
+                                <point x="0.978071" y="0.217613" />
+                                <point x="0.978071" y="0.408806" />
+                                <point x="0.88158" y="0.422727" />
+                                <point x="0.881582" y="1" />
+                                <point x="0.0460528" y="1" />
+                                <point x="0.043859" y="0.113636" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-10.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.723214" hotspotY="0.0535714" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-10.png">
+                            <image-point name="Front" x="0.821429" y="0.535714" />
+                            <image-point name="Rear" x="0.25" y="0.589286" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.109376" y="0.0267863" />
+                                <point x="0.417411" y="0.0133935" />
+                                <point x="0.569197" y="0.169644" />
+                                <point x="0.620536" y="0.379464" />
+                                <point x="0.843751" y="0.35491" />
+                                <point x="0.919644" y="0.248883" />
+                                <point x="0.995537" y="0.213727" />
+                                <point x="0.995537" y="0.401506" />
+                                <point x="0.897322" y="0.415178" />
+                                <point x="0.897324" y="0.991071" />
+                                <point x="0.0468751" y="0.993302" />
+                                <point x="0.0446422" y="0.111607" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-11.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.723214" hotspotY="0.0545455" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-11.png">
+                            <image-point name="Front" x="0.821429" y="0.545455" />
+                            <image-point name="Rear" x="0.25" y="0.6" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.109376" y="0.0272734" />
+                                <point x="0.417411" y="0.0136371" />
+                                <point x="0.569197" y="0.172728" />
+                                <point x="0.620536" y="0.386363" />
+                                <point x="0.843751" y="0.361363" />
+                                <point x="0.919644" y="0.253408" />
+                                <point x="0.995537" y="0.217613" />
+                                <point x="0.995537" y="0.408806" />
+                                <point x="0.897322" y="0.422727" />
+                                <point x="0.897324" y="1" />
+                                <point x="0.0468751" y="1" />
+                                <point x="0.0446422" y="0.113636" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-12.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.723214" hotspotY="0.0545455" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-12.png">
+                            <image-point name="Front" x="0.821429" y="0.545455" />
+                            <image-point name="Rear" x="0.25" y="0.6" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.109376" y="0.0272734" />
+                                <point x="0.417411" y="0.0136371" />
+                                <point x="0.569197" y="0.172728" />
+                                <point x="0.620536" y="0.386363" />
+                                <point x="0.843751" y="0.361363" />
+                                <point x="0.919644" y="0.253408" />
+                                <point x="0.995537" y="0.217613" />
+                                <point x="0.995537" y="0.408806" />
+                                <point x="0.897322" y="0.422727" />
+                                <point x="0.897324" y="1" />
+                                <point x="0.0468751" y="1" />
+                                <point x="0.0446422" y="0.113636" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-13.png">
-                            <image-point name="Front" x="0.549107" y="0.743363" />
-                            <image-point name="Rear" x="0.205357" y="0.787611" />
+                        <frame duration="1" hotspotX="0.723214" hotspotY="0.0535714" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\delman\row-1-col-13.png">
+                            <image-point name="Front" x="0.821429" y="0.535714" />
+                            <image-point name="Rear" x="0.25" y="0.589286" />
                             <collision-poly>
-                                <point x="0.193081" y="0.491151" />
-                                <point x="0.347098" y="0.484514" />
-                                <point x="0.422991" y="0.561947" />
-                                <point x="0.448661" y="0.665929" />
-                                <point x="0.560268" y="0.653761" />
-                                <point x="0.598215" y="0.601216" />
-                                <point x="0.636161" y="0.583794" />
-                                <point x="0.636161" y="0.676853" />
-                                <point x="0.587054" y="0.683628" />
-                                <point x="0.587055" y="0.969026" />
-                                <point x="0.16183" y="0.970132" />
-                                <point x="0.160714" y="0.533186" />
+                                <point x="0.109376" y="0.0267863" />
+                                <point x="0.417411" y="0.0133935" />
+                                <point x="0.569197" y="0.169644" />
+                                <point x="0.620536" y="0.379464" />
+                                <point x="0.843751" y="0.35491" />
+                                <point x="0.919644" y="0.248883" />
+                                <point x="0.995537" y="0.213727" />
+                                <point x="0.995537" y="0.401506" />
+                                <point x="0.897322" y="0.415178" />
+                                <point x="0.897324" y="0.991071" />
+                                <point x="0.0468751" y="0.993302" />
+                                <point x="0.0446422" y="0.111607" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="MotorBebekIdle" pingpong="0" repeatcount="1" repeatto="0" sid="492618683896965" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425">
-                            <image-point name="Front" x="0.638393" y="0.79646" />
-                            <image-point name="Rear" x="0.486607" y="0.79646" />
+                        <frame duration="1" hotspotX="0.261538" hotspotY="-0.272727">
+                            <image-point name="Front" x="0.738462" y="0.477273" />
+                            <image-point name="Rear" x="0.215385" y="0.477273" />
                             <collision-poly>
-                                <point x="0.428571" y="0.849558" />
-                                <point x="0.44308" y="0.724558" />
-                                <point x="0.49721" y="0.725663" />
-                                <point x="0.501953" y="0.684734" />
-                                <point x="0.532226" y="0.631084" />
-                                <point x="0.605399" y="0.619745" />
-                                <point x="0.707676" y="0.875692" />
-                                <point x="0.708391" y="0.997788" />
-                                <point x="0.428013" y="0.987832" />
+                                <point x="0.0153831" y="0.613638" />
+                                <point x="0.0653841" y="0.292614" />
+                                <point x="0.251922" y="0.295454" />
+                                <point x="0.268269" y="0.190341" />
+                                <point x="0.372596" y="0.0525566" />
+                                <point x="0.624759" y="0.0234373" />
+                                <point x="0.977223" y="0.680754" />
+                                <point x="0.979686" y="0.994318" />
+                                <point x="0.0134604" y="0.96875" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="10" loop="0" name="MotorBebekMoving" pingpong="0" repeatcount="1" repeatto="0" sid="775933296388549" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-1.png">
-                            <image-point name="Front" x="0.651786" y="0.79646" />
-                            <image-point name="Rear" x="0.477679" y="0.787611" />
+                        <frame duration="1" hotspotX="0.261538" hotspotY="-0.272727" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-1.png">
+                            <image-point name="Front" x="0.784615" y="0.477273" />
+                            <image-point name="Rear" x="0.184615" y="0.454545" />
                             <collision-poly>
-                                <point x="0.428571" y="0.849558" />
-                                <point x="0.44308" y="0.724558" />
-                                <point x="0.49721" y="0.725663" />
-                                <point x="0.501953" y="0.684734" />
-                                <point x="0.532226" y="0.631084" />
-                                <point x="0.605399" y="0.619745" />
-                                <point x="0.707676" y="0.875692" />
-                                <point x="0.708391" y="0.997788" />
-                                <point x="0.428013" y="0.987832" />
+                                <point x="0.0153831" y="0.613638" />
+                                <point x="0.0653841" y="0.292614" />
+                                <point x="0.251922" y="0.295454" />
+                                <point x="0.268269" y="0.190341" />
+                                <point x="0.372596" y="0.0525566" />
+                                <point x="0.624759" y="0.0234373" />
+                                <point x="0.977223" y="0.680754" />
+                                <point x="0.979686" y="0.994318" />
+                                <point x="0.0134604" y="0.96875" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-2.png">
-                            <image-point name="Front" x="0.651786" y="0.79646" />
-                            <image-point name="Rear" x="0.477679" y="0.787611" />
+                        <frame duration="1" hotspotX="0.261538" hotspotY="-0.302326" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-2.png">
+                            <image-point name="Front" x="0.784615" y="0.465116" />
+                            <image-point name="Rear" x="0.184615" y="0.44186" />
                             <collision-poly>
-                                <point x="0.428571" y="0.849558" />
-                                <point x="0.44308" y="0.724558" />
-                                <point x="0.49721" y="0.725663" />
-                                <point x="0.501953" y="0.684734" />
-                                <point x="0.532226" y="0.631084" />
-                                <point x="0.605399" y="0.619745" />
-                                <point x="0.707676" y="0.875692" />
-                                <point x="0.708391" y="0.997788" />
-                                <point x="0.428013" y="0.987832" />
+                                <point x="0.0153831" y="0.604652" />
+                                <point x="0.0653841" y="0.276163" />
+                                <point x="0.251922" y="0.279069" />
+                                <point x="0.268269" y="0.171511" />
+                                <point x="0.372596" y="0.0305231" />
+                                <point x="0.624759" y="0.000726567" />
+                                <point x="0.977223" y="0.67333" />
+                                <point x="0.979686" y="0.994186" />
+                                <point x="0.0134604" y="0.968023" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-3.png">
-                            <image-point name="Front" x="0.651786" y="0.79646" />
-                            <image-point name="Rear" x="0.477679" y="0.787611" />
+                        <frame duration="1" hotspotX="0.261538" hotspotY="-0.272727" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-3.png">
+                            <image-point name="Front" x="0.784615" y="0.477273" />
+                            <image-point name="Rear" x="0.184615" y="0.454545" />
                             <collision-poly>
-                                <point x="0.428571" y="0.849558" />
-                                <point x="0.44308" y="0.724558" />
-                                <point x="0.49721" y="0.725663" />
-                                <point x="0.501953" y="0.684734" />
-                                <point x="0.532226" y="0.631084" />
-                                <point x="0.605399" y="0.619745" />
-                                <point x="0.707676" y="0.875692" />
-                                <point x="0.708391" y="0.997788" />
-                                <point x="0.428013" y="0.987832" />
+                                <point x="0.0153831" y="0.613638" />
+                                <point x="0.0653841" y="0.292614" />
+                                <point x="0.251922" y="0.295454" />
+                                <point x="0.268269" y="0.190341" />
+                                <point x="0.372596" y="0.0525566" />
+                                <point x="0.624759" y="0.0234373" />
+                                <point x="0.977223" y="0.680754" />
+                                <point x="0.979686" y="0.994318" />
+                                <point x="0.0134604" y="0.96875" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-4.png">
-                            <image-point name="Front" x="0.651786" y="0.79646" />
-                            <image-point name="Rear" x="0.477679" y="0.787611" />
+                        <frame duration="1" hotspotX="0.261538" hotspotY="-0.309524" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-4.png">
+                            <image-point name="Front" x="0.784615" y="0.47619" />
+                            <image-point name="Rear" x="0.184615" y="0.452381" />
                             <collision-poly>
-                                <point x="0.428571" y="0.849558" />
-                                <point x="0.44308" y="0.724558" />
-                                <point x="0.49721" y="0.725663" />
-                                <point x="0.501953" y="0.684734" />
-                                <point x="0.532226" y="0.631084" />
-                                <point x="0.605399" y="0.619745" />
-                                <point x="0.707676" y="0.875692" />
-                                <point x="0.708391" y="0.997788" />
-                                <point x="0.428013" y="0.987832" />
+                                <point x="0.0153831" y="0.619049" />
+                                <point x="0.0653841" y="0.282738" />
+                                <point x="0.251922" y="0.285713" />
+                                <point x="0.268269" y="0.175595" />
+                                <point x="0.372596" y="0.0312498" />
+                                <point x="0.624759" y="0.000743866" />
+                                <point x="0.977223" y="0.689361" />
+                                <point x="0.979686" y="1" />
+                                <point x="0.0134604" y="0.991071" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-5.png">
-                            <image-point name="Front" x="0.651786" y="0.79646" />
-                            <image-point name="Rear" x="0.477679" y="0.787611" />
+                        <frame duration="1" hotspotX="0.261538" hotspotY="-0.272727" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-5.png">
+                            <image-point name="Front" x="0.784615" y="0.477273" />
+                            <image-point name="Rear" x="0.184615" y="0.454545" />
                             <collision-poly>
-                                <point x="0.428571" y="0.849558" />
-                                <point x="0.44308" y="0.724558" />
-                                <point x="0.49721" y="0.725663" />
-                                <point x="0.501953" y="0.684734" />
-                                <point x="0.532226" y="0.631084" />
-                                <point x="0.605399" y="0.619745" />
-                                <point x="0.707676" y="0.875692" />
-                                <point x="0.708391" y="0.997788" />
-                                <point x="0.428013" y="0.987832" />
+                                <point x="0.0153831" y="0.613638" />
+                                <point x="0.0653841" y="0.292614" />
+                                <point x="0.251922" y="0.295454" />
+                                <point x="0.268269" y="0.190341" />
+                                <point x="0.372596" y="0.0525566" />
+                                <point x="0.624759" y="0.0234373" />
+                                <point x="0.977223" y="0.680754" />
+                                <point x="0.979686" y="0.994318" />
+                                <point x="0.0134604" y="0.96875" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-6.png">
-                            <image-point name="Front" x="0.651786" y="0.79646" />
-                            <image-point name="Rear" x="0.477679" y="0.787611" />
+                        <frame duration="1" hotspotX="0.261538" hotspotY="-0.302326" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-6.png">
+                            <image-point name="Front" x="0.784615" y="0.465116" />
+                            <image-point name="Rear" x="0.184615" y="0.44186" />
                             <collision-poly>
-                                <point x="0.428571" y="0.849558" />
-                                <point x="0.44308" y="0.724558" />
-                                <point x="0.49721" y="0.725663" />
-                                <point x="0.501953" y="0.684734" />
-                                <point x="0.532226" y="0.631084" />
-                                <point x="0.605399" y="0.619745" />
-                                <point x="0.707676" y="0.875692" />
-                                <point x="0.708391" y="0.997788" />
-                                <point x="0.428013" y="0.987832" />
+                                <point x="0.0153831" y="0.604652" />
+                                <point x="0.0653841" y="0.276163" />
+                                <point x="0.251922" y="0.279069" />
+                                <point x="0.268269" y="0.171511" />
+                                <point x="0.372596" y="0.0305231" />
+                                <point x="0.624759" y="0.000726567" />
+                                <point x="0.977223" y="0.67333" />
+                                <point x="0.979686" y="0.994186" />
+                                <point x="0.0134604" y="0.968023" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-7.png">
-                            <image-point name="Front" x="0.651786" y="0.79646" />
-                            <image-point name="Rear" x="0.477679" y="0.787611" />
+                        <frame duration="1" hotspotX="0.261538" hotspotY="-0.272727" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-7.png">
+                            <image-point name="Front" x="0.784615" y="0.477273" />
+                            <image-point name="Rear" x="0.184615" y="0.454545" />
                             <collision-poly>
-                                <point x="0.428571" y="0.849558" />
-                                <point x="0.44308" y="0.724558" />
-                                <point x="0.49721" y="0.725663" />
-                                <point x="0.501953" y="0.684734" />
-                                <point x="0.532226" y="0.631084" />
-                                <point x="0.605399" y="0.619745" />
-                                <point x="0.707676" y="0.875692" />
-                                <point x="0.708391" y="0.997788" />
-                                <point x="0.428013" y="0.987832" />
+                                <point x="0.0153831" y="0.613638" />
+                                <point x="0.0653841" y="0.292614" />
+                                <point x="0.251922" y="0.295454" />
+                                <point x="0.268269" y="0.190341" />
+                                <point x="0.372596" y="0.0525566" />
+                                <point x="0.624759" y="0.0234373" />
+                                <point x="0.977223" y="0.680754" />
+                                <point x="0.979686" y="0.994318" />
+                                <point x="0.0134604" y="0.96875" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-8.png">
-                            <image-point name="Front" x="0.651786" y="0.79646" />
-                            <image-point name="Rear" x="0.477679" y="0.787611" />
+                        <frame duration="1" hotspotX="0.261538" hotspotY="-0.302326" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-8.png">
+                            <image-point name="Front" x="0.784615" y="0.465116" />
+                            <image-point name="Rear" x="0.184615" y="0.44186" />
                             <collision-poly>
-                                <point x="0.428571" y="0.849558" />
-                                <point x="0.44308" y="0.724558" />
-                                <point x="0.49721" y="0.725663" />
-                                <point x="0.501953" y="0.684734" />
-                                <point x="0.532226" y="0.631084" />
-                                <point x="0.605399" y="0.619745" />
-                                <point x="0.707676" y="0.875692" />
-                                <point x="0.708391" y="0.997788" />
-                                <point x="0.428013" y="0.987832" />
+                                <point x="0.0153831" y="0.604652" />
+                                <point x="0.0653841" y="0.276163" />
+                                <point x="0.251922" y="0.279069" />
+                                <point x="0.268269" y="0.171511" />
+                                <point x="0.372596" y="0.0305231" />
+                                <point x="0.624759" y="0.000726567" />
+                                <point x="0.977223" y="0.67333" />
+                                <point x="0.979686" y="0.994186" />
+                                <point x="0.0134604" y="0.968023" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-9.png">
-                            <image-point name="Front" x="0.651786" y="0.79646" />
-                            <image-point name="Rear" x="0.477679" y="0.787611" />
+                        <frame duration="1" hotspotX="0.261538" hotspotY="-0.272727" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-9.png">
+                            <image-point name="Front" x="0.784615" y="0.477273" />
+                            <image-point name="Rear" x="0.184615" y="0.454545" />
                             <collision-poly>
-                                <point x="0.428571" y="0.849558" />
-                                <point x="0.44308" y="0.724558" />
-                                <point x="0.49721" y="0.725663" />
-                                <point x="0.501953" y="0.684734" />
-                                <point x="0.532226" y="0.631084" />
-                                <point x="0.605399" y="0.619745" />
-                                <point x="0.707676" y="0.875692" />
-                                <point x="0.708391" y="0.997788" />
-                                <point x="0.428013" y="0.987832" />
+                                <point x="0.0153831" y="0.613638" />
+                                <point x="0.0653841" y="0.292614" />
+                                <point x="0.251922" y="0.295454" />
+                                <point x="0.268269" y="0.190341" />
+                                <point x="0.372596" y="0.0525566" />
+                                <point x="0.624759" y="0.0234373" />
+                                <point x="0.977223" y="0.680754" />
+                                <point x="0.979686" y="0.994318" />
+                                <point x="0.0134604" y="0.96875" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-10.png">
-                            <image-point name="Front" x="0.651786" y="0.79646" />
-                            <image-point name="Rear" x="0.477679" y="0.787611" />
+                        <frame duration="1" hotspotX="0.261538" hotspotY="-0.302326" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\characterS_icon\png\individual\motorbebek\row-1-col-10.png">
+                            <image-point name="Front" x="0.784615" y="0.465116" />
+                            <image-point name="Rear" x="0.184615" y="0.44186" />
                             <collision-poly>
-                                <point x="0.428571" y="0.849558" />
-                                <point x="0.44308" y="0.724558" />
-                                <point x="0.49721" y="0.725663" />
-                                <point x="0.501953" y="0.684734" />
-                                <point x="0.532226" y="0.631084" />
-                                <point x="0.605399" y="0.619745" />
-                                <point x="0.707676" y="0.875692" />
-                                <point x="0.708391" y="0.997788" />
-                                <point x="0.428013" y="0.987832" />
+                                <point x="0.0153831" y="0.604652" />
+                                <point x="0.0653841" y="0.276163" />
+                                <point x="0.251922" y="0.279069" />
+                                <point x="0.268269" y="0.171511" />
+                                <point x="0.372596" y="0.0305231" />
+                                <point x="0.624759" y="0.000726567" />
+                                <point x="0.977223" y="0.67333" />
+                                <point x="0.979686" y="0.994186" />
+                                <point x="0.0134604" y="0.968023" />
                             </collision-poly>
                         </frame>
                     </animation>

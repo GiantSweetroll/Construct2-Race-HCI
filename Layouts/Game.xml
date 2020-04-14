@@ -301,11 +301,11 @@
                         <x>86</x>
                         <y>750</y>
                         <z>0</z>
-                        <width>224</width>
-                        <height>113</height>
+                        <width>77</width>
+                        <height>38</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504424751</hotspotY>
+                        <hotspotX>1.051948071</hotspotX>
+                        <hotspotY>-0.289473683</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
