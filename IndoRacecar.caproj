@@ -1030,6 +1030,10 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="city_background" sid="126610993958789">
+                <plugin id="NinePatch" />
+                <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\WIPBackground.png" />
+            </object-type>
         </object-folder>
         <object-folder name="game messages">
             <object-type global="1" name="LogMessages" sid="336496075986645">

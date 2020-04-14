@@ -37,6 +37,28 @@
                             <param id="1" name="Parameter {n}">Player.idleAnimation</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <comment>Because the delman has more area, using the standard force value makes it very slow moving, so it needs its own force value</comment>
+                        <event-block sid="296837482828924">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="679601187851337" type="System">
+                                    <param id="0" name="Variable">PLAYER_SELECTION</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="643830912618905" type="System">
+                                    <param id="0" name="Variable">VEHICLE_FORCE</param>
+                                    <param id="1" name="Value">60</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="864216217246128" type="System">
+                                    <param id="0" name="Variable">VEHICLE_FORCE_UPWARDS</param>
+                                    <param id="1" name="Value">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -376,6 +398,30 @@
                             <param id="0" name="Force X">0</param>
                             <param id="1" name="Force Y">Function.Call(&quot;calculateForceUpwards&quot;) * -1</param>
                             <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Space bar will reset the car to the starting position</comment>
+                <event-block any="1" sid="627081703107112">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="507633651448651" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" breakpoint="1" disabled="1" id="15" name="Set velocity" sid="242839852208159" type="Player">
+                            <param id="0" name="X component">0</param>
+                            <param id="1" name="Y component">0</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="594384041173566" type="Player">
+                            <param id="0" name="X">StartFlag.X</param>
+                            <param id="1" name="Y">StartFlag.Y</param>
+                        </action>
+                        <action disabled="1" id="-8" name="Set angle" sid="312082725183385" type="Player">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="923100762527251" type="Player">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
