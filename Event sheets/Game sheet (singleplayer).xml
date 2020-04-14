@@ -24,6 +24,18 @@
                         <action id="-16" name="Set opacity" sid="199695569516120" type="Flood">
                             <param id="0" name="Opacity">50</param>
                         </action>
+                        <action id="-10" name="Set value" sid="641734152975115" type="Player">
+                            <param id="0" name="Instance variable">idleAnimation</param>
+                            <param id="1" name="Value">PLAYER_SELECTION</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="910596342578884" type="Player">
+                            <param id="0" name="Instance variable">movingAnimation</param>
+                            <param id="1" name="Value">PLAYER_SELECTION</param>
+                        </action>
+                        <action id="0" name="Call function" sid="559542946364534" type="Function">
+                            <param id="0" name="Name">&quot;setIdle&quot;</param>
+                            <param id="1" name="Parameter {n}">Player.idleAnimation</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -141,7 +153,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="791168811583863" type="System">
                                             <param id="0" name="Variable">terrain_force_reduction</param>
-                                            <param id="1" name="Value">VEHICLE_FORCE/10</param>
+                                            <param id="1" name="Value">VEHICLE_FORCE * 0.5</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -242,6 +254,7 @@
         </event-group>
         <event-group description="Manages the logic for the player&apos;s movement" sid="231594897478263" title="Movement">
             <sub-events>
+                <variable comment='how much offset from the ground for the vehicle to be considered &quot;touching&quot;' constant="0" name="overlapping_offset" sid="194133709542255" static="0" type="number">1</variable>
                 <comment>W or Up arrow key is used to accelerate the Player object by applying force to the right</comment>
                 <event-block any="1" sid="250455436510950">
                     <conditions>
@@ -253,16 +266,38 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Physics" id="2" name="Apply force at angle" sid="955739301379152" type="Player">
+                        <action behavior="Physics" disabled="1" id="2" name="Apply force at angle" sid="955739301379152" type="Player">
                             <param id="0" name="Force">Function.Call(&quot;calculateForce&quot;)</param>
                             <param id="1" name="Angle">Player.Angle</param>
                             <param id="2" name="Image point">2</param>
                         </action>
-                        <action id="0" name="Call function" sid="680284169650762" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="680284169650762" type="Function">
                             <param id="0" name="Name">&quot;setMoving&quot;</param>
                             <param id="1" name="Parameter {n}">Player.movingAnimation</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="340207992933091">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="998064717338718" type="Player">
+                                    <param id="0" name="Object">map2</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">overlapping_offset</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="2" name="Apply force at angle" sid="521680756644699" type="Player">
+                                    <param id="0" name="Force">Function.Call(&quot;calculateForce&quot;)</param>
+                                    <param id="1" name="Angle">Player.Angle</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="238966608306568" type="Function">
+                                    <param id="0" name="Name">&quot;setMoving&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.movingAnimation</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>S or Down arrow key is used to deaccelerate the Player object by applying force to the left</comment>
                 <event-block any="1" sid="833151635601619">
@@ -275,16 +310,38 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Physics" id="2" name="Apply force at angle" sid="414795356094538" type="Player">
+                        <action behavior="Physics" disabled="1" id="2" name="Apply force at angle" sid="414795356094538" type="Player">
                             <param id="0" name="Force">Function.Call(&quot;calculateForce&quot;) * -1</param>
                             <param id="1" name="Angle">Player.Angle</param>
                             <param id="2" name="Image point">2</param>
                         </action>
-                        <action id="0" name="Call function" sid="687431733256086" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="687431733256086" type="Function">
                             <param id="0" name="Name">&quot;setMoving&quot;</param>
                             <param id="1" name="Parameter {n}">Player.movingAnimation</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="975091164634153">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="126217469694550" type="Player">
+                                    <param id="0" name="Object">map2</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">overlapping_offset</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="2" name="Apply force at angle" sid="892422066825325" type="Player">
+                                    <param id="0" name="Force">Function.Call(&quot;calculateForce&quot;) * -1</param>
+                                    <param id="1" name="Angle">Player.Angle</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="101365707799563" type="Function">
+                                    <param id="0" name="Name">&quot;setMoving&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.movingAnimation</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>D or Right arrow key is used to allow the player to rotate their vehicle clockwise</comment>
                 <event-block any="1" sid="378716525530293">

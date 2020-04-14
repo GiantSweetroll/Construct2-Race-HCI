@@ -9,8 +9,8 @@
         <variable constant="0" name="INSTANCE_NAME" sid="969926405757146" static="0" type="text">default</variable>
         <variable constant="0" name="GAME_NAME" sid="503164373709168" static="0" type="text">indo-racecar</variable>
         <comment>Global variables used for game events</comment>
-        <variable comment="Amount of force applied to the Player object" constant="1" name="VEHICLE_FORCE" sid="762445360987483" static="0" type="number">10</variable>
-        <variable comment="How much force is applied to the Player object upwards" constant="1" name="VEHICLE_FORCE_UPWARDS" sid="317218240619773" static="0" type="number">5</variable>
+        <variable comment="Amount of force applied to the Player object" constant="1" name="VEHICLE_FORCE" sid="762445360987483" static="0" type="number">30</variable>
+        <variable comment="How much force is applied to the Player object upwards" constant="1" name="VEHICLE_FORCE_UPWARDS" sid="317218240619773" static="0" type="number">25</variable>
         <event-group description="Functions to manag eupdating the LogText object as messages are added." sid="659441807254993" title="Message log">
             <sub-events>
                 <comment>Function to display log</comment>
