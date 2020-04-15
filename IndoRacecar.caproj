@@ -1079,6 +1079,7 @@
                 <container>
                     <type>StatisticsBoard</type>
                     <type>timeText</type>
+                    <type>timeTaken</type>
                 </container>
                 <texture />
             </object-type>
@@ -1087,10 +1088,16 @@
                 <container>
                     <type>StatisticsBoard</type>
                     <type>timeText</type>
+                    <type>timeTaken</type>
                 </container>
             </object-type>
             <object-type name="timeTaken" sid="370924682900130">
                 <plugin id="TextBox" />
+                <container>
+                    <type>StatisticsBoard</type>
+                    <type>timeText</type>
+                    <type>timeTaken</type>
+                </container>
             </object-type>
         </object-folder>
         <object-type name="Mouse" sid="593802495600120">

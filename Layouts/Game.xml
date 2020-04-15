@@ -588,7 +588,7 @@
                         <text>Time Taken:</text>
                         <placeholder></placeholder>
                         <tooltip></tooltip>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
                         <read-only>Yes</read-only>
                         <spell-check>No</spell-check>
@@ -614,7 +614,7 @@
                         <text>00:00:00</text>
                         <placeholder></placeholder>
                         <tooltip></tooltip>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
                         <read-only>Yes</read-only>
                         <spell-check>No</spell-check>
