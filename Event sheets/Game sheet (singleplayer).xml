@@ -17,6 +17,14 @@
                         <condition id="-2" name="On start of layout" sid="169621157212844" type="System" />
                     </conditions>
                     <actions>
+                        <action id="4" name="Set animation" sid="280096625713413" type="map2">
+                            <param id="0" name="Animation">&quot;Big_City_1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="905264634798533" type="map2">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">map2.Y</param>
+                        </action>
                         <action id="-4" name="Set layer visible" sid="268346787529099" type="System">
                             <param id="0" name="Layer">&quot;Statistics Screen&quot;</param>
                             <param id="1" name="Visibility">0</param>
@@ -47,6 +55,18 @@
                             <param id="0" name="Object">Player</param>
                             <param id="1" name="State">0</param>
                         </action>
+                        <action id="-3" name="Set position" sid="156939110276854" type="StartFlag">
+                            <param id="0" name="X">map2.ImagePointX(&quot;Start&quot;)</param>
+                            <param id="1" name="Y">map2.ImagePointY(&quot;Start&quot;)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="810528618887613" type="FinishFlag">
+                            <param id="0" name="X">map2.ImagePointX(&quot;End&quot;)</param>
+                            <param id="1" name="Y">map2.ImagePointY(&quot;End&quot;)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="285055514569483" type="Player">
+                            <param id="0" name="X">map2.ImagePointX(&quot;Start&quot;) + Player.Width</param>
+                            <param id="1" name="Y">map2.ImagePointY(&quot;Start&quot;)</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <comment>Because the delman has more area, using the standard force value makes it very slow moving, so it needs its own force value</comment>
@@ -66,6 +86,19 @@
                                 <action id="-9" name="Set value" sid="864216217246128" type="System">
                                     <param id="0" name="Variable">VEHICLE_FORCE_UPWARDS</param>
                                     <param id="1" name="Value">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="409760182877838">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="593492703742564" type="Border">
+                                    <param id="0" name="Unique ID">31</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="343761602025237" type="Border">
+                                    <param id="0" name="X">map2.Width</param>
+                                    <param id="1" name="Y">WindowHeight</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -655,6 +688,54 @@
                             <actions>
                                 <action id="-9" name="Destroy" sid="674481431550699" type="luckybox" />
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="handles logic for the camera" sid="252257873066769" title="Camera">
+            <sub-events>
+                <event-block sid="760676550752166">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="576866296627831" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="563866842418823">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="846168831424046" type="System">
+                                    <param id="0" name="First value">invisCamera.X + WindowWidth/2</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">map2.Width</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="745294795731857">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="195697610947527" type="System">
+                                            <param id="0" name="First value">Player.X</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">WindowWidth/2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="477617857409161" type="invisCamera">
+                                            <param id="0" name="X">Player.X + 500</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="510439773291376">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="597429833707955" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="171378945739974" type="invisCamera">
+                                            <param id="0" name="X">960</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

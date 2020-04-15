@@ -302,7 +302,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="256093581345074" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="-0.008" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -999,8 +999,10 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="215699773179583" speed="5">
+                    <animation framecount="1" loop="0" name="Small_City_1" pingpong="0" repeatcount="1" repeatto="0" sid="215699773179583" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.228723" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\BigMap.png">
+                            <image-point name="Start" x="0.0162549" y="0.228723" />
+                            <image-point name="End" x="0.997399" y="0.707447" />
                             <collision-poly>
                                 <point x="0.0929779" y="0.212765" />
                                 <point x="0.137516" y="0.228723" />
@@ -1026,6 +1028,116 @@
                                 <point x="0.99935" y="0.994681" />
                                 <point x="0.000650195" y="0.994681" />
                                 <point x="0.000650195" y="0.228723" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Big_City_1" pingpong="0" repeatcount="1" repeatto="0" sid="766993757637058" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.285714" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\BigMap.png">
+                            <image-point name="Start" x="0.00130152" y="0.29064" />
+                            <image-point name="End" x="0.997614" y="0.70936" />
+                            <collision-poly>
+                                <point x="0.0439263" y="0.273399" />
+                                <point x="0.0536877" y="0.362069" />
+                                <point x="0.0705532" y="0.690887" />
+                                <point x="0.0845988" y="0.738916" />
+                                <point x="0.100543" y="0.483374" />
+                                <point x="0.11307" y="0.475677" />
+                                <point x="0.118412" y="0.427494" />
+                                <point x="0.129325" y="0.265471" />
+                                <point x="0.139121" y="0.218943" />
+                                <point x="0.147543" y="0.215383" />
+                                <point x="0.151538" y="0.452519" />
+                                <point x="0.165466" y="0.588328" />
+                                <point x="0.172104" y="0.594657" />
+                                <point x="0.186053" y="0.397082" />
+                                <point x="0.205717" y="0.208394" />
+                                <point x="0.243531" y="0.0980393" />
+                                <point x="0.251277" y="0.0981601" />
+                                <point x="0.268783" y="0.147542" />
+                                <point x="0.273709" y="0.280668" />
+                                <point x="0.292603" y="0.279497" />
+                                <point x="0.301291" y="0.560931" />
+                                <point x="0.312577" y="0.699185" />
+                                <point x="0.327113" y="0.728903" />
+                                <point x="0.339045" y="0.716668" />
+                                <point x="0.403253" y="0.444542" />
+                                <point x="0.411171" y="0.27769" />
+                                <point x="0.417083" y="0.206579" />
+                                <point x="0.4234" y="0.0232403" />
+                                <point x="0.429759" y="0.0239355" />
+                                <point x="0.43988" y="0.322313" />
+                                <point x="0.451881" y="0.606969" />
+                                <point x="0.459943" y="0.605209" />
+                                <point x="0.467119" y="0.513196" />
+                                <point x="0.472876" y="0.513987" />
+                                <point x="0.481503" y="0.607979" />
+                                <point x="0.487335" y="0.604482" />
+                                <point x="0.498549" y="0.509138" />
+                                <point x="0.50524" y="0.51319" />
+                                <point x="0.517696" y="0.618664" />
+                                <point x="0.527286" y="0.617214" />
+                                <point x="0.53398" y="0.541366" />
+                                <point x="0.54199" y="0.540387" />
+                                <point x="0.549683" y="0.595932" />
+                                <point x="0.55418" y="0.595688" />
+                                <point x="0.568102" y="0.392671" />
+                                <point x="0.580472" y="0.298552" />
+                                <point x="0.596093" y="0.263808" />
+                                <point x="0.603904" y="0.214417" />
+                                <point x="0.6141" y="0.0295566" />
+                                <point x="0.617463" y="0.0295567" />
+                                <point x="0.640619" y="0.568966" />
+                                <point x="0.651329" y="0.700739" />
+                                <point x="0.665077" y="0.689655" />
+                                <point x="0.673239" y="0.515702" />
+                                <point x="0.680519" y="0.514932" />
+                                <point x="0.688769" y="0.659867" />
+                                <point x="0.69409" y="0.661946" />
+                                <point x="0.703607" y="0.465825" />
+                                <point x="0.715198" y="0.175646" />
+                                <point x="0.725929" y="0.041641" />
+                                <point x="0.746154" y="0.0460668" />
+                                <point x="0.753229" y="0.251482" />
+                                <point x="0.760509" y="0.338179" />
+                                <point x="0.768568" y="0.337809" />
+                                <point x="0.78179" y="0.175678" />
+                                <point x="0.784117" y="0.191903" />
+                                <point x="0.784304" y="0.419227" />
+                                <point x="0.787543" y="0.58215" />
+                                <point x="0.806191" y="0.574942" />
+                                <point x="0.812369" y="0.520845" />
+                                <point x="0.82099" y="0.293058" />
+                                <point x="0.824487" y="0.262908" />
+                                <point x="0.833339" y="0.257686" />
+                                <point x="0.837766" y="0.351133" />
+                                <point x="0.843276" y="0.346059" />
+                                <point x="0.845825" y="0.291256" />
+                                <point x="0.848915" y="0.275862" />
+                                <point x="0.852494" y="0.275247" />
+                                <point x="0.860683" y="0.52617" />
+                                <point x="0.863909" y="0.612223" />
+                                <point x="0.869427" y="0.613377" />
+                                <point x="0.87685" y="0.510506" />
+                                <point x="0.882677" y="0.515721" />
+                                <point x="0.891664" y="0.409954" />
+                                <point x="0.892795" y="0.432194" />
+                                <point x="0.893035" y="0.588634" />
+                                <point x="0.900748" y="0.620056" />
+                                <point x="0.905038" y="0.617294" />
+                                <point x="0.914233" y="0.455815" />
+                                <point x="0.921488" y="0.412021" />
+                                <point x="0.927068" y="0.409828" />
+                                <point x="0.932786" y="0.440752" />
+                                <point x="0.93879" y="0.438972" />
+                                <point x="0.944938" y="0.390053" />
+                                <point x="0.949096" y="0.301554" />
+                                <point x="0.954321" y="0.304102" />
+                                <point x="0.966587" y="0.496263" />
+                                <point x="0.995497" y="0.689633" />
+                                <point x="0.999893" y="0.695813" />
+                                <point x="0.999783" y="0.995074" />
+                                <point x="0.00021692" y="0.995074" />
+                                <point x="0.00021692" y="0.278325" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1172,7 +1284,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="437564212850314" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-1.png">
+                    <frame duration="1" hotspotX="0.01" hotspotY="1" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-1.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.88" y="0.056872" />
@@ -1183,7 +1295,7 @@
                             <point x="0.08" y="0.49763" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-2.png">
+                    <frame duration="1" hotspotX="0.01" hotspotY="1" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-2.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.88" y="0.056872" />
@@ -1194,7 +1306,7 @@
                             <point x="0.08" y="0.49763" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-3.png">
+                    <frame duration="1" hotspotX="0.01" hotspotY="1" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-3.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.5" y="0.0379147" />
@@ -1206,7 +1318,7 @@
                             <point x="0.08" y="0.49763" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-4.png">
+                    <frame duration="1" hotspotX="0.01" hotspotY="1" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-4.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.5" y="0.0379147" />
@@ -1218,7 +1330,7 @@
                             <point x="0.08" y="0.49763" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-5.png">
+                    <frame duration="1" hotspotX="0.01" hotspotY="1" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-5.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.5" y="0.113744" />
@@ -1230,7 +1342,7 @@
                             <point x="0.08" y="0.49763" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-6.png">
+                    <frame duration="1" hotspotX="0.01" hotspotY="1" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\start_flag\row-1-col-6.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.5" y="0.113744" />
@@ -1249,7 +1361,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989069178365145" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-1.png">
+                    <frame duration="1" hotspotX="-0.01" hotspotY="0.995261" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-1.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.88" y="0.056872" />
@@ -1260,7 +1372,7 @@
                             <point x="0.08" y="0.49763" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-2.png">
+                    <frame duration="1" hotspotX="-0.01" hotspotY="0.995261" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-2.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.88" y="0.056872" />
@@ -1271,7 +1383,7 @@
                             <point x="0.08" y="0.49763" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-3.png">
+                    <frame duration="1" hotspotX="-0.01" hotspotY="0.995261" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-3.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.5" y="0.0379147" />
@@ -1283,7 +1395,7 @@
                             <point x="0.08" y="0.49763" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-4.png">
+                    <frame duration="1" hotspotX="-0.01" hotspotY="0.995261" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-4.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.5" y="0.0379147" />
@@ -1295,7 +1407,7 @@
                             <point x="0.08" y="0.49763" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-5.png">
+                    <frame duration="1" hotspotX="-0.01" hotspotY="0.995261" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-5.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.5" y="0.113744" />
@@ -1307,7 +1419,7 @@
                             <point x="0.08" y="0.49763" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50237" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-6.png">
+                    <frame duration="1" hotspotX="-0.01" hotspotY="0.995261" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FlagSpriteSheet\separated\finish_flag\row-1-col-6.png">
                         <collision-poly>
                             <point x="0.16" y="0.0758294" />
                             <point x="0.5" y="0.113744" />
@@ -1342,9 +1454,18 @@
         <object-type name="Text" sid="473234875770170">
             <plugin id="Text" />
         </object-type>
-        <object-type name="BlackBackground" sid="695141286785956">
-            <plugin id="TiledBg" />
-            <texture />
+        <object-type name="invisCamera" sid="812075500538114">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="260384054341029">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="325467510647733" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

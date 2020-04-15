@@ -11,7 +11,7 @@
         <horizontal>500</horizontal>
         <vertical>500</vertical>
     </margins>
-    <unbounded-scrolling>0</unbounded-scrolling>
+    <unbounded-scrolling>1</unbounded-scrolling>
     <layers>
         <layer name="Background" sid="8722530541249526">
             <initially-visible>1</initially-visible>
@@ -47,8 +47,8 @@
                         <x>1</x>
                         <y>-1.874328613</y>
                         <z>0</z>
-                        <width>1905</width>
-                        <height>1082</height>
+                        <width>1920</width>
+                        <height>1080</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -96,7 +96,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3809</x>
+                        <x>3805</x>
                         <y>-2</y>
                         <z>0</z>
                         <width>1905</width>
@@ -160,8 +160,8 @@
                         <width>100</width>
                         <height>211</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.502369642</hotspotY>
+                        <hotspotX>0.01</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -182,8 +182,8 @@
                         <width>100</width>
                         <height>211</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.502369642</hotspotY>
+                        <hotspotX>-0.01</hotspotX>
+                        <hotspotY>0.995260656</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -214,14 +214,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-124</x>
-                        <y>544.5</y>
+                        <x>-255</x>
+                        <y>1072</y>
                         <z>0</z>
                         <width>250</width>
                         <height>1071</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>-0.008</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -252,14 +252,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3965</x>
-                        <y>544</y>
+                        <x>4432</x>
+                        <y>2301</y>
                         <z>0</z>
                         <width>250</width>
                         <height>1071</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>-0.008</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -286,7 +286,7 @@
                 <instance type="map2" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Big_City_1</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -309,14 +309,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1920</x>
+                        <x>5758</x>
                         <y>804</y>
                         <z>0</z>
-                        <width>3842.997314453</width>
-                        <height>362.944458008</height>
+                        <width>11518.997070313</width>
+                        <height>391.902801514</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.228723407</hotspotY>
+                        <hotspotY>0.285714298</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -471,7 +471,7 @@
                         </behavior-instance>
                         <behavior-instance type="ScrollTo">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -486,6 +486,35 @@
                         <depth>0</depth>
                         <hotspotX>0.545454562</hotspotX>
                         <hotspotY>0.526315808</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="invisCamera" uid="46">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960</x>
+                        <y>549</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>250</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
