@@ -29,6 +29,7 @@
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -1098,6 +1099,40 @@
                     <type>timeText</type>
                     <type>timeTaken</type>
                 </container>
+            </object-type>
+        </object-folder>
+        <object-folder name="Powerups">
+            <object-type name="luckybox" sid="266220927352964">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="196889117168074">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Wrap" sid="822178628968071">
+                        <behavior id="wrap" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="316376266193783" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="luckyboxSpawner" sid="623273381356277">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Wrap" sid="315019783956270">
+                        <behavior id="wrap" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="774934105528409">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="998352798169720" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-type name="Mouse" sid="593802495600120">

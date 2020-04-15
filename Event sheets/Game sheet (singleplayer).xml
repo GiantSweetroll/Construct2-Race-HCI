@@ -43,6 +43,10 @@
                         <action id="-16" name="Set opacity" sid="916516954949355" type="BlackScreen">
                             <param id="0" name="Opacity">50</param>
                         </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="680462115046740" type="luckybox">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="State">0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <comment>Because the delman has more area, using the standard force value makes it very slow moving, so it needs its own force value</comment>
@@ -517,6 +521,142 @@
                             <param id="0" name="Text">Function.Call(&quot;getTime&quot;, timer)</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Manages the logic for power ups" sid="977898139946398" title="Power Ups">
+            <sub-events>
+                <variable comment="variable to set which power up to display" constant="0" name="powerUpType" sid="694976399767013" static="0" type="number">0</variable>
+                <variable comment="variable to identify if a power up should be spawned" constant="0" name="powerUp" sid="893788319132239" static="0" type="number">0</variable>
+                <comment>Every x seconds, randomize if a power up will spawn</comment>
+                <event-block sid="657733017348242">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="784486363987835" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="763515043267392" type="System">
+                            <param id="0" name="Variable">powerUp</param>
+                            <param id="1" name="Value">int(random(0, 11))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>If powerUp is 1, select from the available power ups to spawn</comment>
+                        <event-block sid="102161282828124">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="233896759315928" type="System">
+                                    <param id="0" name="Variable">powerUp</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="419442272407182" type="System">
+                                    <param id="0" name="Variable">finished</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="117945681762575" type="luckyboxSpawner">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">FinishFlag.X-FinishFlag.Width</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="742653844318585" type="luckyboxSpawner">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Player.X+Player.Width</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="478431810250958" type="System">
+                                    <param id="0" name="Variable">powerUpType</param>
+                                    <param id="1" name="Value">int(random(0, 2))</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="380715368539713" type="luckyboxSpawner">
+                                    <param id="0" name="Object">luckybox</param>
+                                    <param id="1" name="Layer">&quot;Powerups&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Check for what kind of power up to spawn.&#x0D;&#x0A;&#x0D;&#x0A;0 = Indomie</comment>
+                                <event-block sid="192496781516834">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="867964139021075" type="System">
+                                            <param id="0" name="Variable">powerUpType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>When the player hits a lucky block and hits the space bar, destroy the lucky block</comment>
+                <event-block sid="299499990003499">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="569277366499040" type="Player">
+                            <param id="0" name="Object">luckybox</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="503808407661482">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="371387659355863" type="Keyboard">
+                                    <param id="0" name="Key">32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="243245818639918" type="Function">
+                                    <param id="0" name="Name">&quot;destroyLuckyBlock&quot;</param>
+                                    <param id="1" name="Parameter {n}">luckybox.UID</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="924688986742832">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="388761715176164" type="System">
+                                            <param id="0" name="Variable">powerUpType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="732146401870139" type="Player">
+                                            <param id="0" name="Impulse">Function.Call(&quot;calculateForce&quot;) * 1.5</param>
+                                            <param id="1" name="Angle">Player.Angle</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="451545618150179" type="Function">
+                                            <param id="0" name="Name">&quot;setMoving&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.movingAnimation</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Function to destroy the lucky block</comment>
+                <event-block sid="171237281615311">
+                    <conditions>
+                        <condition id="0" name="On function" sid="510533315293361" type="Function">
+                            <param id="0" name="Name">&quot;destroyLuckyBlock&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="104504169435073">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="815353202570365" type="luckybox">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="674481431550699" type="luckybox" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
