@@ -257,7 +257,7 @@
                                         <condition id="-8" name="Compare two values" sid="780557175441581" type="System">
                                             <param id="0" name="First value">Flood.Y</param>
                                             <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Second value">map2.Y +(map2.Height/2)</param>
+                                            <param id="2" name="Second value">map2.Y +(map2.Height*0.2)</param>
                                         </condition>
                                         <condition id="-14" name="Compare variable" sid="671873716746309" type="System">
                                             <param id="0" name="Variable">floodReverse</param>
