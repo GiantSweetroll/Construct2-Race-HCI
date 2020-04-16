@@ -492,16 +492,7 @@
                             <properties>
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>4</fade-in-time>
-                                <wait-time>9999999</wait-time>
-                                <fade-out-time>0</fade-out-time>
-                                <destroy>No</destroy>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Fade2">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>5</wait-time>
+                                <wait-time>10</wait-time>
                                 <fade-out-time>4</fade-out-time>
                                 <destroy>No</destroy>
                             </properties>

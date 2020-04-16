@@ -38,6 +38,9 @@
                             <param id="0" name="Variable">timer</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-16" name="Set opacity" sid="444621299286900" type="Smog">
+                            <param id="0" name="Opacity">95</param>
+                        </action>
                         <action id="-16" name="Set opacity" sid="199695569516120" type="Flood">
                             <param id="0" name="Opacity">50</param>
                         </action>
@@ -226,8 +229,7 @@
                                         <action id="-15" name="Set visible" sid="209678589109741" type="Smog">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action behavior="Fade" id="0" name="Restart fade" sid="873046086866555" type="Smog" />
-                                        <action behavior="Fade2" id="1" name="Start fade" sid="899308221839821" type="Smog" />
+                                        <action behavior="Fade" id="1" name="Start fade" sid="873046086866555" type="Smog" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="223961952701749">
@@ -249,12 +251,21 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="402979831956691">
-                    <conditions>
-                        <condition behavior="Fade2" id="0" name="On fade-out finished" sid="145021061357015" type="Smog" />
-                    </conditions>
+                <event-block disabled="1" sid="402979831956691">
+                    <conditions />
                     <actions>
                         <action id="-9" name="Set value" sid="649292344017231" type="System">
+                            <param id="0" name="Variable">randomEventRunning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="356202607037724">
+                    <conditions>
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="712176501171779" type="Smog" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="689370371889844" type="System">
                             <param id="0" name="Variable">randomEventRunning</param>
                             <param id="1" name="Value">0</param>
                         </action>

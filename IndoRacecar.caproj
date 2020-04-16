@@ -1164,9 +1164,6 @@
                     <behavior-type name="Fade" sid="485620428703199">
                         <behavior id="Fade" />
                     </behavior-type>
-                    <behavior-type name="Fade2" sid="528357815040648">
-                        <behavior id="Fade" />
-                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="553863673562248" speed="5">
