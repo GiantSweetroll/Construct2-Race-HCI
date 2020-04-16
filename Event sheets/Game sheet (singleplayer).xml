@@ -137,6 +137,10 @@
                             <param id="0" name="Property name">&quot;border-width&quot;</param>
                             <param id="1" name="Value">&quot;0px 0px 0px 0px&quot;</param>
                         </action>
+                        <action id="7" name="Set CSS style" sid="570270643238981" type="timeText">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;white&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="219821636782321">
@@ -163,6 +167,10 @@
                         <action id="7" name="Set CSS style" sid="352609556804397" type="timeTaken">
                             <param id="0" name="Property name">&quot;border-width&quot;</param>
                             <param id="1" name="Value">&quot;0px 0px 0px 0px&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="349123255140020" type="timeTaken">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;white&quot;</param>
                         </action>
                     </actions>
                 </event-block>
