@@ -1271,7 +1271,7 @@
             </object-type>
         </object-folder>
         <object-folder name="statistics screen">
-            <object-type name="BlackScreen" sid="812228091690473">
+            <object-type name="BlackScreen50" sid="812228091690473">
                 <plugin id="TiledBg" />
                 <texture />
             </object-type>
@@ -1554,6 +1554,10 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="BalckScreen100" sid="917566953593639">
+            <plugin id="TiledBg" />
+            <texture />
         </object-type>
     </object-folder>
     <families />

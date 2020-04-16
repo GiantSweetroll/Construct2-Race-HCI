@@ -56,7 +56,7 @@
                             <param id="0" name="Name">&quot;setIdle&quot;</param>
                             <param id="1" name="Parameter {n}">Player.idleAnimation</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="916516954949355" type="BlackScreen">
+                        <action id="-16" name="Set opacity" sid="916516954949355" type="BlackScreen50">
                             <param id="0" name="Opacity">50</param>
                         </action>
                         <action behavior="Physics" id="23" name="Enable/disable collisions" sid="680462115046740" type="luckybox">
@@ -740,12 +740,17 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="563866842418823">
+                        <event-block any="1" sid="563866842418823">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="846168831424046" type="System">
                                     <param id="0" name="First value">invisCamera.X + 960</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Second value">map2.Width</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="660574831310994" type="System">
+                                    <param id="0" name="First value">Player.X</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">map2.Width - LayoutWidth/2</param>
                                 </condition>
                             </conditions>
                             <actions />
