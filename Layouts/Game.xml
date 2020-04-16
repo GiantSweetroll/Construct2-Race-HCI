@@ -4,7 +4,7 @@
     <sid>8873350371196689</sid>
     <event-sheet>Game sheet (singleplayer)</event-sheet>
     <size>
-        <width>3838</width>
+        <width>1920</width>
         <height>1080</height>
     </size>
     <margins>
@@ -29,81 +29,23 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="city_background" uid="37">
+                <instance type="city_background_1" uid="37">
                     <properties>
-                        <left-margin>16</left-margin>
-                        <right-margin>16</right-margin>
-                        <top-margin>16</top-margin>
-                        <bottom-margin>16</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1</x>
-                        <y>-1.874328613</y>
+                        <x>0</x>
+                        <y>0</y>
                         <z>0</z>
                         <width>1920</width>
                         <height>1080</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="city_background" uid="38">
-                    <properties>
-                        <left-margin>16</left-margin>
-                        <right-margin>16</right-margin>
-                        <top-margin>16</top-margin>
-                        <bottom-margin>16</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1903</x>
-                        <y>-2</y>
-                        <z>0</z>
-                        <width>1905</width>
-                        <height>1082</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="city_background" uid="39">
-                    <properties>
-                        <left-margin>16</left-margin>
-                        <right-margin>16</right-margin>
-                        <top-margin>16</top-margin>
-                        <bottom-margin>16</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3805</x>
-                        <y>-2</y>
-                        <z>0</z>
-                        <width>1905</width>
-                        <height>1082</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -176,14 +118,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3782</x>
-                        <y>866</y>
+                        <x>-433</x>
+                        <y>590</y>
                         <z>0</z>
                         <width>100</width>
                         <height>211</height>
                         <depth>0</depth>
-                        <hotspotX>-0.01</hotspotX>
-                        <hotspotY>0.995260656</hotspotY>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -252,8 +194,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4432</x>
-                        <y>2301</y>
+                        <x>-1078</x>
+                        <y>831</y>
                         <z>0</z>
                         <width>250</width>
                         <height>1071</height>
@@ -286,7 +228,7 @@
                 <instance type="map2" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Big_City_1</initial-animation>
+                        <initial-animation>Small_City_1</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -309,14 +251,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5758</x>
-                        <y>804</y>
+                        <x>-988</x>
+                        <y>1265</y>
                         <z>0</z>
-                        <width>11518.997070313</width>
-                        <height>391.902801514</height>
+                        <width>3842.997314453</width>
+                        <height>362.944458008</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.285714298</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -702,11 +644,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>471</x>
-                        <y>72</y>
+                        <x>2.239257813</x>
+                        <y>72.119628906</y>
                         <z>0</z>
-                        <width>936.239257813</width>
-                        <height>936.239257813</height>
+                        <width>1909</width>
+                        <height>936</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -729,8 +671,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>483</x>
-                        <y>210</y>
+                        <x>517</x>
+                        <y>301</y>
                         <z>0</z>
                         <width>286.110290527</width>
                         <height>41.962841034</height>
@@ -755,8 +697,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1142</x>
-                        <y>209</y>
+                        <x>1091</x>
+                        <y>301</y>
                         <z>0</z>
                         <width>266</width>
                         <height>42</height>
