@@ -20,7 +20,7 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="280096625713413" type="map2">
-                            <param id="0" name="Animation">&quot;Big_City_1&quot;</param>
+                            <param id="0" name="Animation">&quot;Rural_1&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="905264634798533" type="map2">
