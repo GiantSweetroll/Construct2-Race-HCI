@@ -212,11 +212,11 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="194798096705739" type="System">
                                     <param id="0" name="Variable">randomEventType</param>
-                                    <param id="1" name="Value">int(random(0, 2))</param>
+                                    <param id="1" name="Value">int(random(0, 3))</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <comment>Check for what kind of random event to fire.&#x0D;&#x0A;&#x0D;&#x0A;0 = Smog&#x0D;&#x0A;1 = Flood</comment>
+                                <comment>Check for what kind of random event to fire.&#x0D;&#x0A;&#x0D;&#x0A;0 = Smog&#x0D;&#x0A;1 = Flood&#x0D;&#x0A;2 = Earthquake</comment>
                                 <event-block sid="818559196565365">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="560133877441847" type="System">
@@ -230,6 +230,10 @@
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action behavior="Fade" id="1" name="Start fade" sid="873046086866555" type="Smog" />
+                                        <action id="-12" name="Set group active" sid="973711079687929" type="System">
+                                            <param id="0" name="Group name">&quot;Smog&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="223961952701749">
@@ -247,30 +251,49 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="200086423687253">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="668962629369780" type="System">
+                                            <param id="0" name="Variable">randomEventType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="203334228383348" type="invisCamera">
+                                            <param id="0" name="Magnitude">int(random(30, 80))</param>
+                                            <param id="1" name="Duration">3</param>
+                                            <param id="2" name="Mode">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="782382900602470" type="System">
+                                            <param id="0" name="Variable">randomEventRunning</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="402979831956691">
-                    <conditions />
-                    <actions>
-                        <action id="-9" name="Set value" sid="649292344017231" type="System">
-                            <param id="0" name="Variable">randomEventRunning</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="356202607037724">
-                    <conditions>
-                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="712176501171779" type="Smog" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="689370371889844" type="System">
-                            <param id="0" name="Variable">randomEventRunning</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="Controls smog random event logic" inactive="1" sid="366446054265275" title="Smog">
+                    <sub-events>
+                        <event-block sid="356202607037724">
+                            <conditions>
+                                <condition behavior="Fade" id="0" name="On fade-out finished" sid="712176501171779" type="Smog" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="689370371889844" type="System">
+                                    <param id="0" name="Variable">randomEventRunning</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="671799363223504" type="System">
+                                    <param id="0" name="Group name">&quot;Smog&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="Controls the flood random event logic" inactive="1" sid="892784841226373" title="Flood">
                     <sub-events>
                         <event-block sid="373269577947185">
