@@ -23,7 +23,7 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="280096625713413" type="map2">
-                            <param id="0" name="Animation">&quot;Rural_1&quot;</param>
+                            <param id="0" name="Animation">&quot;Big_City_1&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="905264634798533" type="map2">
@@ -497,7 +497,7 @@
                                         <condition id="-8" name="Compare two values" sid="588426561245908" type="System">
                                             <param id="0" name="First value">luckyboxSpawner.X</param>
                                             <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Second value">Player.X + 500</param>
+                                            <param id="2" name="Second value">Player.X + Player.Width</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -754,7 +754,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="763515043267392" type="System">
                             <param id="0" name="Variable">powerUp</param>
-                            <param id="1" name="Value">int(random(0, 50))</param>
+                            <param id="1" name="Value">int(random(0, 20))</param>
                         </action>
                     </actions>
                     <sub-events>
