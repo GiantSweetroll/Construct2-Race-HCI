@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Character Selection sheet</name>
     <events>
+        <variable constant="0" name="NameInputVisibility" sid="953939782899984" static="0" type="number">0</variable>
+        <variable constant="0" name="SelectedMap" sid="637783105556778" static="0" type="number">1</variable>
+        <variable constant="0" name="MapPanelMoving" sid="585203867836425" static="0" type="number">0</variable>
         <variable constant="0" name="locked" sid="338558279096045" static="0" type="number">0</variable>
         <variable comment="Used to store the username of the user" constant="0" name="MY_USERNAME" sid="558387289368357" static="0" type="text">defaultname</variable>
         <variable comment="Used to identify the player&apos;s final character selection (this will be used to login and connect to the signalling server)" constant="0" name="PLAYER_SELECTION" sid="512494463320977" static="0" type="number">0</variable>
@@ -24,6 +27,16 @@
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
                     <param id="2" name="Object clicked">back_button</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="331132071031472" type="System">
+                    <param id="0" name="Variable">MapPanelMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="181427084132595" type="System">
+                    <param id="0" name="Variable">NameInputVisibility</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
@@ -368,29 +381,255 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="262091863240252">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="581618909094417" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">select_empty_button</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="135239780411404" type="select_Button">
-                    <param id="0" name="Frame number">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="158616892638645" type="select_Button">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-16" name="Wait" sid="735601873916591" type="System">
-                    <param id="0" name="Seconds">0.25</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="885606799421567" type="System">
-                    <param id="0" name="Layout">Game</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="857598813389784" title="MapPanelMovement">
+            <sub-events>
+                <event-block sid="262091863240252">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="581618909094417" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">select_empty_button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="135239780411404" type="select_Button">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="158616892638645" type="select_Button">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="735601873916591" type="System">
+                            <param id="0" name="Seconds">0.25</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="936016493250278" type="System">
+                            <param id="0" name="Variable">MapPanelMoving</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="737111720700691" type="Text_input">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="167052962701973" type="System">
+                            <param id="0" name="Variable">NameInputVisibility</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="713926959107596">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="225660380690315" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="314736346875492" type="System">
+                            <param id="0" name="Variable">MapPanelMoving</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="853966870351873" type="System">
+                            <param id="0" name="Seconds">0.90</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="407079419989698" type="Text_input">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="690515122944452" type="System">
+                            <param id="0" name="Variable">NameInputVisibility</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="274273580503335">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="764145404220884" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">CityMapIcon</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="764608936197906" type="System">
+                            <param id="0" name="Variable">MapPanelMoving</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="793816144886962" type="System">
+                            <param id="0" name="Variable">SelectedMap</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="210684376609094" type="System">
+                            <param id="0" name="Layout">Game</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="783615935936768">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="400014465214028" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">RuralMapIcon</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="134577790918921" type="System">
+                            <param id="0" name="Variable">MapPanelMoving</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="146485969109098" type="System">
+                            <param id="0" name="Variable">SelectedMap</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="156502814972683" type="System">
+                            <param id="0" name="Layout">Game</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="853781287596123">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="745942065257774" type="System">
+                            <param id="0" name="Variable">MapPanelMoving</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="331617229037367" type="MapSelectBG">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="363706244737872" type="CityMapIcon">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="423662091516949" type="RuralMapIcon">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="149307936543848" type="Sprite5">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="345289145345708">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="961794138128854" type="System">
+                            <param id="0" name="Variable">MapPanelMoving</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="138631708286406" type="CityMapIcon">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="222138584104818" type="MapSelectBG">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="287762899609799" type="RuralMapIcon">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="889649515967268" type="Sprite5">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="200050200900061" type="MapSelectBG">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="655292386016331" type="CityMapIcon">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="278553395044160" type="RuralMapIcon">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="583020347221700" type="Sprite5">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="233848079923846">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="171829433041704" type="System">
+                            <param id="0" name="Variable">MapPanelMoving</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="159473925374061" type="CityMapIcon">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="347779096414591" type="MapSelectBG">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="206234997689511" type="RuralMapIcon">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="135292232826953" type="Sprite5">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="514985525941893" type="MapSelectBG">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="707384932365540" type="CityMapIcon">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="886805458873900" type="RuralMapIcon">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="353626732976220" type="Sprite5">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="847239415358507">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="721983144034094" type="System">
+                            <param id="0" name="Variable">MapPanelMoving</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="945601553295904">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="429357406668227" type="MapSelectBG">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="864630540940794" type="System">
+                                    <param id="0" name="Variable">MapPanelMoving</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="583134829907281" type="System">
+                                    <param id="0" name="Variable">MapPanelMoving</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="220374585318827">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="175648119886648" type="MapSelectBG">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">1092</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="240487365237920" type="System">
+                                    <param id="0" name="Variable">MapPanelMoving</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="323511441505996" type="System">
+                                    <param id="0" name="Variable">MapPanelMoving</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

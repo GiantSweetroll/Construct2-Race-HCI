@@ -1561,6 +1561,69 @@
                 <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\ItemBox.png" />
             </object-type>
         </object-folder>
+        <object-folder name="MapSelection">
+            <object-type name="MapSelectBG" sid="529803755707778">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="988500563646953">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="293846474177027" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\MapSelectionBG.png">
+                            <collision-poly>
+                                <point x="0.0666667" y="0.118519" />
+                                <point x="0.5" y="0.0814815" />
+                                <point x="0.933333" y="0.118519" />
+                                <point x="0.933333" y="0.881481" />
+                                <point x="0.5" y="0.911111" />
+                                <point x="0.0666667" y="0.881481" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CityMapIcon" sid="220544995446069">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="326499350114633">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="390563717367457" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\CityIcon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RuralMapIcon" sid="540246917014892">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="723871313705765">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816463280573525" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\RuralIcon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite5" sid="400189130117120">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="411971304745960">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="896291797572052" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\XButton.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Mouse" sid="593802495600120">
             <plugin id="Mouse" />
         </object-type>
@@ -1826,6 +1889,14 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="427369752295362" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="973665320714446">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="258543029631671" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>

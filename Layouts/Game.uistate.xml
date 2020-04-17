@@ -27,8 +27,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <layers>
         <layer locked="0" name="Background" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Log" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Ground" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Misc Sprites" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Ground" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Powerups" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Player" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Beggar Random Event" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Random events" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="UI" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="timer" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Black bars" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Statistics Screen" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Destroyer" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

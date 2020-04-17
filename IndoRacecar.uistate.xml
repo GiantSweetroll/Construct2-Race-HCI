@@ -10,13 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Main Menu</layout>
+        <layout order="0">Main Menu</layout>
         <layout order="1">Character Selection</layout>
-        <layout order="5">Game</layout>
-        <event-sheet order="2">Character Selection sheet</event-sheet>
+        <layout order="4">Game</layout>
+        <event-sheet active="1" order="2">Character Selection sheet</event-sheet>
         <event-sheet order="3">Menu sheet</event-sheet>
-        <event-sheet order="4">Game sheet</event-sheet>
-        <event-sheet order="6">Character sheet</event-sheet>
+        <event-sheet order="5">Game sheet (singleplayer)</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -34,10 +33,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Vehicles/" />
         <folder expanded="0" path="object-folder/CharacterSelection/" />
         <folder expanded="0" path="object-folder/map/" />
-        <folder expanded="1" path="object-folder/game messages/" />
-        <folder expanded="1" path="layout-folder/" />
-        <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="object-folder/game messages/" />
+        <folder expanded="0" path="object-folder/Random events/" />
+        <folder expanded="0" path="object-folder/statistics screen/" />
+        <folder expanded="1" path="object-folder/Powerups/" />
+        <folder expanded="0" path="object-folder/Game UI/" />
+        <folder expanded="1" path="object-folder/MapSelection/" />
+        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Icons/" />
@@ -51,6 +55,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/MutedMusic/" />
         <folder expanded="1" path="animation-folder/xButton/" />
         <folder expanded="1" path="animation-folder/PopupBG/" />
+        <folder expanded="1" path="animation-folder/Border/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/duck/" />
         <folder expanded="1" path="animation-folder/emeska/" />
@@ -60,10 +65,25 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/second/" />
         <folder expanded="1" path="animation-folder/first/" />
         <folder expanded="1" path="animation-folder/map2/" />
+        <folder expanded="1" path="animation-folder/Smog/" />
+        <folder expanded="1" path="animation-folder/Flood/" />
+        <folder expanded="1" path="animation-folder/Beggar/" />
+        <folder expanded="1" path="animation-folder/BeggarSpawner/" />
+        <folder expanded="1" path="animation-folder/luckybox/" />
+        <folder expanded="1" path="animation-folder/luckyboxSpawner/" />
+        <folder expanded="1" path="animation-folder/indomie/" />
+        <folder expanded="1" path="animation-folder/MapSelectBG/" />
+        <folder expanded="1" path="animation-folder/CityMapIcon/" />
+        <folder expanded="1" path="animation-folder/RuralMapIcon/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/StartFlag/" />
         <folder expanded="1" path="animation-folder/FinishFlag/" />
         <folder expanded="1" path="animation-folder/select_Button/" />
         <folder expanded="1" path="animation-folder/select_empty_button/" />
+        <folder expanded="1" path="animation-folder/invisCamera/" />
+        <folder expanded="1" path="animation-folder/Coin/" />
+        <folder expanded="1" path="animation-folder/CoinSpawner/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
     </folders-expanded>
 </c2uistate>
