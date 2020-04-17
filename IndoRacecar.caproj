@@ -1410,25 +1410,25 @@
                 <plugin id="NinePatch" />
                 <container>
                     <type>StatisticsBoard</type>
-                    <type>timeText</type>
-                    <type>timeTaken</type>
+                    <type>categoryTextBox</type>
+                    <type>valuesTextBox</type>
                 </container>
                 <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FinishScreen.png" />
             </object-type>
-            <object-type name="timeText" sid="460918897112056">
+            <object-type name="categoryTextBox" sid="460918897112056">
                 <plugin id="TextBox" />
                 <container>
                     <type>StatisticsBoard</type>
-                    <type>timeText</type>
-                    <type>timeTaken</type>
+                    <type>categoryTextBox</type>
+                    <type>valuesTextBox</type>
                 </container>
             </object-type>
-            <object-type name="timeTaken" sid="370924682900130">
+            <object-type name="valuesTextBox" sid="370924682900130">
                 <plugin id="TextBox" />
                 <container>
                     <type>StatisticsBoard</type>
-                    <type>timeText</type>
-                    <type>timeTaken</type>
+                    <type>categoryTextBox</type>
+                    <type>valuesTextBox</type>
                 </container>
             </object-type>
         </object-folder>
@@ -1787,6 +1787,11 @@
         </object-type>
         <object-type name="Coin" sid="294122309936629">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="618722081026291">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="20" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="972678708530353" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1808,6 +1813,19 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CoinSpawner" sid="605936438702834">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="509363977731400">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="427369752295362" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>

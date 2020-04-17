@@ -463,6 +463,78 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="CoinSpawner" uid="57">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>800</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>50</x>
+                        <y>416</y>
+                        <z>0</z>
+                        <width>48.989795685</width>
+                        <height>48.989795685</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Coin" uid="56">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Bounding box</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>999</density>
+                                <friction>1</friction>
+                                <elasticity>0</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2330</x>
+                        <y>173</y>
+                        <z>0</z>
+                        <width>58</width>
+                        <height>58</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -538,28 +610,6 @@
                         <depth>0</depth>
                         <hotspotX>0.855029583</hotspotX>
                         <hotspotY>0.564864874</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Coin" uid="56">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2330</x>
-                        <y>173</y>
-                        <z>0</z>
-                        <width>58</width>
-                        <height>58</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -962,42 +1012,42 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="timeText" uid="42">
+                <instance type="categoryTextBox" uid="42">
                     <properties>
-                        <text>Time Taken:</text>
+                        <text></text>
                         <placeholder></placeholder>
                         <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
                         <read-only>Yes</read-only>
                         <spell-check>No</spell-check>
-                        <type>Text</type>
+                        <type>Textarea</type>
                         <auto-font-size>Yes</auto-font-size>
                         <id-optional></id-optional>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>517</x>
+                        <x>517.055175781</x>
                         <y>301</y>
                         <z>0</z>
-                        <width>286.110290527</width>
-                        <height>41.962841034</height>
+                        <width>286</width>
+                        <height>648</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="timeTaken" uid="43">
+                <instance type="valuesTextBox" uid="43">
                     <properties>
-                        <text>00:00:00</text>
+                        <text></text>
                         <placeholder></placeholder>
                         <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
                         <read-only>Yes</read-only>
                         <spell-check>No</spell-check>
-                        <type>Text</type>
+                        <type>Textarea</type>
                         <auto-font-size>Yes</auto-font-size>
                         <id-optional></id-optional>
                     </properties>
@@ -1008,7 +1058,7 @@
                         <y>301</y>
                         <z>0</z>
                         <width>266</width>
-                        <height>42</height>
+                        <height>644</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
