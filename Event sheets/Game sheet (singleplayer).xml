@@ -65,6 +65,10 @@
                             <param id="0" name="Object">Player</param>
                             <param id="1" name="State">0</param>
                         </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="199886760271833" type="Beggar">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="State">0</param>
+                        </action>
                         <action id="-3" name="Set position" sid="912640266556660" type="StartFlag">
                             <param id="0" name="X">map2.ImagePointX(&quot;Start&quot;)</param>
                             <param id="1" name="Y">map2.ImagePointY(&quot;Start&quot;)</param>
@@ -222,11 +226,11 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="194798096705739" type="System">
                                     <param id="0" name="Variable">randomEventType</param>
-                                    <param id="1" name="Value">int(random(0, 3))</param>
+                                    <param id="1" name="Value">int(random(0, 4))</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <comment>Check for what kind of random event to fire.&#x0D;&#x0A;&#x0D;&#x0A;0 = Smog&#x0D;&#x0A;1 = Flood&#x0D;&#x0A;2 = Earthquake</comment>
+                                <comment>Check for what kind of random event to fire.&#x0D;&#x0A;&#x0D;&#x0A;0 = Smog&#x0D;&#x0A;1 = Flood&#x0D;&#x0A;2 = Earthquake&#x0D;&#x0A;3 = Hand of God</comment>
                                 <event-block sid="818559196565365">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="560133877441847" type="System">
@@ -292,6 +296,30 @@
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set text" sid="142499567364379" type="GameStatus">
+                                            <param id="0" name="Text">GAME_STATUS_DEFAULT_TEXT</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="700888811427269">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="692689407311290" type="System">
+                                            <param id="0" name="Variable">randomEventType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="514542566162915" type="System">
+                                            <param id="0" name="Variable">randomEventRunning</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="487673964722301" type="GameStatus">
+                                            <param id="0" name="Text">&quot;Hand of God!&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="113075242326601" type="System">
+                                            <param id="0" name="Seconds">5</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="969150962732595" type="GameStatus">
                                             <param id="0" name="Text">GAME_STATUS_DEFAULT_TEXT</param>
                                         </action>
                                     </actions>
@@ -437,6 +465,59 @@
                                     </sub-events>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="Handles the Hand of God (Beggar) random event logic" sid="108623833068135" title="Hand of God (Beggar)">
+                    <sub-events>
+                        <variable comment="indicate if a beggar should spawn" constant="0" name="spawnBeggar" sid="114090438249684" static="0" type="number">0</variable>
+                        <event-block sid="757787829216265">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="593916842797161" type="System">
+                                    <param id="0" name="Variable">randomEventType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="852985154235450" type="System">
+                                    <param id="0" name="Variable">spawnBeggar</param>
+                                    <param id="1" name="Value">int(random(1, 2))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="282832147082682">
+                                    <conditions>
+                                        <condition disabled="1" id="-14" name="Compare variable" sid="980006972487475" type="System">
+                                            <param id="0" name="Variable">spawnBeggar</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="588426561245908" type="System">
+                                            <param id="0" name="First value">BeggarSpawner.X</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">Player.X + 500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="471490582569557" type="BeggarSpawner">
+                                            <param id="0" name="Object">Beggar</param>
+                                            <param id="1" name="Layer">&quot;Beggar Random Event&quot;</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="140919304097903">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="681804740539888" type="Beggar">
+                                    <param id="0" name="Object">ObjectDestroyer</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="238577641538178" type="Beggar" />
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -781,6 +862,17 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>If a lucky box is not activated after going off map to the left, destroy it</comment>
+                <event-block sid="957648131347496">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="729229814896969" type="luckybox">
+                            <param id="0" name="Object">ObjectDestroyer</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="335553154048858" type="luckybox" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="handles logic for the camera" sid="252257873066769" title="Camera">
@@ -907,6 +999,16 @@
                     </conditions>
                     <actions>
                         <action id="3" name="Start" sid="996170772625362" type="indomie">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="705081064516387">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="687134982039688" type="Beggar" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="461823906427180" type="Beggar">
                             <param id="0" name="From">1</param>
                         </action>
                     </actions>
