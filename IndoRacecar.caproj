@@ -1147,7 +1147,7 @@
                             <image-point name="Start" x="0.00173536" y="0.347458" />
                             <image-point name="End" x="0.998048" y="0.644068" />
                             <collision-poly>
-                                <point x="0.0258134" y="0.279661" />
+                                <point x="0.0262472" y="0.277542" />
                                 <point x="0.0449024" y="0.385593" />
                                 <point x="0.061551" y="0.399364" />
                                 <point x="0.0773589" y="0.500529" />
@@ -1264,8 +1264,93 @@
             <object-type name="Flood" sid="987531881571833">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525435133107124" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.23545" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\Flood.png" />
+                    <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525435133107124" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FloodSpriteSheet\Flood0.png">
+                            <collision-poly>
+                                <point x="0.101951" y="0.0238095" />
+                                <point x="0.5" y="0.0449735" />
+                                <point x="0.898049" y="0.0238095" />
+                                <point x="0.999512" y="0.23545" />
+                                <point x="0.999512" y="0.997355" />
+                                <point x="0.000487805" y="0.997355" />
+                                <point x="0.000487805" y="0.23545" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FloodSpriteSheet\Flood1.png">
+                            <collision-poly>
+                                <point x="0.101951" y="0.0238095" />
+                                <point x="0.5" y="0.0449735" />
+                                <point x="0.898049" y="0.0238095" />
+                                <point x="0.999512" y="0.23545" />
+                                <point x="0.999512" y="0.997355" />
+                                <point x="0.000487805" y="0.997355" />
+                                <point x="0.000487805" y="0.23545" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FloodSpriteSheet\Flood2.png">
+                            <collision-poly>
+                                <point x="0.0980488" y="0.0026455" />
+                                <point x="0.5" y="0.0449735" />
+                                <point x="0.894146" y="0.0449735" />
+                                <point x="0.999512" y="0.23545" />
+                                <point x="0.999512" y="0.997355" />
+                                <point x="0.000487805" y="0.997355" />
+                                <point x="0.000487805" y="0.23545" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FloodSpriteSheet\Flood3.png">
+                            <collision-poly>
+                                <point x="0.0980488" y="0.0026455" />
+                                <point x="0.5" y="0.0449735" />
+                                <point x="0.894146" y="0.0449735" />
+                                <point x="0.999512" y="0.23545" />
+                                <point x="0.999512" y="0.997355" />
+                                <point x="0.000487805" y="0.997355" />
+                                <point x="0.000487805" y="0.23545" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FloodSpriteSheet\Flood4.png">
+                            <collision-poly>
+                                <point x="0.101951" y="0.0238095" />
+                                <point x="0.901951" y="0.0026455" />
+                                <point x="0.999512" y="0.23545" />
+                                <point x="0.999512" y="0.997355" />
+                                <point x="0.000487805" y="0.997355" />
+                                <point x="0.000487805" y="0.23545" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FloodSpriteSheet\Flood5.png">
+                            <collision-poly>
+                                <point x="0.101951" y="0.0238095" />
+                                <point x="0.901951" y="0.0026455" />
+                                <point x="0.999512" y="0.23545" />
+                                <point x="0.999512" y="0.997355" />
+                                <point x="0.000487805" y="0.997355" />
+                                <point x="0.000487805" y="0.23545" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FloodSpriteSheet\Flood6.png">
+                            <collision-poly>
+                                <point x="0.105854" y="0.0449735" />
+                                <point x="0.5" y="0.0449735" />
+                                <point x="0.901951" y="0.0026455" />
+                                <point x="0.999512" y="0.23545" />
+                                <point x="0.999512" y="0.997355" />
+                                <point x="0.000487805" y="0.997355" />
+                                <point x="0.000487805" y="0.23545" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\FloodSpriteSheet\Flood7.png">
+                            <collision-poly>
+                                <point x="0.105854" y="0.0449735" />
+                                <point x="0.5" y="0.0449735" />
+                                <point x="0.901951" y="0.0026455" />
+                                <point x="0.999512" y="0.23545" />
+                                <point x="0.999512" y="0.997355" />
+                                <point x="0.000487805" y="0.997355" />
+                                <point x="0.000487805" y="0.23545" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1314,7 +1399,18 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="316376266193783" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\ItemBox.png">
+                            <collision-poly>
+                                <point x="0.015625" y="0.015625" />
+                                <point x="0.5" y="0" />
+                                <point x="0.984375" y="0.015625" />
+                                <point x="1" y="0.5" />
+                                <point x="0.984375" y="0.984375" />
+                                <point x="0.5" y="1" />
+                                <point x="0.015625" y="0.984375" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1333,6 +1429,15 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Game UI">
+            <object-type name="UIBox" sid="323349449734408">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="GameStatus" sid="437744263659905">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-type name="Mouse" sid="593802495600120">
