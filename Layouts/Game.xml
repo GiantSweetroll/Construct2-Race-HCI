@@ -396,6 +396,7 @@
                         <peerid></peerid>
                         <inputs>0</inputs>
                         <powerup>-1</powerup>
+                        <coins>0</coins>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -537,6 +538,28 @@
                         <depth>0</depth>
                         <hotspotX>0.855029583</hotspotX>
                         <hotspotY>0.564864874</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Coin" uid="56">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2330</x>
+                        <y>173</y>
+                        <z>0</z>
+                        <width>58</width>
+                        <height>58</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

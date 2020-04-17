@@ -130,7 +130,7 @@
                     </conditions>
                     <actions>
                         <action id="1" name="Set return value" sid="186459942699462" type="Function">
-                            <param id="0" name="Value">VEHICLE_FORCE - terrain_force_reduction</param>
+                            <param id="0" name="Value">VEHICLE_FORCE - terrain_force_reduction + hand_of_god_force_boost</param>
                         </action>
                     </actions>
                 </event-block>
@@ -143,7 +143,7 @@
                     </conditions>
                     <actions>
                         <action id="1" name="Set return value" sid="902768698235180" type="Function">
-                            <param id="0" name="Value">VEHICLE_FORCE_UPWARDS - terrain_force_reduction</param>
+                            <param id="0" name="Value">VEHICLE_FORCE_UPWARDS - terrain_force_reduction + hand_of_god_force_boost</param>
                         </action>
                     </actions>
                 </event-block>
