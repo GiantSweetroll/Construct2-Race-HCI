@@ -1393,14 +1393,6 @@
             </object-type>
             <object-type name="BeggarSpawner" sid="589593822273654">
                 <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Wrap" sid="811843359031350">
-                        <behavior id="wrap" />
-                    </behavior-type>
-                    <behavior-type name="Bullet" sid="569192123267342">
-                        <behavior id="Bullet" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="993840324165354" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
