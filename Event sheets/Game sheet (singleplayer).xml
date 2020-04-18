@@ -5,7 +5,8 @@
     <events>
         <include>timer sheet</include>
         <include>Character sheet</include>
-        <variable comment="Indicator if the game has finished" constant="0" name="finished" sid="392121217228079" static="0" type="number">0</variable>
+        <comment>gameState keeps track at what state the game is currently in.&#x0D;&#x0A;&#x0D;&#x0A;-1: Loading, game hasn&apos;t started&#x0D;&#x0A;0: Game is running&#x0D;&#x0A;1: Game is finished</comment>
+        <variable comment="keeps track at what state the game is in" constant="0" name="gameState" sid="392121217228079" static="0" type="number">-1</variable>
         <variable comment="Used to keep track of how long the player has been playing on the map" constant="0" name="timer" sid="357399775604295" static="0" type="number">0</variable>
         <variable comment="Indicator if a random event is already in progress" constant="0" name="randomEventRunning" sid="407178735813083" static="0" type="number">0</variable>
         <variable comment="variable to identify that the flood should go down" constant="0" name="floodReverse" sid="517704121229718" static="0" type="number">0</variable>
@@ -215,7 +216,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="968486747492835" type="System">
-                                    <param id="0" name="Variable">finished</param>
+                                    <param id="0" name="Variable">gameState</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
@@ -502,7 +503,7 @@
                                         <condition id="-8" name="Compare two values" sid="588426561245908" type="System">
                                             <param id="0" name="First value">luckyboxSpawner.X</param>
                                             <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Second value">Player.X + Player.Width</param>
+                                            <param id="2" name="Second value">LayoutWidth</param>
                                         </condition>
                                         <condition id="-14" name="Compare variable" sid="270614095531668" type="System">
                                             <param id="0" name="Variable">beggar_spawned</param>
@@ -511,7 +512,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="480035892816499" type="luckyboxSpawner">
+                                        <action id="0" name="Spawn another object" sid="480035892816499" type="Spawner">
                                             <param id="0" name="Object">Beggar</param>
                                             <param id="1" name="Layer">&quot;Beggar Random Event&quot;</param>
                                             <param id="2" name="Image point">0</param>
@@ -524,7 +525,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="140919304097903">
+                        <event-block disabled="1" sid="140919304097903">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="681804740539888" type="Beggar">
                                     <param id="0" name="Object">ObjectDestroyer</param>
@@ -581,6 +582,20 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="538535661703638">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="285425792213533" type="Beggar">
+                                    <param id="0" name="Object">Spawner</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="3" name="Apply impulse" sid="420744332801202" type="Beggar">
+                                    <param id="0" name="Impulse X">0</param>
+                                    <param id="1" name="Impulse Y">99999999999</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -754,7 +769,7 @@
                             <param id="0" name="Interval (seconds)">1.0</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="141233482111145" type="System">
-                            <param id="0" name="Variable">finished</param>
+                            <param id="0" name="Variable">gameState</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -775,21 +790,27 @@
             <sub-events>
                 <variable comment="variable to set which power up to display" constant="0" name="powerUpType" sid="694976399767013" static="0" type="number">0</variable>
                 <variable comment="variable to identify if a power up should be spawned" constant="0" name="powerUp" sid="893788319132239" static="0" type="number">0</variable>
-                <comment>Every x seconds, randomize if a power up will spawn</comment>
-                <event-block sid="657733017348242">
+                <event-block sid="526801811043788">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="784486363987835" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
+                        <condition id="-8" name="Compare two values" sid="350715788049993" type="System">
+                            <param id="0" name="First value">Spawner.X</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">FinishFlag.X</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="242117766559976" type="System">
+                            <param id="0" name="First value">Spawner.X</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">map2.Width/4</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="763515043267392" type="System">
+                        <action id="-9" name="Set value" sid="906324436283205" type="System">
                             <param id="0" name="Variable">powerUp</param>
-                            <param id="1" name="Value">int(random(0, 20))</param>
+                            <param id="1" name="Value">int(random(0, 1000))</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <comment>If powerUp is 1, select from the available power ups to spawn</comment>
+                        <comment>If powerUp is 8, spawn a lucky box</comment>
                         <event-block sid="102161282828124">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="233896759315928" type="System">
@@ -797,22 +818,9 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">8</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="419442272407182" type="System">
-                                    <param id="0" name="Variable">finished</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition id="-1" name="Compare X" sid="117945681762575" type="luckyboxSpawner">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">FinishFlag.X-FinishFlag.Width</param>
-                                </condition>
-                                <condition id="-1" name="Compare X" sid="742653844318585" type="luckyboxSpawner">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Player.X+Player.Width</param>
-                                </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="380715368539713" type="luckyboxSpawner">
+                                <action id="0" name="Spawn another object" sid="692710146359096" type="Spawner">
                                     <param id="0" name="Object">luckybox</param>
                                     <param id="1" name="Layer">&quot;Powerups&quot;</param>
                                     <param id="2" name="Image point">0</param>
@@ -837,14 +845,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="243245818639918" type="Function">
-                                    <param id="0" name="Name">&quot;destroyLuckyBlock&quot;</param>
-                                    <param id="1" name="Parameter {n}">luckybox.UID</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="124498927590816" type="System">
                                     <param id="0" name="Variable">powerUpType</param>
                                     <param id="1" name="Value">floor(random(0, 1))</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="825770509426095" type="luckybox" />
                             </actions>
                             <sub-events>
                                 <comment>Check for what kind of power up the player is given.&#x0D;&#x0A;&#x0D;&#x0A;0 = Indomie</comment>
@@ -870,26 +875,19 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Function to destroy the lucky block</comment>
-                <event-block sid="171237281615311">
+                <event-block sid="293063371847989">
                     <conditions>
-                        <condition id="0" name="On function" sid="510533315293361" type="Function">
-                            <param id="0" name="Name">&quot;destroyLuckyBlock&quot;</param>
+                        <condition id="1" name="Is overlapping another object" sid="633775616070973" type="luckybox">
+                            <param id="0" name="Object">Spawner</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="104504169435073">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="815353202570365" type="luckybox">
-                                    <param id="0" name="Unique ID">Function.Param(0)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="674481431550699" type="luckybox" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action behavior="Physics" id="3" name="Apply impulse" sid="248530252169017" type="luckybox">
+                            <param id="0" name="Impulse X">0</param>
+                            <param id="1" name="Impulse Y">99999999999999999</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <comment>If the player holds a power up, pressing the &quot;Use Power Up&quot; key will consume the power up.</comment>
                 <event-block sid="841106136898318">
@@ -921,12 +919,16 @@
                                 <action id="-15" name="Set visible" sid="579570746794810" type="indomie">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="630314563458944" type="Player">
+                                    <param id="0" name="Instance variable">powerup</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <comment>If a lucky box is not activated after going off map to the left, destroy it</comment>
-                <event-block sid="957648131347496">
+                <event-block disabled="1" sid="957648131347496">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="729229814896969" type="luckybox">
                             <param id="0" name="Object">ObjectDestroyer</param>
@@ -997,7 +999,7 @@
         <event-group description="handles coin logic" sid="621039484992836" title="Coin">
             <sub-events>
                 <variable comment="identifies if a coin should spawn" constant="0" name="spawnCoin" sid="302705698424414" static="0" type="number">0</variable>
-                <event-block sid="460171198333713">
+                <event-block disabled="1" sid="460171198333713">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="944077307426686" type="Coin">
                             <param id="0" name="Object">ObjectDestroyer</param>
@@ -1021,16 +1023,30 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="962589801962266">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="938244305513564" type="Coin">
+                            <param id="0" name="Object">Spawner</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="3" name="Apply impulse" sid="821211426460256" type="Coin">
+                            <param id="0" name="Impulse X">0</param>
+                            <param id="1" name="Impulse Y">99999999999</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="720634343992888">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="946809472060614" type="System">
-                            <param id="0" name="First value">CoinSpawner.X</param>
+                            <param id="0" name="First value">Spawner.X</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Second value">FinishFlag.X</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="151368602238759" type="CoinSpawner" />
+                        <action id="-9" name="Destroy" sid="151368602238759" type="Spawner" />
                     </actions>
                 </event-block>
                 <event-block sid="503049914545651">
@@ -1053,7 +1069,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="991247805672339" type="CoinSpawner">
+                                <action id="0" name="Spawn another object" sid="991247805672339" type="Spawner">
                                     <param id="0" name="Object">Coin</param>
                                     <param id="1" name="Layer">&quot;Player&quot;</param>
                                     <param id="2" name="Image point">0</param>
@@ -1064,6 +1080,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="handles loading screen logic" sid="281591556313568" title="Loading Screen" />
         <event-group description="" sid="207899474169060" title="Misc Stuff">
             <sub-events>
                 <comment>When the player hits the finish flag, the game ends</comment>
@@ -1075,7 +1092,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="267635968012595" type="System">
-                            <param id="0" name="Variable">finished</param>
+                            <param id="0" name="Variable">gameState</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action disabled="1" id="0" name="Set text" sid="414681690761104" type="LogText">
@@ -1150,6 +1167,39 @@
                     <actions>
                         <action id="3" name="Start" sid="765561255597293" type="Coin">
                             <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="668929752972939">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="890312358347646" type="LoadingScreen" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="277625661727668" type="LoadingScreen">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="796264156333828">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="754587604434672" type="System">
+                            <param id="0" name="First value">Spawner.X</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">LayoutWidth</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="192969949097300" type="System">
+                            <param id="0" name="Variable">gameState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="734067391988801" type="System">
+                            <param id="0" name="Variable">gameState</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="366277986164105" type="LoadingScreen">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>

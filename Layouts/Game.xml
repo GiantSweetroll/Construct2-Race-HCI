@@ -240,7 +240,7 @@
                                 <prevent-rotation>Yes</prevent-rotation>
                                 <density>1</density>
                                 <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
+                                <elasticity>0</elasticity>
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0.01</angular-damping>
                                 <bullet>No</bullet>
@@ -302,11 +302,6 @@
                                 <angular-damping>0.01</angular-damping>
                                 <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Wrap">
-                            <properties>
-                                <wrap-to>Layout</wrap-to>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -463,9 +458,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CoinSpawner" uid="57">
+                <instance type="Spawner" uid="57">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -510,11 +505,11 @@
                                 <immovable>No</immovable>
                                 <collision-mask>Bounding box</collision-mask>
                                 <prevent-rotation>Yes</prevent-rotation>
-                                <density>999</density>
+                                <density>9999999999</density>
                                 <friction>1</friction>
                                 <elasticity>0</elasticity>
                                 <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
+                                <angular-damping>0</angular-damping>
                                 <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -1099,6 +1094,47 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Loading Screen" sid="438789647458182">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="LoadingScreen" uid="62">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>961</x>
+                        <y>524</y>
+                        <z>0</z>
+                        <width>1922</width>
+                        <height>1082</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
