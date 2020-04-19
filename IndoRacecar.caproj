@@ -1960,6 +1960,10 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file-folder name="background_images">
+            <file name="rural_background.png" />
+            <file name="WIPBackground.png" />
+        </file-folder>
         <file name="PixelFont.ttf" />
         <file name="stylesheet.css" />
     </files-folder>

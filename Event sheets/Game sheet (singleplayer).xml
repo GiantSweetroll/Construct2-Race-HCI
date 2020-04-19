@@ -23,73 +23,108 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="169621157212844" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="280096625713413" type="map2">
-                            <param id="0" name="Animation">&quot;Big_City_1&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="905264634798533" type="map2">
-                            <param id="0" name="X">0</param>
-                            <param id="1" name="Y">LayoutHeight</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="777169851680697" type="city_background_1">
-                            <param id="0" name="Width">map2.Width</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="268346787529099" type="System">
-                            <param id="0" name="Layer">&quot;Statistics Screen&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="237866527652669" type="System">
-                            <param id="0" name="Variable">timer</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="444621299286900" type="Smog">
-                            <param id="0" name="Opacity">95</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="199695569516120" type="Flood">
-                            <param id="0" name="Opacity">80</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="641734152975115" type="Player">
-                            <param id="0" name="Instance variable">idleAnimation</param>
-                            <param id="1" name="Value">PLAYER_SELECTION</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="910596342578884" type="Player">
-                            <param id="0" name="Instance variable">movingAnimation</param>
-                            <param id="1" name="Value">PLAYER_SELECTION</param>
-                        </action>
-                        <action id="0" name="Call function" sid="559542946364534" type="Function">
-                            <param id="0" name="Name">&quot;setIdle&quot;</param>
-                            <param id="1" name="Parameter {n}">Player.idleAnimation</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="916516954949355" type="BlackScreen50">
-                            <param id="0" name="Opacity">50</param>
-                        </action>
-                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="680462115046740" type="luckybox">
-                            <param id="0" name="Object">Player</param>
-                            <param id="1" name="State">0</param>
-                        </action>
-                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="199886760271833" type="Beggar">
-                            <param id="0" name="Object">Player</param>
-                            <param id="1" name="State">0</param>
-                        </action>
-                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="174783613836643" type="Coin">
-                            <param id="0" name="Object">Player</param>
-                            <param id="1" name="State">0</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="912640266556660" type="StartFlag">
-                            <param id="0" name="X">map2.ImagePointX(&quot;Start&quot;)</param>
-                            <param id="1" name="Y">map2.ImagePointY(&quot;Start&quot;)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="659251035792109" type="FinishFlag">
-                            <param id="0" name="X">map2.ImagePointX(&quot;End&quot;)</param>
-                            <param id="1" name="Y">map2.ImagePointY(&quot;End&quot;)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="376628346498012" type="Player">
-                            <param id="0" name="X">map2.ImagePointX(&quot;Start&quot;) + Player.Width</param>
-                            <param id="1" name="Y">map2.ImagePointY(&quot;Start&quot;)</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <comment>Check which map to use.&#x0D;&#x0A;&#x0D;&#x0A;1. City&#x0D;&#x0A;2. Rural</comment>
+                        <event-block sid="273814492928946">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="450650076167955" type="System">
+                                    <param id="0" name="Variable">SelectedMap</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="245578053064388" type="map2">
+                                    <param id="0" name="Animation">&quot;Big_City_1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="2" name="Load image from URL" sid="702145057595934" type="city_background_1">
+                                    <param id="0" name="URI">&quot;WIPBackground.png&quot;</param>
+                                    <param id="1" name="Cross-origin">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="986495905544289">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="220962394084741" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="954716807071482" type="map2">
+                                    <param id="0" name="Animation">&quot;Rural_1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="2" name="Load image from URL" sid="823587416002172" type="city_background_1">
+                                    <param id="0" name="URI">&quot;rural_background.png&quot;</param>
+                                    <param id="1" name="Cross-origin">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="183048588469979">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Set position" sid="734618873339354" type="map2">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">LayoutHeight</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="490162165781382" type="city_background_1">
+                                    <param id="0" name="Width">map2.Width</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="985076428741965" type="System">
+                                    <param id="0" name="Layer">&quot;Statistics Screen&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="694219326832652" type="System">
+                                    <param id="0" name="Variable">timer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="347076316313440" type="Smog">
+                                    <param id="0" name="Opacity">95</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="224288250379120" type="Flood">
+                                    <param id="0" name="Opacity">80</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="556104342954806" type="Player">
+                                    <param id="0" name="Instance variable">idleAnimation</param>
+                                    <param id="1" name="Value">PLAYER_SELECTION</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="338889599824115" type="Player">
+                                    <param id="0" name="Instance variable">movingAnimation</param>
+                                    <param id="1" name="Value">PLAYER_SELECTION</param>
+                                </action>
+                                <action id="0" name="Call function" sid="170405178782627" type="Function">
+                                    <param id="0" name="Name">&quot;setIdle&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.idleAnimation</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="288315613680739" type="BlackScreen50">
+                                    <param id="0" name="Opacity">50</param>
+                                </action>
+                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="713947604177164" type="luckybox">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="654306939587619" type="Beggar">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="955434751579787" type="Coin">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="741173610926941" type="StartFlag">
+                                    <param id="0" name="X">map2.ImagePointX(&quot;Start&quot;)</param>
+                                    <param id="1" name="Y">map2.ImagePointY(&quot;Start&quot;)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="578302833520388" type="FinishFlag">
+                                    <param id="0" name="X">map2.ImagePointX(&quot;End&quot;)</param>
+                                    <param id="1" name="Y">map2.ImagePointY(&quot;End&quot;)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="345866778626046" type="Player">
+                                    <param id="0" name="X">map2.ImagePointX(&quot;Start&quot;) + Player.Width</param>
+                                    <param id="1" name="Y">map2.ImagePointY(&quot;Start&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Because the delman has more area, using the standard force value makes it very slow moving, so it needs its own force value</comment>
                         <event-block sid="296837482828924">
                             <conditions>
@@ -1080,7 +1115,33 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="handles loading screen logic" sid="281591556313568" title="Loading Screen" />
+        <event-group description="handles loading screen logic" sid="281591556313568" title="Loading Screen">
+            <sub-events>
+                <event-block sid="511522399248131">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="846193254190898" type="System">
+                            <param id="0" name="First value">Spawner.X</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">LayoutWidth</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="414638727003328" type="System">
+                            <param id="0" name="Variable">gameState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="312367781254080" type="System">
+                            <param id="0" name="Variable">gameState</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="367957162401258" type="LoadingScreen">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="207899474169060" title="Misc Stuff">
             <sub-events>
                 <comment>When the player hits the finish flag, the game ends</comment>
@@ -1177,29 +1238,6 @@
                     <actions>
                         <action id="3" name="Start" sid="277625661727668" type="LoadingScreen">
                             <param id="0" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="796264156333828">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="754587604434672" type="System">
-                            <param id="0" name="First value">Spawner.X</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">LayoutWidth</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="192969949097300" type="System">
-                            <param id="0" name="Variable">gameState</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">-1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="734067391988801" type="System">
-                            <param id="0" name="Variable">gameState</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="366277986164105" type="LoadingScreen">
-                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
