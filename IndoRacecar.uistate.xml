@@ -41,10 +41,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/MapSelection/" />
         <folder expanded="0" path="layout-folder/" />
         <folder expanded="0" path="event-folder/" />
-        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/background_images/" />
         <folder expanded="1" path="animation-folder/StartButtonNew/" />
         <folder expanded="1" path="animation-folder/OptionButton/" />
         <folder expanded="1" path="animation-folder/ExitButton/" />
@@ -83,7 +84,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/select_empty_button/" />
         <folder expanded="1" path="animation-folder/invisCamera/" />
         <folder expanded="1" path="animation-folder/Coin/" />
-        <folder expanded="1" path="animation-folder/CoinSpawner/" />
+        <folder expanded="1" path="animation-folder/Spawner/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/LoadingScreen/" />
     </folders-expanded>
 </c2uistate>

@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Character Selection sheet</name>
     <events>
-        <variable constant="0" name="NameInputVisibility" sid="953939782899984" static="0" type="number">0</variable>
+        <variable constant="0" name="NameInputVisibility" sid="953939782899984" static="0" type="number">1</variable>
         <variable constant="0" name="SelectedMap" sid="637783105556778" static="0" type="number">1</variable>
         <variable constant="0" name="MapPanelMoving" sid="585203867836425" static="0" type="number">0</variable>
         <variable constant="0" name="locked" sid="338558279096045" static="0" type="number">0</variable>
@@ -27,11 +27,6 @@
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
                     <param id="2" name="Object clicked">back_button</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="331132071031472" type="System">
-                    <param id="0" name="Variable">MapPanelMoving</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="181427084132595" type="System">
                     <param id="0" name="Variable">NameInputVisibility</param>
@@ -223,11 +218,6 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">duck</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="519086712033444" type="System">
-                            <param id="0" name="Variable">locked</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Play" sid="128832735083602" type="Audio">
@@ -245,11 +235,6 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">emeska</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="448537925075315" type="System">
-                            <param id="0" name="Variable">locked</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Play" sid="374961560536429" type="Audio">
@@ -266,11 +251,6 @@
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">horse</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="987795217640463" type="System">
-                            <param id="0" name="Variable">locked</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -339,6 +319,10 @@
                             <param id="0" name="Variable">PLAYER_SELECTION</param>
                             <param id="1" name="Value">2</param>
                         </action>
+                        <action id="-3" name="Set position" sid="182382453991515" type="Player_1_white">
+                            <param id="0" name="X">139</param>
+                            <param id="1" name="Y">365</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="282411269010972">
@@ -358,6 +342,10 @@
                             <param id="0" name="Variable">PLAYER_SELECTION</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-3" name="Set position" sid="711437117913838" type="Player_1_white">
+                            <param id="0" name="X">347</param>
+                            <param id="1" name="Y">366</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="575916616190551">
@@ -376,6 +364,10 @@
                         <action id="-9" name="Set value" sid="918882333537956" type="System">
                             <param id="0" name="Variable">PLAYER_SELECTION</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="233443833903613" type="Player_1_white">
+                            <param id="0" name="X">552</param>
+                            <param id="1" name="Y">365</param>
                         </action>
                     </actions>
                 </event-block>
