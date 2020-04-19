@@ -1647,9 +1647,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text_input" sid="312711180216895">
-            <plugin id="TextBox" />
-        </object-type>
         <object-type name="StartFlag" sid="403049734793084">
             <plugin id="Sprite" />
             <animation-folder>
