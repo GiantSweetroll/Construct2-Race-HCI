@@ -1904,6 +1904,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="InitializeText" sid="816790247828528">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

@@ -63,6 +63,11 @@
                         <event-block sid="183048588469979">
                             <conditions />
                             <actions>
+                                <action id="5" name="Set web font" sid="522963756325598" type="InitializeText">
+                                    <param id="0" name="Family name">&quot;CyberpunkWaifus&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="394060360051950" type="InitializeText" />
                                 <action id="-3" name="Set position" sid="734618873339354" type="map2">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">LayoutHeight</param>
@@ -188,6 +193,28 @@
                         <action id="7" name="Set CSS style" sid="570270643238981" type="categoryTextBox">
                             <param id="0" name="Property name">&quot;color&quot;</param>
                             <param id="1" name="Value">&quot;white&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="434841603529682">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="151463449844678" type="GameStatus" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set font face" sid="752442721224437" type="GameStatus">
+                            <param id="0" name="Font face">&quot;CyberpunkWaifus&quot;</param>
+                            <param id="1" name="Style">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="601758478796302">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="132163081470761" type="LogText" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set font face" sid="768737126113652" type="LogText">
+                            <param id="0" name="Font face">&quot;CyberpunkWaifus&quot;</param>
+                            <param id="1" name="Style">0</param>
                         </action>
                     </actions>
                 </event-block>

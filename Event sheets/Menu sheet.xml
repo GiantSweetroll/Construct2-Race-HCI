@@ -6,12 +6,6 @@
         <variable constant="0" name="BulletMoving" sid="720843990251821" static="0" type="number">0</variable>
         <variable constant="0" name="MusicMuted" sid="990675534314577" static="0" type="number">0</variable>
         <variable constant="0" name="SFXMuted" sid="858785408915771" static="0" type="number">0</variable>
-        <event-block sid="213627129081195">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="895766421818514" type="System" />
-            </conditions>
-            <actions />
-        </event-block>
         <event-block sid="216074201666407">
             <conditions>
                 <condition id="6" name="On object clicked" sid="925077710893414" type="Mouse">
