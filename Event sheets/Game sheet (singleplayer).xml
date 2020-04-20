@@ -19,11 +19,45 @@
         <variable comment="the default text of the GameStatus object" constant="1" name="GAME_STATUS_DEFAULT_TEXT" sid="741618752000003" static="0" type="text">Finish the Race!</variable>
         <event-group description="" sid="903638005397133" title="Initialization">
             <sub-events>
+                <comment>At the start of layout, reset the global variables to default value</comment>
                 <event-block sid="449259786209480">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="169621157212844" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="597409099533628" type="System">
+                            <param id="0" name="Variable">gameState</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="469017572092518" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="612765126299429" type="System">
+                            <param id="0" name="Variable">randomEventRunning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="310010563557764" type="System">
+                            <param id="0" name="Variable">floodReverse</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="604342814762924" type="System">
+                            <param id="0" name="Variable">hand_of_god_force_boost</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="463088679724509" type="System">
+                            <param id="0" name="Variable">beggar_spawned</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="730233502107127" type="System">
+                            <param id="0" name="Variable">VEHICLE_FORCE</param>
+                            <param id="1" name="Value">45</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="428404491857465" type="System">
+                            <param id="0" name="Variable">VEHICLE_FORCE_UPWARDS</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <comment>Check which map to use.&#x0D;&#x0A;&#x0D;&#x0A;1. City&#x0D;&#x0A;2. Rural</comment>
                         <event-block sid="273814492928946">
@@ -88,6 +122,9 @@
                                 </action>
                                 <action id="-16" name="Set opacity" sid="224288250379120" type="Flood">
                                     <param id="0" name="Opacity">80</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="177819029752085" type="Flood">
+                                    <param id="0" name="Y">map2.Y</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="556104342954806" type="Player">
                                     <param id="0" name="Instance variable">idleAnimation</param>
@@ -835,6 +872,11 @@
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">1</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="877020556836084" type="System">
+                            <param id="0" name="Variable">gameState</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="867733745288587" type="System">
@@ -1164,6 +1206,28 @@
                         </action>
                         <action id="-15" name="Set visible" sid="367957162401258" type="LoadingScreen">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Events for the statistics screen" sid="502230128504839" title="Statistics Screen">
+            <sub-events>
+                <event-block sid="146330094524335">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="384071657760078" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">MainMenuButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="210173797450649" type="System">
+                            <param id="0" name="Variable">gameState</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="902929894095856" type="System">
+                            <param id="0" name="Layout">Main Menu</param>
                         </action>
                     </actions>
                 </event-block>
