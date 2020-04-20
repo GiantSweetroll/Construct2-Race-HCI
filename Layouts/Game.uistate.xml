@@ -35,9 +35,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layer locked="0" name="Random events" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="UI" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="timer" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Black bars" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Statistics Screen" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Destroyer" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Loading Screen" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Black bars" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Statistics Screen" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Destroyer" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Loading Screen" parallax-in-editor="0" visible="0" />
     </layers>
 </c2uistate>
