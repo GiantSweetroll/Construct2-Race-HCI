@@ -1016,7 +1016,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="Physics" id="5" name="Apply impulse at angle" sid="539142433916532" type="Player">
-                                    <param id="0" name="Impulse">Function.Call(&quot;calculateForce&quot;) * 0.15</param>
+                                    <param id="0" name="Impulse">Function.Call(&quot;calculateForce&quot;) * 0.5</param>
                                     <param id="1" name="Angle">Player.Angle</param>
                                     <param id="2" name="Image point">2</param>
                                 </action>
