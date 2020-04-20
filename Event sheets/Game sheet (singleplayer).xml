@@ -57,6 +57,10 @@
                             <param id="0" name="Variable">VEHICLE_FORCE_UPWARDS</param>
                             <param id="1" name="Value">15</param>
                         </action>
+                        <action id="-12" name="Set group active" sid="597161444756071" type="System">
+                            <param id="0" name="Group name">&quot;Flood&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <comment>Check which map to use.&#x0D;&#x0A;&#x0D;&#x0A;1. City&#x0D;&#x0A;2. Rural</comment>
