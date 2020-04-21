@@ -1556,7 +1556,7 @@
         <object-folder name="Game UI">
             <object-type name="UIBox" sid="323349449734408">
                 <plugin id="TiledBg" />
-                <texture />
+                <texture original-source="H:\Projects\Projects 8 - Construct2\Construct2-Race-HCI\Assets\GameHud.png" />
             </object-type>
             <object-type name="GameStatus" sid="437744263659905">
                 <plugin id="Text" />
@@ -1975,6 +1975,7 @@
         <file-folder name="background_images">
             <file name="rural_background.png" />
             <file name="WIPBackground.png" />
+            <file name="ruralGhettoBackground.png" />
         </file-folder>
         <file name="CyberpunkWaifus.ttf" />
         <file name="stylesheet.css" />

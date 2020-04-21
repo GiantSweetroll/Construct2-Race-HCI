@@ -93,7 +93,7 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="2" name="Load image from URL" sid="823587416002172" type="city_background_1">
-                                    <param id="0" name="URI">&quot;rural_background.png&quot;</param>
+                                    <param id="0" name="URI">&quot;ruralGhettoBackground.png&quot;</param>
                                     <param id="1" name="Cross-origin">1</param>
                                 </action>
                             </actions>

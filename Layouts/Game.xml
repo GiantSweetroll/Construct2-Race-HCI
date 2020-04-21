@@ -738,10 +738,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>4</x>
-                        <y>2</y>
+                        <y>-112</y>
                         <z>0</z>
                         <width>1914</width>
-                        <height>108</height>
+                        <height>275</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -754,7 +754,7 @@
                         <text>Finish the Race!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-37,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -870,7 +870,7 @@
                         <text>00:00:00</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-48,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
