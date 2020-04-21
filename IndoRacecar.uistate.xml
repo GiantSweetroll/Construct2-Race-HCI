@@ -70,6 +70,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Flood/" />
         <folder expanded="1" path="animation-folder/Beggar/" />
         <folder expanded="1" path="animation-folder/BeggarSpawner/" />
+        <folder expanded="1" path="animation-folder/MainMenuButton/" />
         <folder expanded="1" path="animation-folder/luckybox/" />
         <folder expanded="1" path="animation-folder/luckyboxSpawner/" />
         <folder expanded="1" path="animation-folder/indomie/" />
