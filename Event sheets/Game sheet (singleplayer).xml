@@ -164,6 +164,12 @@
                                     <param id="0" name="X">map2.ImagePointX(&quot;Start&quot;) + Player.Width</param>
                                     <param id="1" name="Y">map2.ImagePointY(&quot;Start&quot;)</param>
                                 </action>
+                                <action id="4" name="Set enabled" sid="820817027373260" type="categoryTextBox">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="4" name="Set enabled" sid="415227529694277" type="valuesTextBox">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <comment>Because the delman has more area, using the standard force value makes it very slow moving, so it needs its own force value</comment>
