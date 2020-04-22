@@ -4,9 +4,9 @@
     <name>Character Selection sheet</name>
     <events>
         <variable constant="0" name="NameInputVisibility" sid="953939782899984" static="0" type="number">1</variable>
-        <variable constant="0" name="SelectedMap" sid="637783105556778" static="0" type="number">1</variable>
+        <variable comment="used to select map from the user choosing" constant="0" name="SelectedMap" sid="637783105556778" static="0" type="number">1</variable>
         <variable constant="0" name="MapPanelMoving" sid="585203867836425" static="0" type="number">0</variable>
-        <variable constant="0" name="locked" sid="338558279096045" static="0" type="number">0</variable>
+        <variable comment="used to lock if the user pick a character from the character selection" constant="0" name="locked" sid="338558279096045" static="0" type="number">0</variable>
         <variable comment="Used to store the username of the user" constant="0" name="MY_USERNAME" sid="558387289368357" static="0" type="text">defaultname</variable>
         <variable comment="Used to identify the player&apos;s final character selection (this will be used to login and connect to the signalling server)" constant="0" name="PLAYER_SELECTION" sid="512494463320977" static="0" type="number">0</variable>
         <comment>Resets the locked status, and initializes the font, ordering the browser to download the font</comment>
@@ -28,7 +28,7 @@
                     <param id="1" name="Click type">0</param>
                     <param id="2" name="Object clicked">back_button</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="181427084132595" type="System">
+                <condition disabled="1" id="-14" name="Compare variable" sid="181427084132595" type="System">
                     <param id="0" name="Variable">NameInputVisibility</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
