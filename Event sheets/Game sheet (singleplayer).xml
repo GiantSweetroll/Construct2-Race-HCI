@@ -658,6 +658,12 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="202240548917367" type="Beggar" />
+                                        <action id="0" name="Play" sid="938455867013910" type="Audio">
+                                            <param id="0" name="Audio file">PowerUp_Used</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                        </action>
                                         <action id="-9" name="Set value" sid="700277197413178" type="System">
                                             <param id="0" name="Variable">beggar_spawned</param>
                                             <param id="1" name="Value">0</param>
@@ -965,6 +971,12 @@
                                     <param id="1" name="Value">floor(random(0, 1))</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="825770509426095" type="luckybox" />
+                                <action id="0" name="Play" sid="967152406185917" type="Audio">
+                                    <param id="0" name="Audio file">PowerUp_PickUp</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <comment>Check for what kind of power up the player is given.&#x0D;&#x0A;&#x0D;&#x0A;0 = Indomie</comment>
@@ -1013,6 +1025,23 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="672752065147614">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="378748380052230" type="Player">
+                                    <param id="0" name="Instance variable">powerup</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="880092377648403" type="Audio">
+                                    <param id="0" name="Audio file">PowerUp_Used</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="122295376690074">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="936704103232736" type="Player">
@@ -1131,6 +1160,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action breakpoint="1" id="0" name="Play" sid="906849893250533" type="Audio">
+                            <param id="0" name="Audio file">Coin_PickUp</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="689442955843613" type="Coin" />
                         <action id="-11" name="Add to" sid="701890042378015" type="Player">
                             <param id="0" name="Instance variable">coins</param>

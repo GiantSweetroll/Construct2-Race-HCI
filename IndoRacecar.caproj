@@ -1972,6 +1972,9 @@
         <file name="buttonBackClick.ogg" />
         <file name="buttonOnClick.ogg" />
         <file name="characterOnClick.ogg" />
+        <file name="Coin_PickUp.ogg" />
+        <file name="PowerUp_PickUp.ogg" />
+        <file name="PowerUp_Used.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
