@@ -604,7 +604,7 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
-                                        <condition id="-8" name="Compare two values" sid="588426561245908" type="System">
+                                        <condition disabled="1" id="-8" name="Compare two values" sid="588426561245908" type="System">
                                             <param id="0" name="First value">luckyboxSpawner.X</param>
                                             <param id="1" name="Comparison">4</param>
                                             <param id="2" name="Second value">LayoutWidth</param>
@@ -1170,7 +1170,7 @@
                         <action id="0" name="Play" sid="908968070647043" type="Audio">
                             <param id="0" name="Audio file">Coin_PickUp2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
                         </action>
                         <action id="-11" name="Add to" sid="701890042378015" type="Player">
