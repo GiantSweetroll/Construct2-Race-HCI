@@ -1166,13 +1166,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action breakpoint="1" id="0" name="Play" sid="906849893250533" type="Audio">
-                            <param id="0" name="Audio file">Coin_PickUp</param>
+                        <action id="-9" name="Destroy" sid="689442955843613" type="Coin" />
+                        <action id="0" name="Play" sid="908968070647043" type="Audio">
+                            <param id="0" name="Audio file">Coin_PickUp2</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="689442955843613" type="Coin" />
                         <action id="-11" name="Add to" sid="701890042378015" type="Player">
                             <param id="0" name="Instance variable">coins</param>
                             <param id="1" name="Value">1</param>
