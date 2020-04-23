@@ -1976,6 +1976,8 @@
         <file name="PowerUp_Used.ogg" />
         <file name="Coin_PickUp.ogg" />
         <file name="Coin_PickUp2.ogg" />
+        <file name="city music.ogg" />
+        <file name="rural music.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

@@ -124,7 +124,10 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="12" name="Remove all effects" sid="894779856824829" type="Audio">
-                            <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                            <param id="0" name="Tag">&quot;BG_music&quot; </param>
+                        </action>
+                        <action id="12" name="Remove all effects" sid="883086355339535" type="Audio">
+                            <param id="0" name="Tag">&quot;g_music&quot; </param>
                         </action>
                     </actions>
                 </event-block>
@@ -147,8 +150,11 @@
                         <action id="-15" name="Set visible" sid="422939189839534" type="MusicIcon">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="32" name="Add mute effect" sid="632969472774782" type="Audio">
-                            <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                        <action id="32" name="Add mute effect" sid="815541148547815" type="Audio">
+                            <param id="0" name="Tag">&quot;g_music&quot;</param>
+                        </action>
+                        <action id="32" name="Add mute effect" sid="445142594998963" type="Audio">
+                            <param id="0" name="Tag">&quot;BG_music&quot;</param>
                         </action>
                     </actions>
                 </event-block>

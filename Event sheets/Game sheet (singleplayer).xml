@@ -81,6 +81,12 @@
                                     <param id="0" name="URI">&quot;WIPBackground.png&quot;</param>
                                     <param id="1" name="Cross-origin">1</param>
                                 </action>
+                                <action id="0" name="Play" sid="676220371244471" type="Audio">
+                                    <param id="0" name="Audio file">city music</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;g_music&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="986495905544289">
@@ -95,6 +101,12 @@
                                 <action id="2" name="Load image from URL" sid="823587416002172" type="city_background_1">
                                     <param id="0" name="URI">&quot;rural_background_fixed.png&quot;</param>
                                     <param id="1" name="Cross-origin">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="590275129670119" type="Audio">
+                                    <param id="0" name="Audio file">rural music</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;g_music&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -584,16 +596,19 @@
                         <variable comment="indicate if a beggar should spawn" constant="0" name="spawnBeggar" sid="114090438249684" static="0" type="number">0</variable>
                         <event-block sid="757787829216265">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="593916842797161" type="System">
+                                <condition disabled="1" id="-14" name="Compare variable" sid="593916842797161" type="System">
                                     <param id="0" name="Variable">gameState</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">-1</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="278317939893691" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="852985154235450" type="System">
                                     <param id="0" name="Variable">spawnBeggar</param>
-                                    <param id="1" name="Value">int(random(1, 11))</param>
+                                    <param id="1" name="Value">int(random(0, 2))</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -613,6 +628,16 @@
                                             <param id="0" name="Variable">beggar_spawned</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="327896019584979" type="System">
+                                            <param id="0" name="First value">Spawner.X</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">LayoutWidth</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="614119941324712" type="System">
+                                            <param id="0" name="First value">Spawner.X</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">FinishFlag.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1288,6 +1313,9 @@
                         </action>
                         <action id="-2" name="Go to layout" sid="902929894095856" type="System">
                             <param id="0" name="Layout">Main Menu</param>
+                        </action>
+                        <action id="6" name="Stop" sid="121688841165020" type="Audio">
+                            <param id="0" name="Tag">&quot;g_music&quot;</param>
                         </action>
                     </actions>
                 </event-block>
