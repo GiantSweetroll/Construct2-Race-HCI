@@ -1580,6 +1580,9 @@
         <object-folder name="MapSelection">
             <object-type name="MapSelectBG" sid="529803755707778">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="MapActivated" sid="205770939783212" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Bullet" sid="988500563646953">
                         <behavior id="Bullet" />
