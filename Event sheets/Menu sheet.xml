@@ -57,7 +57,6 @@
         <event-block sid="126108814377809">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="699833658584826" type="System" />
-                <condition id="-18" name="Is in preview" sid="957810377933301" type="System" />
             </conditions>
             <actions>
                 <action id="0" name="Play" sid="191592884695388" type="Audio">
