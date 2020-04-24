@@ -1981,6 +1981,7 @@
         <file name="Coin_PickUp2.ogg" />
         <file name="city music.ogg" />
         <file name="rural music.ogg" />
+        <file name="MainMenu.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
