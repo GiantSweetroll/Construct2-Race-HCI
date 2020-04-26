@@ -907,17 +907,25 @@
                                                     <conditions>
                                                         <condition id="-22" name="Else" sid="108488197670216" type="System" />
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="6" name="Stop" sid="771122357972574" type="Audio">
-                                                            <param id="0" name="Tag">&quot;VehicleBraking&quot;</param>
-                                                        </action>
-                                                        <action id="0" name="Play" sid="479316673446175" type="Audio">
-                                                            <param id="0" name="Audio file">delman(klungklingklang)</param>
-                                                            <param id="2" name="Loop">0</param>
-                                                            <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="714881526918371">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="848018848016525" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="6" name="Stop" sid="341371330276732" type="Audio">
+                                                                    <param id="0" name="Tag">&quot;VehicleBraking&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="310472502113216" type="Audio">
+                                                                    <param id="0" name="Audio file">delman(klungklingklang)</param>
+                                                                    <param id="2" name="Loop">1</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -1043,17 +1051,25 @@
                                                     <conditions>
                                                         <condition id="-22" name="Else" sid="246958901929060" type="System" />
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="6" name="Stop" sid="294228534509291" type="Audio">
-                                                            <param id="0" name="Tag">&quot;VehicleBraking&quot;</param>
-                                                        </action>
-                                                        <action id="0" name="Play" sid="411728398891257" type="Audio">
-                                                            <param id="0" name="Audio file">delman(klungklingklang)</param>
-                                                            <param id="2" name="Loop">0</param>
-                                                            <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="766229825247759">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="812528542676881" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="6" name="Stop" sid="736687900082045" type="Audio">
+                                                                    <param id="0" name="Tag">&quot;VehicleBraking&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="298173464047457" type="Audio">
+                                                                    <param id="0" name="Audio file">delman(klungklingklang)</param>
+                                                                    <param id="2" name="Loop">1</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
