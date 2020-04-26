@@ -675,6 +675,18 @@
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="950938229040653">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="718771425100036" type="Beggar">
+                                                    <param id="0" name="Unique ID">55</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="853451293076687" type="Beggar" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -753,24 +765,6 @@
                                     <param id="0" name="Impulse X">0</param>
                                     <param id="1" name="Impulse Y">99999999999</param>
                                     <param id="2" name="Image point">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="127978314260073">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="841494701881724" type="System">
-                                    <param id="0" name="Value">Beggar.X - Player.X</param>
-                                    <param id="1" name="Lower bound">-500</param>
-                                    <param id="2" name="Upper bound">500</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="649543639071065" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="263939101327513" type="Audio">
-                                    <param id="0" name="Audio file">beggar</param>
-                                    <param id="2" name="Loop">1</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1458,6 +1452,9 @@
                         </action>
                         <action id="6" name="Stop" sid="121688841165020" type="Audio">
                             <param id="0" name="Tag">&quot;g_music&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="867172687309189" type="Audio">
+                            <param id="0" name="Tag">&quot;RandomEventBGM&quot;</param>
                         </action>
                     </actions>
                 </event-block>
