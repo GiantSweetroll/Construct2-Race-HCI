@@ -1985,6 +1985,10 @@
         <file name="MainMenu.ogg" />
         <file name="car_running.ogg" />
         <file name="car_brake.ogg" />
+        <file name="beggar.ogg" />
+        <file name="earthquake.ogg" />
+        <file name="smog.ogg" />
+        <file name="Flood.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
