@@ -810,11 +810,14 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
+                                                        <action id="6" name="Stop" sid="378593048315500" type="Audio">
+                                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                                        </action>
                                                         <action id="0" name="Play" sid="518705268124874" type="Audio">
                                                             <param id="0" name="Audio file">car_brake</param>
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                                            <param id="1" name="Tag (optional)">&quot;VehicleBraking&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -823,11 +826,14 @@
                                                         <condition id="-22" name="Else" sid="553838765305124" type="System" />
                                                     </conditions>
                                                     <actions>
+                                                        <action id="6" name="Stop" sid="640808920944825" type="Audio">
+                                                            <param id="0" name="Tag">&quot;VehicleBraking&quot;</param>
+                                                        </action>
                                                         <action id="0" name="Play" sid="686290563048011" type="Audio">
                                                             <param id="0" name="Audio file">car_running</param>
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -898,11 +904,14 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
+                                                        <action id="6" name="Stop" sid="341910106149568" type="Audio">
+                                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                                        </action>
                                                         <action id="0" name="Play" sid="266469309002779" type="Audio">
                                                             <param id="0" name="Audio file">car_brake</param>
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                                            <param id="1" name="Tag (optional)">&quot;VehicleBraking&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -911,11 +920,14 @@
                                                         <condition id="-22" name="Else" sid="444827843357448" type="System" />
                                                     </conditions>
                                                     <actions>
+                                                        <action id="6" name="Stop" sid="527840406628298" type="Audio">
+                                                            <param id="0" name="Tag">&quot;VehicleBraking&quot;</param>
+                                                        </action>
                                                         <action id="0" name="Play" sid="913815789313529" type="Audio">
                                                             <param id="0" name="Audio file">car_running</param>
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
