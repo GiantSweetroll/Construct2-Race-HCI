@@ -317,6 +317,7 @@
                     <instance-variable name="inputs" sid="847054310483112" type="number" />
                     <instance-variable comment="stores what powerup is currently in storage" name="powerup" sid="522326026428670" type="number" />
                     <instance-variable comment="how many coins the player has collected" name="coins" sid="505998244277033" type="number" />
+                    <instance-variable comment="Identify which music sfx to play" name="sfx" sid="739480675564181" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="129956147177379">
@@ -1982,6 +1983,8 @@
         <file name="city music.ogg" />
         <file name="rural music.ogg" />
         <file name="MainMenu.ogg" />
+        <file name="car_running.ogg" />
+        <file name="car_brake.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

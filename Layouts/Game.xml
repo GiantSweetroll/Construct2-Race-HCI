@@ -392,6 +392,7 @@
                         <inputs>0</inputs>
                         <powerup>-1</powerup>
                         <coins>0</coins>
+                        <sfx>0</sfx>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">

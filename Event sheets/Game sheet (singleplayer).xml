@@ -790,6 +790,50 @@
                                             <param id="1" name="Parameter {n}">Player.movingAnimation</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="529887082094375">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="824648808866631" type="Player">
+                                                    <param id="0" name="Instance variable">sfx</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="373661999371923">
+                                                    <conditions>
+                                                        <condition behavior="Physics" id="1" name="Compare velocity" sid="382571772134407" type="Player">
+                                                            <param id="0" name="Which">0</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="518705268124874" type="Audio">
+                                                            <param id="0" name="Audio file">car_brake</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="525398196176855">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="553838765305124" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="686290563048011" type="Audio">
+                                                            <param id="0" name="Audio file">car_running</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -834,6 +878,50 @@
                                             <param id="1" name="Parameter {n}">Player.movingAnimation</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="536991950301985">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="559610841263624" type="Player">
+                                                    <param id="0" name="Instance variable">sfx</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="309800686074570">
+                                                    <conditions>
+                                                        <condition behavior="Physics" id="1" name="Compare velocity" sid="146085384307044" type="Player">
+                                                            <param id="0" name="Which">0</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="266469309002779" type="Audio">
+                                                            <param id="0" name="Audio file">car_brake</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="960788924165175">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="444827843357448" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="913815789313529" type="Audio">
+                                                            <param id="0" name="Audio file">car_running</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
