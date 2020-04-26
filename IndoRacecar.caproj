@@ -1989,6 +1989,8 @@
         <file name="earthquake.ogg" />
         <file name="smog.ogg" />
         <file name="Flood.ogg" />
+        <file name="DelmanWalk.ogg" />
+        <file name="delman(klungklingklang).ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
