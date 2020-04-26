@@ -374,6 +374,12 @@
                                         <action id="0" name="Set text" sid="747939229953918" type="GameStatus">
                                             <param id="0" name="Text">&quot;Smog!&quot;</param>
                                         </action>
+                                        <action id="0" name="Play" sid="201538297776416" type="Audio">
+                                            <param id="0" name="Audio file">smog</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;RandomEventBGM&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="223961952701749">
@@ -391,6 +397,12 @@
                                         </action>
                                         <action id="0" name="Set text" sid="491131892425623" type="GameStatus">
                                             <param id="0" name="Text">&quot;Flood!&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="232946769801670" type="Audio">
+                                            <param id="0" name="Audio file">Flood</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;RandomEventBGM&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -410,6 +422,12 @@
                                             <param id="0" name="Magnitude">int(random(30, 80))</param>
                                             <param id="1" name="Duration">earthquakeDuration</param>
                                             <param id="2" name="Mode">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="747845861790216" type="Audio">
+                                            <param id="0" name="Audio file">earthquake</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;RandomEventBGM&quot;</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="498492863653272" type="System">
                                             <param id="0" name="Seconds">earthquakeDuration</param>
@@ -468,6 +486,9 @@
                                 <action id="-12" name="Set group active" sid="671799363223504" type="System">
                                     <param id="0" name="Group name">&quot;Smog&quot;</param>
                                     <param id="1" name="State">0</param>
+                                </action>
+                                <action id="6" name="Stop" sid="238099597164165" type="Audio">
+                                    <param id="0" name="Tag">&quot;RandomEventBGM&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -580,6 +601,9 @@
                                                         </action>
                                                         <action id="0" name="Set text" sid="148426726123302" type="GameStatus">
                                                             <param id="0" name="Text">GAME_STATUS_DEFAULT_TEXT</param>
+                                                        </action>
+                                                        <action id="6" name="Stop" sid="437371608045346" type="Audio">
+                                                            <param id="0" name="Tag">&quot;RandomEventBGM&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -729,6 +753,24 @@
                                     <param id="0" name="Impulse X">0</param>
                                     <param id="1" name="Impulse Y">99999999999</param>
                                     <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="127978314260073">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="841494701881724" type="System">
+                                    <param id="0" name="Value">Beggar.X - Player.X</param>
+                                    <param id="1" name="Lower bound">-500</param>
+                                    <param id="2" name="Upper bound">500</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="649543639071065" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="263939101327513" type="Audio">
+                                    <param id="0" name="Audio file">beggar</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
