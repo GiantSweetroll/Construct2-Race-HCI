@@ -1706,6 +1706,9 @@
                         <action id="6" name="Stop" sid="867172687309189" type="Audio">
                             <param id="0" name="Tag">&quot;RandomEventBGM&quot;</param>
                         </action>
+                        <action id="6" name="Stop" sid="874845241929000" type="Audio">
+                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
