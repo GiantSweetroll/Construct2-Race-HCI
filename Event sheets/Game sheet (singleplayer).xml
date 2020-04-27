@@ -791,6 +791,7 @@
                     <actions />
                     <sub-events>
                         <comment>Checks if the vehicle is moving or not</comment>
+                        <comment>2 = Moving forward&#x0D;&#x0A;1 = Reversing Forward&#x0D;&#x0A;0 = Stopped&#x0D;&#x0A;-1 = Reversing Backwards&#x0D;&#x0A;-2= Moving Backwards</comment>
                         <event-block sid="997116318906423">
                             <conditions>
                                 <condition behavior="Physics" id="1" name="Compare velocity" sid="706858742770372" type="Player">
@@ -802,13 +803,32 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="221036375545446" type="System">
                                     <param id="0" name="Variable">VehicleMovingBool</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="711501112946964">
+                            <conditions>
+                                <condition behavior="Physics" id="1" name="Compare velocity" sid="708986300107535" type="Player">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="638400545316462" type="System">
+                                    <param id="0" name="Variable">VehicleMovingBool</param>
+                                    <param id="1" name="Value">-2</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="802130974855677">
                             <conditions>
-                                <condition id="-22" name="Else" sid="856466655242696" type="System" />
+                                <condition behavior="Physics" id="1" name="Compare velocity" sid="703635917141437" type="Player">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="937794958310107" type="System">
@@ -859,6 +879,22 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="697678983495330">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="323106013690901" type="System">
+                                            <param id="0" name="Variable">VehicleMovingBool</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-2</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="338056800027874" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="572153787007139" type="System">
+                                            <param id="0" name="Variable">VehicleMovingBool</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <comment>S or Down arrow key is used to deaccelerate the Player object by applying force to the left</comment>
@@ -903,6 +939,22 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="152377050507145">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="672121993796733" type="System">
+                                            <param id="0" name="Variable">VehicleMovingBool</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="376648415142328" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="139065614554415" type="System">
+                                            <param id="0" name="Variable">VehicleMovingBool</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="817776321648844">
@@ -910,12 +962,32 @@
                                 <condition id="-14" name="Compare variable" sid="798425358057856" type="System">
                                     <param id="0" name="Variable">VehicleMovingBool</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="915916650099362" type="System" />
                             </conditions>
                             <actions />
                             <sub-events>
+                                <event-block sid="596362792906584">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="202802668739564" type="Player">
+                                            <param id="0" name="Instance variable">sfx</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="176477316595613" type="Audio">
+                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="445566885051561" type="Audio">
+                                            <param id="0" name="Audio file">delman(klungklingklang)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="140126774293985">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="821499346507323" type="Player">
@@ -925,6 +997,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="6" name="Stop" sid="837939869367508" type="Audio">
+                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                        </action>
                                         <action id="0" name="Play" sid="915196890280011" type="Audio">
                                             <param id="0" name="Audio file">delman(klungklingklang)</param>
                                             <param id="2" name="Loop">1</param>
@@ -942,7 +1017,189 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="6" name="Stop" sid="804041896152226" type="Audio">
+                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                        </action>
                                         <action id="0" name="Play" sid="322701768115122" type="Audio">
+                                            <param id="0" name="Audio file">car_running</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="596652542116426">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="662250564018698" type="System">
+                                    <param id="0" name="Variable">VehicleMovingBool</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="769416016551103" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="772089450697500">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="793339198985174" type="Player">
+                                            <param id="0" name="Instance variable">sfx</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="267278894130175" type="Audio">
+                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="271969676593158" type="Audio">
+                                            <param id="0" name="Audio file">car_brake</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="486884159803755">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="427745241123043" type="Player">
+                                            <param id="0" name="Instance variable">sfx</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="994755657309689" type="Audio">
+                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="848421237147496" type="Audio">
+                                            <param id="0" name="Audio file">car_brake</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="230893273431679">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="868638779151451" type="System">
+                                    <param id="0" name="Variable">VehicleMovingBool</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="864673968693250" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="229670518759178">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="299771682092351" type="Player">
+                                            <param id="0" name="Instance variable">sfx</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="951724057239620" type="Audio">
+                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="151445175203628" type="Audio">
+                                            <param id="0" name="Audio file">car_brake</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="192761280524043">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="520072844409379" type="Player">
+                                            <param id="0" name="Instance variable">sfx</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="232098111917444" type="Audio">
+                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="282106317427312" type="Audio">
+                                            <param id="0" name="Audio file">car_brake</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="811635922405841">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="766212465451463" type="System">
+                                    <param id="0" name="Variable">VehicleMovingBool</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="876749870951014" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="798724476577938">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="699260187596154" type="Player">
+                                            <param id="0" name="Instance variable">sfx</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="635707642336876" type="Audio">
+                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="609548985501312" type="Audio">
+                                            <param id="0" name="Audio file">delman(klungklingklang)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="376547249422791">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="314220437510143" type="Player">
+                                            <param id="0" name="Instance variable">sfx</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="496898824758727" type="Audio">
+                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="301864739344660" type="Audio">
+                                            <param id="0" name="Audio file">delman(klungklingklang)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="641391982092825">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="221382905959629" type="Player">
+                                            <param id="0" name="Instance variable">sfx</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="905683195704560" type="Audio">
+                                            <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="951938943502675" type="Audio">
                                             <param id="0" name="Audio file">car_running</param>
                                             <param id="2" name="Loop">1</param>
                                             <param id="3" name="Volume">0</param>
