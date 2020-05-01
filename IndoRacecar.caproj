@@ -1931,6 +1931,23 @@
         <object-type name="InitializeText" sid="816790247828528">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Sprite2" sid="994110837420806">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="940965254458679" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\Instructions.png">
+                        <collision-poly>
+                            <point x="0.0078125" y="0.00598802" />
+                            <point x="0.992188" y="0.00598802" />
+                            <point x="1" y="0.5" />
+                            <point x="0.882813" y="0.91018" />
+                            <point x="0.117188" y="0.91018" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
