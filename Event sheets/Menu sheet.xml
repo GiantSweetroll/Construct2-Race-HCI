@@ -345,7 +345,7 @@
                                     <conditions>
                                         <condition id="-2" name="Compare Y" sid="757754287024277" type="StartButtonNew">
                                             <param id="0" name="Comparison">3</param>
-                                            <param id="1" name="Y co-ordinate">490</param>
+                                            <param id="1" name="Y co-ordinate">500</param>
                                         </condition>
                                         <condition id="-14" name="Compare variable" sid="320316935238114" type="System">
                                             <param id="0" name="Variable">BulletMoving</param>

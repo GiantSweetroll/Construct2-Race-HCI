@@ -65,6 +65,9 @@
                     <behavior-type name="Bullet" sid="606577996286852">
                         <behavior id="Bullet" />
                     </behavior-type>
+                    <behavior-type name="Fade" sid="775233661382548">
+                        <behavior id="Fade" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="511486351646354" speed="5">
@@ -92,6 +95,9 @@
                     <behavior-type name="Bullet" sid="411939754288369">
                         <behavior id="Bullet" />
                     </behavior-type>
+                    <behavior-type name="Fade" sid="701961798551419">
+                        <behavior id="Fade" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="487436337354928" speed="5">
@@ -116,6 +122,9 @@
                     <behavior-type name="Bullet" sid="827914699219741">
                         <behavior id="Bullet" />
                     </behavior-type>
+                    <behavior-type name="Fade" sid="472600363767733">
+                        <behavior id="Fade" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="781337380028336" speed="5">
@@ -139,6 +148,9 @@
                 <behaviors>
                     <behavior-type name="Bullet" sid="497316681692168">
                         <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="343874131750889">
+                        <behavior id="Fade" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -1937,6 +1949,11 @@
         </object-type>
         <object-type name="Sprite2" sid="994110837420806">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="149197359945238">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="940965254458679" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\Instructions.png">
@@ -1947,6 +1964,30 @@
                             <point x="0.882813" y="0.91018" />
                             <point x="0.117188" y="0.91018" />
                             <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="307228064382608">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="355608200222424">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="138512544084240" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\characterS_icon\png\title.png">
+                        <collision-poly>
+                            <point x="0.241667" y="0.42963" />
+                            <point x="0.5" y="0.311111" />
+                            <point x="0.758333" y="0.42963" />
+                            <point x="0.858333" y="0.5" />
+                            <point x="0.741667" y="0.540741" />
+                            <point x="0.5" y="0.748148" />
+                            <point x="0.258333" y="0.540741" />
+                            <point x="0.108333" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
