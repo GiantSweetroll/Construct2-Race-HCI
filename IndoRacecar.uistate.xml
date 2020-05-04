@@ -10,11 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Main Menu</layout>
+        <layout order="0">Main Menu</layout>
         <layout order="3">Character Selection</layout>
         <layout order="4">Game</layout>
+        <event-sheet active="1" order="1">Menu sheet</event-sheet>
         <event-sheet order="2">Character Selection sheet</event-sheet>
-        <event-sheet order="1">Menu sheet</event-sheet>
         <event-sheet order="5">Game sheet (singleplayer)</event-sheet>
     </open-tabs>
     <properties>
@@ -38,11 +38,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/statistics screen/" />
         <folder expanded="1" path="object-folder/Powerups/" />
         <folder expanded="0" path="object-folder/Game UI/" />
-        <folder expanded="1" path="object-folder/MapSelection/" />
+        <folder expanded="0" path="object-folder/MapSelection/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="file-folder/background_images/" />
@@ -90,5 +90,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LoadingScreen/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
     </folders-expanded>
 </c2uistate>

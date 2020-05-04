@@ -6,575 +6,670 @@
         <variable constant="0" name="BulletMoving" sid="720843990251821" static="0" type="number">0</variable>
         <variable constant="0" name="MusicMuted" sid="990675534314577" static="0" type="number">0</variable>
         <variable constant="0" name="SFXMuted" sid="858785408915771" static="0" type="number">0</variable>
-        <event-block sid="216074201666407">
+        <event-block sid="974807564337127">
             <conditions>
-                <condition id="6" name="On object clicked" sid="925077710893414" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">StartButtonNew</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="732976639144900" type="System">
-                    <param id="0" name="Variable">BulletMoving</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="916719351491619" type="Sprite7">
+                    <param id="0" name="Instance variable">AboutOn</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="880698796010566" type="System">
-                    <param id="0" name="Layout">Character Selection</param>
-                </action>
-                <action id="0" name="Play" sid="819006429049694" type="Audio">
-                    <param id="0" name="Audio file">buttonOnClick</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="178194399154346">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="375833760436937" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">ExitButton</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="345300720178174" type="System">
-                    <param id="0" name="Variable">BulletMoving</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="1" name="Close" sid="635697939766977" type="Browser" />
-                <action id="0" name="Play" sid="464799639718222" type="Audio">
-                    <param id="0" name="Audio file">buttonBackClick</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="126108814377809">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="699833658584826" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Play" sid="191592884695388" type="Audio">
-                    <param id="0" name="Audio file">MainMenu</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">-10</param>
-                    <param id="1" name="Tag (optional)">&quot;BG_music&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group description="" sid="717733421256055" title="MutedSettings">
+            <actions />
             <sub-events>
-                <event-block sid="714849767347656">
+                <event-block sid="216074201666407">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="812955529035374" type="System">
-                            <param id="0" name="Variable">SFXMuted</param>
+                        <condition id="6" name="On object clicked" sid="925077710893414" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">StartButtonNew</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="732976639144900" type="System">
+                            <param id="0" name="Variable">BulletMoving</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="438807977895456" type="SFXIcon">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-2" name="Go to layout" sid="880698796010566" type="System">
+                            <param id="0" name="Layout">Character Selection</param>
                         </action>
-                        <action id="-3" name="Set position" sid="314866533898142" type="SFXIcon">
-                            <param id="0" name="X">1142</param>
-                            <param id="1" name="Y">546</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="883063162200038" type="MutedSFX">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="12" name="Remove all effects" sid="109958568928473" type="Audio">
-                            <param id="0" name="Tag">&quot;SoundEffect&quot;</param>
+                        <action id="0" name="Play" sid="819006429049694" type="Audio">
+                            <param id="0" name="Audio file">buttonOnClick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="291466731980601">
+                <event-block sid="402139247102604">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="528119000709156" type="System">
-                            <param id="0" name="Variable">SFXMuted</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="6" name="On object clicked" sid="409007343511657" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite6</param>
                         </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="530472145920410" type="MutedSFX">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="299107816568058" type="MutedSFX">
-                            <param id="0" name="X">1142</param>
-                            <param id="1" name="Y">546</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="635203562877201" type="SFXIcon">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="32" name="Add mute effect" sid="469574055519550" type="Audio">
-                            <param id="0" name="Tag">&quot;SoundEffect&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="643810282071269">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="577396188629573" type="System">
-                            <param id="0" name="Variable">MusicMuted</param>
+                        <condition id="-14" name="Compare variable" sid="961964078473420" type="System">
+                            <param id="0" name="Variable">BulletMoving</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="694749360662342" type="MusicIcon">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="0" name="Play" sid="813056453074504" type="Audio">
+                            <param id="0" name="Audio file">buttonOnClick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="163896079336347" type="MusicIcon">
-                            <param id="0" name="X">781</param>
-                            <param id="1" name="Y">546</param>
+                        <action id="-3" name="Set position" sid="630259392302377" type="Sprite7">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="988478438325573" type="MutedMusic">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="-3" name="Set position" sid="625048885782691" type="Sprite8">
+                            <param id="0" name="X">1882</param>
+                            <param id="1" name="Y">49</param>
                         </action>
-                        <action id="12" name="Remove all effects" sid="894779856824829" type="Audio">
-                            <param id="0" name="Tag">&quot;BG_music&quot; </param>
-                        </action>
-                        <action id="12" name="Remove all effects" sid="883086355339535" type="Audio">
-                            <param id="0" name="Tag">&quot;g_music&quot; </param>
+                        <action id="-13" name="Set boolean" sid="216625175124081" type="Sprite7">
+                            <param id="0" name="Instance variable">AboutOn</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="410007956110075">
+                <event-block sid="178194399154346">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="511996478217066" type="System">
-                            <param id="0" name="Variable">MusicMuted</param>
+                        <condition id="6" name="On object clicked" sid="375833760436937" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">ExitButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="345300720178174" type="System">
+                            <param id="0" name="Variable">BulletMoving</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="226246228151684" type="MutedMusic">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="436074616938631" type="MutedMusic">
-                            <param id="0" name="X">781</param>
-                            <param id="1" name="Y">546</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="422939189839534" type="MusicIcon">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="32" name="Add mute effect" sid="815541148547815" type="Audio">
-                            <param id="0" name="Tag">&quot;g_music&quot;</param>
-                        </action>
-                        <action id="32" name="Add mute effect" sid="445142594998963" type="Audio">
-                            <param id="0" name="Tag">&quot;BG_music&quot;</param>
+                        <action id="1" name="Close" sid="635697939766977" type="Browser" />
+                        <action id="0" name="Play" sid="464799639718222" type="Audio">
+                            <param id="0" name="Audio file">buttonBackClick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="453655079316985" title="Popup">
-            <sub-events>
-                <event-group description="" sid="703839037766952" title="StickBulletBehavior">
+                <event-block sid="126108814377809">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="699833658584826" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="191592884695388" type="Audio">
+                            <param id="0" name="Audio file">MainMenu</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;BG_music&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="717733421256055" title="MutedSettings">
                     <sub-events>
-                        <event-block sid="443370410229264">
+                        <event-block sid="714849767347656">
                             <conditions>
-                                <condition id="6" name="On object clicked" sid="898883602995058" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">xButton</param>
+                                <condition id="-14" name="Compare variable" sid="812955529035374" type="System">
+                                    <param id="0" name="Variable">SFXMuted</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="295436099296519" type="System">
-                                    <param id="0" name="Variable">BulletMoving</param>
-                                    <param id="1" name="Value">2</param>
+                                <action id="-15" name="Set visible" sid="438807977895456" type="SFXIcon">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="0" name="Play" sid="575526242285762" type="Audio">
-                                    <param id="0" name="Audio file">buttonBackClick</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                <action id="-3" name="Set position" sid="314866533898142" type="SFXIcon">
+                                    <param id="0" name="X">1142</param>
+                                    <param id="1" name="Y">546</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="640696469948527">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="961557994482675" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">OptionButton</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="589502025531383" type="System">
-                                    <param id="0" name="Variable">BulletMoving</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="-15" name="Set visible" sid="883063162200038" type="MutedSFX">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="0" name="Play" sid="122767602765728" type="Audio">
-                                    <param id="0" name="Audio file">buttonOnClick</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                <action id="12" name="Remove all effects" sid="109958568928473" type="Audio">
+                                    <param id="0" name="Tag">&quot;SoundEffect&quot;</param>
+                                </action>
+                                <action id="12" name="Remove all effects" sid="707353648612771" type="Audio">
+                                    <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="624818876380022">
+                        <event-block sid="291466731980601">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="222243028912631" type="System">
-                                    <param id="0" name="Variable">BulletMoving</param>
+                                <condition id="-14" name="Compare variable" sid="528119000709156" type="System">
+                                    <param id="0" name="Variable">SFXMuted</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="337616849045447" type="StartButtonNew">
-                                    <param id="0" name="Angle">90</param>
+                                <action id="-15" name="Set visible" sid="530472145920410" type="MutedSFX">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="434946582106934" type="OptionButton">
-                                    <param id="0" name="Angle">90</param>
+                                <action id="-3" name="Set position" sid="299107816568058" type="MutedSFX">
+                                    <param id="0" name="X">1142</param>
+                                    <param id="1" name="Y">546</param>
                                 </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="397512818332463" type="ExitButton">
-                                    <param id="0" name="Angle">90</param>
+                                <action id="-15" name="Set visible" sid="635203562877201" type="SFXIcon">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="917035982915621" type="Stick">
-                                    <param id="0" name="Angle">90</param>
+                                <action id="32" name="Add mute effect" sid="469574055519550" type="Audio">
+                                    <param id="0" name="Tag">&quot;SoundEffect&quot;</param>
                                 </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="880084746848964" type="OptionButton">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="403299294188207" type="StartButtonNew">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="150057884628949" type="ExitButton">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="804524028455921" type="Stick">
-                                    <param id="0" name="State">1</param>
+                                <action id="32" name="Add mute effect" sid="322168749031329" type="Audio">
+                                    <param id="0" name="Tag">&quot;VehicleMoving&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="342070523811601">
+                        <event-block sid="643810282071269">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="626923745845233" type="System">
-                                    <param id="0" name="Variable">BulletMoving</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="991503698920191" type="StartButtonNew">
-                                    <param id="0" name="Angle">270</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="880503287989230" type="OptionButton">
-                                    <param id="0" name="Angle">270</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="923874349179430" type="ExitButton">
-                                    <param id="0" name="Angle">270</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="333999402513223" type="Stick">
-                                    <param id="0" name="Angle">270</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="220323810085187" type="OptionButton">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="397300989031147" type="StartButtonNew">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="442514863317591" type="ExitButton">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="133613076005282" type="Stick">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="236247047468836">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="807135383815929" type="System">
-                                    <param id="0" name="Variable">BulletMoving</param>
+                                <condition id="-14" name="Compare variable" sid="577396188629573" type="System">
+                                    <param id="0" name="Variable">MusicMuted</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="536704317721212" type="OptionButton">
-                                    <param id="0" name="State">0</param>
+                                <action id="-15" name="Set visible" sid="694749360662342" type="MusicIcon">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="949283795928735" type="StartButtonNew">
-                                    <param id="0" name="State">0</param>
+                                <action id="-3" name="Set position" sid="163896079336347" type="MusicIcon">
+                                    <param id="0" name="X">781</param>
+                                    <param id="1" name="Y">546</param>
                                 </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="444162085888739" type="ExitButton">
-                                    <param id="0" name="State">0</param>
+                                <action id="-15" name="Set visible" sid="988478438325573" type="MutedMusic">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="369240498147912" type="Stick">
-                                    <param id="0" name="State">0</param>
+                                <action id="12" name="Remove all effects" sid="894779856824829" type="Audio">
+                                    <param id="0" name="Tag">&quot;BG_music&quot; </param>
+                                </action>
+                                <action id="12" name="Remove all effects" sid="883086355339535" type="Audio">
+                                    <param id="0" name="Tag">&quot;g_music&quot; </param>
+                                </action>
+                                <action id="12" name="Remove all effects" sid="136257774440520" type="Audio">
+                                    <param id="0" name="Tag">&quot;RandomEventBGM&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="440051597671250">
+                        <event-block sid="410007956110075">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="709203432380758" type="System">
-                                    <param id="0" name="Variable">BulletMoving</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-14" name="Compare variable" sid="511996478217066" type="System">
+                                    <param id="0" name="Variable">MusicMuted</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="226246228151684" type="MutedMusic">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="436074616938631" type="MutedMusic">
+                                    <param id="0" name="X">781</param>
+                                    <param id="1" name="Y">546</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="422939189839534" type="MusicIcon">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="32" name="Add mute effect" sid="815541148547815" type="Audio">
+                                    <param id="0" name="Tag">&quot;g_music&quot;</param>
+                                </action>
+                                <action id="32" name="Add mute effect" sid="445142594998963" type="Audio">
+                                    <param id="0" name="Tag">&quot;BG_music&quot;</param>
+                                </action>
+                                <action id="32" name="Add mute effect" sid="188870882597300" type="Audio">
+                                    <param id="0" name="Tag">&quot;RandomEventBGM&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="453655079316985" title="Popup">
+                    <sub-events>
+                        <event-group description="" sid="703839037766952" title="StickBulletBehavior">
                             <sub-events>
-                                <event-block sid="946541056397543">
+                                <event-block sid="443370410229264">
                                     <conditions>
-                                        <condition id="-2" name="Compare Y" sid="852624877774130" type="StartButtonNew">
-                                            <param id="0" name="Comparison">5</param>
-                                            <param id="1" name="Y co-ordinate">1200</param>
+                                        <condition id="6" name="On object clicked" sid="898883602995058" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">xButton</param>
                                         </condition>
-                                        <condition id="-14" name="Compare variable" sid="308852946028991" type="System">
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="295436099296519" type="System">
+                                            <param id="0" name="Variable">BulletMoving</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="575526242285762" type="Audio">
+                                            <param id="0" name="Audio file">buttonBackClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="640696469948527">
+                                    <conditions>
+                                        <condition id="6" name="On object clicked" sid="961557994482675" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">OptionButton</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="589502025531383" type="System">
+                                            <param id="0" name="Variable">BulletMoving</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="122767602765728" type="Audio">
+                                            <param id="0" name="Audio file">buttonOnClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="624818876380022">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="222243028912631" type="System">
                                             <param id="0" name="Variable">BulletMoving</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="642601962823855" type="System">
-                                            <param id="0" name="Variable">BulletMoving</param>
-                                            <param id="1" name="Value">0</param>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="337616849045447" type="StartButtonNew">
+                                            <param id="0" name="Angle">90</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="434946582106934" type="OptionButton">
+                                            <param id="0" name="Angle">90</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="397512818332463" type="ExitButton">
+                                            <param id="0" name="Angle">90</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="917035982915621" type="Stick">
+                                            <param id="0" name="Angle">90</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="880084746848964" type="OptionButton">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="403299294188207" type="StartButtonNew">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="150057884628949" type="ExitButton">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="804524028455921" type="Stick">
+                                            <param id="0" name="State">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="877028208456514">
+                                <event-block sid="342070523811601">
                                     <conditions>
-                                        <condition id="-2" name="Compare Y" sid="757754287024277" type="StartButtonNew">
-                                            <param id="0" name="Comparison">3</param>
-                                            <param id="1" name="Y co-ordinate">500</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="320316935238114" type="System">
+                                        <condition id="-14" name="Compare variable" sid="626923745845233" type="System">
                                             <param id="0" name="Variable">BulletMoving</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">2</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="310952106041221" type="System">
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="991503698920191" type="StartButtonNew">
+                                            <param id="0" name="Angle">270</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="880503287989230" type="OptionButton">
+                                            <param id="0" name="Angle">270</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="923874349179430" type="ExitButton">
+                                            <param id="0" name="Angle">270</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="333999402513223" type="Stick">
+                                            <param id="0" name="Angle">270</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="220323810085187" type="OptionButton">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="397300989031147" type="StartButtonNew">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="442514863317591" type="ExitButton">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="133613076005282" type="Stick">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="236247047468836">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="807135383815929" type="System">
                                             <param id="0" name="Variable">BulletMoving</param>
-                                            <param id="1" name="Value">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="536704317721212" type="OptionButton">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="949283795928735" type="StartButtonNew">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="444162085888739" type="ExitButton">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="369240498147912" type="Stick">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="440051597671250">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="709203432380758" type="System">
+                                            <param id="0" name="Variable">BulletMoving</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="946541056397543">
+                                            <conditions>
+                                                <condition id="-2" name="Compare Y" sid="852624877774130" type="StartButtonNew">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="Y co-ordinate">1200</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="308852946028991" type="System">
+                                                    <param id="0" name="Variable">BulletMoving</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="642601962823855" type="System">
+                                                    <param id="0" name="Variable">BulletMoving</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="877028208456514">
+                                            <conditions>
+                                                <condition id="-2" name="Compare Y" sid="757754287024277" type="StartButtonNew">
+                                                    <param id="0" name="Comparison">3</param>
+                                                    <param id="1" name="Y co-ordinate">500</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="320316935238114" type="System">
+                                                    <param id="0" name="Variable">BulletMoving</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="310952106041221" type="System">
+                                                    <param id="0" name="Variable">BulletMoving</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="866351809617181" title="PopupFades">
+                            <sub-events>
+                                <variable constant="0" name="fadeOutDuration" sid="893884188921012" static="0" type="number">0.3</variable>
+                                <variable constant="0" name="fadeInDuration" sid="752947599917056" static="0" type="number">0.3</variable>
+                                <event-block sid="282516826251591">
+                                    <conditions>
+                                        <condition id="6" name="On object clicked" sid="742181924505676" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">OptionButton</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="344016765595711" type="PopupBG">
+                                            <param id="0" name="X">960</param>
+                                            <param id="1" name="Y">546.591</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="548642219393874" type="xButton">
+                                            <param id="0" name="X">1284.686</param>
+                                            <param id="1" name="Y">429.786</param>
+                                        </action>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="669127568610280" type="PopupBG">
+                                            <param id="0" name="Fade-in time">fadeInDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="593547025617377" type="PopupBG">
+                                            <param id="0" name="Fade-out time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="943058266502824" type="SFXIcon">
+                                            <param id="0" name="Fade-in time">fadeInDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="865089809623489" type="SFXIcon">
+                                            <param id="0" name="Fade-out time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="670673180972233" type="MusicIcon">
+                                            <param id="0" name="Fade-in time">fadeInDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="784878152851169" type="MusicIcon">
+                                            <param id="0" name="Fade-out time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="195843119329838" type="xButton">
+                                            <param id="0" name="Fade-in time">fadeInDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="225491016054201" type="xButton">
+                                            <param id="0" name="Fade-out time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="530911146253521" type="MutedSFX">
+                                            <param id="0" name="Fade-in time">fadeInDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="922071387996543" type="MutedSFX">
+                                            <param id="0" name="Fade-out time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="999448586012095" type="MutedMusic">
+                                            <param id="0" name="Fade-in time">fadeInDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="940012141890134" type="MutedMusic">
+                                            <param id="0" name="Fade-out time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="195012422712280" type="PopupBG" />
+                                        <action behavior="Fade" id="1" name="Start fade" sid="839521265750373" type="xButton" />
+                                        <action behavior="Fade" id="1" name="Start fade" sid="861614669782741" type="SFXIcon" />
+                                        <action behavior="Fade" id="1" name="Start fade" sid="469442244355974" type="MusicIcon" />
+                                        <action behavior="Fade" id="1" name="Start fade" sid="626666229298141" type="MutedSFX" />
+                                        <action behavior="Fade" id="1" name="Start fade" sid="802575365149527" type="MutedMusic" />
+                                        <action id="-4" name="Set layer visible" sid="300224332513219" type="System">
+                                            <param id="0" name="Layer">2</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="917172136176314">
+                                    <conditions>
+                                        <condition id="6" name="On object clicked" sid="998708194380201" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">xButton</param>
+                                        </condition>
+                                        <condition id="-9" name="Layer is visible" sid="398003183765908" type="System">
+                                            <param id="0" name="Layer">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="982749420975596" type="PopupBG">
+                                            <param id="0" name="Fade-in time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="464760475044245" type="PopupBG">
+                                            <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="934726431803453" type="xButton">
+                                            <param id="0" name="Fade-in time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="320368465434507" type="xButton">
+                                            <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="994494055672577" type="MusicIcon">
+                                            <param id="0" name="Fade-in time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="317157942287958" type="MusicIcon">
+                                            <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="526974226009351" type="SFXIcon">
+                                            <param id="0" name="Fade-in time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="612751164866603" type="SFXIcon">
+                                            <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="151595084708146" type="MutedMusic">
+                                            <param id="0" name="Fade-in time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="384852077625024" type="MutedMusic">
+                                            <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="2" name="Set fade-in time" sid="318002042389432" type="MutedSFX">
+                                            <param id="0" name="Fade-in time">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="593447467720898" type="MutedSFX">
+                                            <param id="0" name="Fade-out time">fadeOutDuration</param>
+                                        </action>
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="581955486941655" type="MusicIcon" />
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="324419805847715" type="SFXIcon" />
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="824494677303194" type="MutedMusic" />
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="889109704316043" type="MutedSFX" />
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="658144307780379" type="PopupBG" />
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="305378345973488" type="xButton" />
+                                        <action id="-16" name="Wait" sid="297592170823171" type="System">
+                                            <param id="0" name="Seconds">fadeOutDuration</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="169006897529946" type="System">
+                                            <param id="0" name="Layer">2</param>
+                                            <param id="1" name="Visibility">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="866351809617181" title="PopupFades">
-                    <sub-events>
-                        <variable constant="0" name="fadeOutDuration" sid="893884188921012" static="0" type="number">0.3</variable>
-                        <variable constant="0" name="fadeInDuration" sid="752947599917056" static="0" type="number">0.3</variable>
-                        <event-block sid="282516826251591">
+                        </event-group>
+                        <event-block sid="401413652256289">
                             <conditions>
-                                <condition id="6" name="On object clicked" sid="742181924505676" type="Mouse">
+                                <condition id="6" name="On object clicked" sid="283060665409760" type="Mouse">
                                     <param id="0" name="Mouse button">0</param>
                                     <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">OptionButton</param>
+                                    <param id="2" name="Object clicked">SFXIcon</param>
                                 </condition>
+                                <condition id="-9" name="Layer is visible" sid="943700955849785" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="325462914690107" type="SFXIcon" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="344016765595711" type="PopupBG">
-                                    <param id="0" name="X">960</param>
-                                    <param id="1" name="Y">546.591</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="548642219393874" type="xButton">
-                                    <param id="0" name="X">1284.686</param>
-                                    <param id="1" name="Y">429.786</param>
-                                </action>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="669127568610280" type="PopupBG">
-                                    <param id="0" name="Fade-in time">fadeInDuration</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="593547025617377" type="PopupBG">
-                                    <param id="0" name="Fade-out time">0</param>
-                                </action>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="943058266502824" type="SFXIcon">
-                                    <param id="0" name="Fade-in time">fadeInDuration</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="865089809623489" type="SFXIcon">
-                                    <param id="0" name="Fade-out time">0</param>
-                                </action>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="670673180972233" type="MusicIcon">
-                                    <param id="0" name="Fade-in time">fadeInDuration</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="784878152851169" type="MusicIcon">
-                                    <param id="0" name="Fade-out time">0</param>
-                                </action>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="195843119329838" type="xButton">
-                                    <param id="0" name="Fade-in time">fadeInDuration</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="225491016054201" type="xButton">
-                                    <param id="0" name="Fade-out time">0</param>
-                                </action>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="530911146253521" type="MutedSFX">
-                                    <param id="0" name="Fade-in time">fadeInDuration</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="922071387996543" type="MutedSFX">
-                                    <param id="0" name="Fade-out time">0</param>
-                                </action>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="999448586012095" type="MutedMusic">
-                                    <param id="0" name="Fade-in time">fadeInDuration</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="940012141890134" type="MutedMusic">
-                                    <param id="0" name="Fade-out time">0</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="195012422712280" type="PopupBG" />
-                                <action behavior="Fade" id="1" name="Start fade" sid="839521265750373" type="xButton" />
-                                <action behavior="Fade" id="1" name="Start fade" sid="861614669782741" type="SFXIcon" />
-                                <action behavior="Fade" id="1" name="Start fade" sid="469442244355974" type="MusicIcon" />
-                                <action behavior="Fade" id="1" name="Start fade" sid="626666229298141" type="MutedSFX" />
-                                <action behavior="Fade" id="1" name="Start fade" sid="802575365149527" type="MutedMusic" />
-                                <action id="-4" name="Set layer visible" sid="300224332513219" type="System">
-                                    <param id="0" name="Layer">2</param>
-                                    <param id="1" name="Visibility">1</param>
+                                <action id="-9" name="Set value" sid="601133921538564" type="System">
+                                    <param id="0" name="Variable">SFXMuted</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="917172136176314">
+                        <event-block sid="633051036255180">
                             <conditions>
-                                <condition id="6" name="On object clicked" sid="998708194380201" type="Mouse">
+                                <condition id="6" name="On object clicked" sid="708025842836255" type="Mouse">
                                     <param id="0" name="Mouse button">0</param>
                                     <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">xButton</param>
+                                    <param id="2" name="Object clicked">MutedSFX</param>
                                 </condition>
-                                <condition id="-9" name="Layer is visible" sid="398003183765908" type="System">
+                                <condition id="-9" name="Layer is visible" sid="450583490263421" type="System">
                                     <param id="0" name="Layer">2</param>
                                 </condition>
+                                <condition id="-9" name="Is visible" sid="488885359628927" type="MutedSFX" />
                             </conditions>
                             <actions>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="982749420975596" type="PopupBG">
-                                    <param id="0" name="Fade-in time">0</param>
+                                <action id="-9" name="Set value" sid="453091882564116" type="System">
+                                    <param id="0" name="Variable">SFXMuted</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="464760475044245" type="PopupBG">
-                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
-                                </action>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="934726431803453" type="xButton">
-                                    <param id="0" name="Fade-in time">0</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="320368465434507" type="xButton">
-                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
-                                </action>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="994494055672577" type="MusicIcon">
-                                    <param id="0" name="Fade-in time">0</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="317157942287958" type="MusicIcon">
-                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
-                                </action>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="526974226009351" type="SFXIcon">
-                                    <param id="0" name="Fade-in time">0</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="612751164866603" type="SFXIcon">
-                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
-                                </action>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="151595084708146" type="MutedMusic">
-                                    <param id="0" name="Fade-in time">0</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="384852077625024" type="MutedMusic">
-                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
-                                </action>
-                                <action behavior="Fade" id="2" name="Set fade-in time" sid="318002042389432" type="MutedSFX">
-                                    <param id="0" name="Fade-in time">0</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="593447467720898" type="MutedSFX">
-                                    <param id="0" name="Fade-out time">fadeOutDuration</param>
-                                </action>
-                                <action behavior="Fade" id="0" name="Restart fade" sid="581955486941655" type="MusicIcon" />
-                                <action behavior="Fade" id="0" name="Restart fade" sid="324419805847715" type="SFXIcon" />
-                                <action behavior="Fade" id="0" name="Restart fade" sid="824494677303194" type="MutedMusic" />
-                                <action behavior="Fade" id="0" name="Restart fade" sid="889109704316043" type="MutedSFX" />
-                                <action behavior="Fade" id="0" name="Restart fade" sid="658144307780379" type="PopupBG" />
-                                <action behavior="Fade" id="0" name="Restart fade" sid="305378345973488" type="xButton" />
-                                <action id="-16" name="Wait" sid="297592170823171" type="System">
-                                    <param id="0" name="Seconds">fadeOutDuration</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="169006897529946" type="System">
+                            </actions>
+                        </event-block>
+                        <event-block sid="341821375856659">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="805822139339978" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">MusicIcon</param>
+                                </condition>
+                                <condition id="-9" name="Layer is visible" sid="393886588492411" type="System">
                                     <param id="0" name="Layer">2</param>
-                                    <param id="1" name="Visibility">0</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="582884044145229" type="MusicIcon" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="813089880548292" type="System">
+                                    <param id="0" name="Variable">MusicMuted</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="232017609971863">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="104572867480437" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">MutedMusic</param>
+                                </condition>
+                                <condition id="-9" name="Layer is visible" sid="818007994402386" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="560415318331070" type="MutedMusic" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="147832582663574" type="System">
+                                    <param id="0" name="Variable">MusicMuted</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-block sid="401413652256289">
+            </sub-events>
+        </event-block>
+        <event-block sid="712410196521740">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="333078221609845" type="Sprite7">
+                    <param id="0" name="Instance variable">AboutOn</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="895648387553928">
                     <conditions>
-                        <condition id="6" name="On object clicked" sid="283060665409760" type="Mouse">
+                        <condition id="6" name="On object clicked" sid="968845505790714" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">SFXIcon</param>
+                            <param id="2" name="Object clicked">Sprite8</param>
                         </condition>
-                        <condition id="-9" name="Layer is visible" sid="943700955849785" type="System">
-                            <param id="0" name="Layer">2</param>
-                        </condition>
-                        <condition id="-9" name="Is visible" sid="325462914690107" type="SFXIcon" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="601133921538564" type="System">
-                            <param id="0" name="Variable">SFXMuted</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="-3" name="Set position" sid="785102406782018" type="Sprite7">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1100</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="633051036255180">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="708025842836255" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">MutedSFX</param>
-                        </condition>
-                        <condition id="-9" name="Layer is visible" sid="450583490263421" type="System">
-                            <param id="0" name="Layer">2</param>
-                        </condition>
-                        <condition id="-9" name="Is visible" sid="488885359628927" type="MutedSFX" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="453091882564116" type="System">
-                            <param id="0" name="Variable">SFXMuted</param>
+                        <action id="-3" name="Set position" sid="122198519510648" type="Sprite8">
+                            <param id="0" name="X">2000</param>
+                            <param id="1" name="Y">49</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="211196171330415" type="Sprite7">
+                            <param id="0" name="Instance variable">AboutOn</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="341821375856659">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="805822139339978" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">MusicIcon</param>
-                        </condition>
-                        <condition id="-9" name="Layer is visible" sid="393886588492411" type="System">
-                            <param id="0" name="Layer">2</param>
-                        </condition>
-                        <condition id="-9" name="Is visible" sid="582884044145229" type="MusicIcon" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="813089880548292" type="System">
-                            <param id="0" name="Variable">MusicMuted</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="232017609971863">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="104572867480437" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">MutedMusic</param>
-                        </condition>
-                        <condition id="-9" name="Layer is visible" sid="818007994402386" type="System">
-                            <param id="0" name="Layer">2</param>
-                        </condition>
-                        <condition id="-9" name="Is visible" sid="560415318331070" type="MutedMusic" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="147832582663574" type="System">
-                            <param id="0" name="Variable">MusicMuted</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="0" name="Play" sid="138741099328807" type="Audio">
+                            <param id="0" name="Audio file">buttonBackClick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-group>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -1993,6 +1993,33 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite6" sid="295032866068570">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577248517094445" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\AboutButton.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="204719066774686">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="AboutOn" sid="424079524254603" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769143681110961" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\About.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="409198619431791">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399665279868250" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\XButton.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
