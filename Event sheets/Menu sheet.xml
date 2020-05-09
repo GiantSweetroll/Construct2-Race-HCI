@@ -671,14 +671,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="414603753286460">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="473139439727611" type="Source_page">
-                    <param id="0" name="Instance variable">Sourceon</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
         <event-group description="" sid="901273659879986" title="about_page">
             <sub-events>
                 <event-block sid="490616019600752">
@@ -694,11 +686,11 @@
                             <param id="0" name="X">1886</param>
                             <param id="1" name="Y">49</param>
                         </action>
-                        <action id="-3" name="Set position" sid="198594940199907" type="Source_page">
-                            <param id="0" name="X">963</param>
-                            <param id="1" name="Y">543</param>
+                        <action id="-3" name="Set position" sid="522322210287722" type="Source_page">
+                            <param id="0" name="X">962</param>
+                            <param id="1" name="Y">538</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="202469865205581" type="Source_page">
+                        <action id="-16" name="Set opacity" sid="186121642420534" type="Source_page">
                             <param id="0" name="Opacity">90</param>
                         </action>
                     </actions>
@@ -712,13 +704,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="647627475753617" type="Source_page">
-                            <param id="0" name="X">2970</param>
-                            <param id="1" name="Y">543</param>
-                        </action>
                         <action id="-3" name="Set position" sid="256865930259470" type="X">
                             <param id="0" name="X">2391</param>
                             <param id="1" name="Y">-92</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="915286944141891" type="Source_page">
+                            <param id="0" name="X">2953</param>
+                            <param id="1" name="Y">534</param>
                         </action>
                     </actions>
                 </event-block>
