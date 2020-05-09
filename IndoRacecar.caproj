@@ -2054,6 +2054,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sources_button" sid="515214012377307">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="956506360064610" speed="5">
+                    <frame duration="1" hotspotX="0.949367" hotspotY="2.84375" original-source="C:\Users\CXaVier\Desktop\Sources.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
