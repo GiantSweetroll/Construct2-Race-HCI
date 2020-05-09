@@ -44,7 +44,7 @@
                         <condition id="6" name="On object clicked" sid="409007343511657" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">Sprite6</param>
+                            <param id="2" name="Object clicked">Source</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="961964078473420" type="System">
                             <param id="0" name="Variable">BulletMoving</param>
@@ -671,5 +671,58 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="414603753286460">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="473139439727611" type="Source_page">
+                    <param id="0" name="Instance variable">Sourceon</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-group description="" sid="901273659879986" title="about_page">
+            <sub-events>
+                <event-block sid="490616019600752">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="653628786154405" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Source_Button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="737780931826862" type="X">
+                            <param id="0" name="X">1886</param>
+                            <param id="1" name="Y">49</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="198594940199907" type="Source_page">
+                            <param id="0" name="X">963</param>
+                            <param id="1" name="Y">543</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="202469865205581" type="Source_page">
+                            <param id="0" name="Opacity">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="566461652952248">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="742486048716234" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="647627475753617" type="Source_page">
+                            <param id="0" name="X">2970</param>
+                            <param id="1" name="Y">543</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="256865930259470" type="X">
+                            <param id="0" name="X">2391</param>
+                            <param id="1" name="Y">-92</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

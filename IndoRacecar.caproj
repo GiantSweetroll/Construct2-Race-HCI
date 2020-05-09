@@ -1993,7 +1993,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite6" sid="295032866068570">
+        <object-type name="Source" sid="295032866068570">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577248517094445" speed="5">
@@ -2017,6 +2017,54 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399665279868250" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\XButton.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="150716413355916">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Source_Button" sid="779715919282999">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="614567417820888" speed="5">
+                    <frame duration="1" hotspotX="0.490099" hotspotY="0.297872" original-source="C:\Users\CXaVier\Desktop\source.png">
+                        <collision-poly>
+                            <point x="0" y="2.59724e-006" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Source_page" sid="248893249441216">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Sourceon" sid="362231731340653" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="758302782975722" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\Source Page.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="X" sid="719978335491059">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472568832181426" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\NWCO(construct2)\Construct2-Race-HCI\Assets\XButton.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.4" />
+                            <point x="1" y="0" />
+                            <point x="0.6" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.6" />
+                            <point x="0" y="1" />
+                            <point x="0.4" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
