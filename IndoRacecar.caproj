@@ -2042,18 +2042,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472568832181426" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\NWCO(construct2)\Construct2-Race-HCI\Assets\XButton.png">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.5" y="0.4" />
-                            <point x="1" y="0" />
-                            <point x="0.6" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0.5" y="0.6" />
-                            <point x="0" y="1" />
-                            <point x="0.4" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\NWCO(construct2)\Construct2-Race-HCI\Assets\XButton.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -2061,7 +2050,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="422265369687443" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CXaVier\Desktop\Source_Page.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Construct2Project\Construct2-Race-HCI\Assets\source_page2.png" />
                 </animation>
             </animation-folder>
         </object-type>
