@@ -10,10 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Main Menu</layout>
+        <layout active="1" order="0">Main Menu</layout>
         <layout order="3">Character Selection</layout>
         <layout order="4">Game</layout>
-        <event-sheet active="1" order="1">Menu sheet</event-sheet>
+        <event-sheet order="1">Menu sheet</event-sheet>
         <event-sheet order="2">Character Selection sheet</event-sheet>
         <event-sheet order="5">Game sheet (singleplayer)</event-sheet>
     </open-tabs>
@@ -90,8 +90,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LoadingScreen/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
-        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/Source/" />
         <folder expanded="1" path="animation-folder/Sprite7/" />
         <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/Source_Button/" />
+        <folder expanded="1" path="animation-folder/X/" />
+        <folder expanded="1" path="animation-folder/Source_page/" />
     </folders-expanded>
 </c2uistate>

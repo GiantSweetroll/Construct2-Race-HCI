@@ -6,7 +6,7 @@
         <variable constant="0" name="BulletMoving" sid="720843990251821" static="0" type="number">0</variable>
         <variable constant="0" name="MusicMuted" sid="990675534314577" static="0" type="number">0</variable>
         <variable constant="0" name="SFXMuted" sid="858785408915771" static="0" type="number">0</variable>
-        <event-block sid="974807564337127">
+        <event-block any="1" sid="974807564337127">
             <conditions>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="916719351491619" type="Sprite7">
                     <param id="0" name="Instance variable">AboutOn</param>
@@ -101,11 +101,35 @@
                         <condition id="-2" name="On start of layout" sid="699833658584826" type="System" />
                     </conditions>
                     <actions>
+                        <action id="33" name="Stop all" sid="380262937917845" type="Audio" />
                         <action id="0" name="Play" sid="191592884695388" type="Audio">
                             <param id="0" name="Audio file">MainMenu</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;BG_music&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="490616019600752">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="653628786154405" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Source_Button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="737780931826862" type="X">
+                            <param id="0" name="X">1886</param>
+                            <param id="1" name="Y">49</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="522322210287722" type="Source_page">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="671221026818453" type="Sprite7">
+                            <param id="0" name="Instance variable">AboutOn</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -632,7 +656,7 @@
                 </event-group>
             </sub-events>
         </event-block>
-        <event-block sid="712410196521740">
+        <event-block any="1" sid="712410196521740">
             <conditions>
                 <condition id="-8" name="Is boolean instance variable set" sid="333078221609845" type="Sprite7">
                     <param id="0" name="Instance variable">AboutOn</param>
@@ -669,32 +693,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-group description="" sid="901273659879986" title="about_page">
-            <sub-events>
-                <event-block sid="490616019600752">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="653628786154405" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">Source_Button</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="737780931826862" type="X">
-                            <param id="0" name="X">1886</param>
-                            <param id="1" name="Y">49</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="522322210287722" type="Source_page">
-                            <param id="0" name="X">962</param>
-                            <param id="1" name="Y">538</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="186121642420534" type="Source_page">
-                            <param id="0" name="Opacity">90</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="566461652952248">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="742486048716234" type="Mouse">
@@ -712,9 +710,19 @@
                             <param id="0" name="X">2953</param>
                             <param id="1" name="Y">534</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="233858946781965" type="Sprite7">
+                            <param id="0" name="Instance variable">AboutOn</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="912211134264347" type="Audio">
+                            <param id="0" name="Audio file">buttonBackClick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoundEffect&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-group>
+        </event-block>
     </events>
 </c2eventsheet>
