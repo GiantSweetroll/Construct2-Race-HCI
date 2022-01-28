@@ -63,6 +63,7 @@
     <!-- <li><a href="#contributing">Contributing</a></li> -->
     <!-- <li><a href="#license">License</a></li> -->
     <li><a href="#members">Members</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
   </ol>
 </details>
 
@@ -146,7 +147,17 @@ Project Link: [https://github.com/GiantSweetroll/Construct2-Race-HCI](https://gi
 
 <div align="right">(<a href="#top">back to top</a>)</div>
 
-
+## Screenshots
+<details>
+<summary>Project screenshots</summary>
+<img align="center" src="screenshots/main menu.png">
+<img align="center" src="screenshots/character selection.png">
+<img align="center" src="screenshots/gameplay.png">
+<img align="center" src="screenshots/gameplay2.png">
+<img align="center" src="screenshots/smog.png">
+<img align="center" src="screenshots/flood.png">
+<img align="center" src="screenshots/victory.png">
+</details>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
