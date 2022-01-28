@@ -20,7 +20,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/GiantSweetroll/Construct2-Race-HCI">
-    <img src="screenshots/logo.png" alt="Logo" width="80" height="80">
+    <img src="screenshots/logo.png" alt="Logo" width="120" height="68">
   </a>
 
   <h3 align="center">Pembalap Kaki Lima</h3>
